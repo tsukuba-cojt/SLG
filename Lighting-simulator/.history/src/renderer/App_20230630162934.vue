@@ -13,10 +13,10 @@ div.parent
           @click="togglePreset(preset.id)"
           :class="{'is-active': overridePresets.includes(preset.id)}"
         ) {{ preset.id }}
-  div.sequence
-    sequence-row
   div.input
     InputText
+  div.sequence
+    sequence-row
 </template>
 
 <script>
@@ -70,9 +70,6 @@ body
 </style>
 
 <style lang="sass" scoped>
-.parent
-  width: 100%
-  display: flex
 .wrap
   display: inline-block
   grid-template-columns: 1fr 300px
@@ -81,7 +78,6 @@ body
   
 .sequence
   width: 25%
-  font-size: 13px
 
 .input
   width: 25%

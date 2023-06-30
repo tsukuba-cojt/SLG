@@ -1,7 +1,6 @@
 <template lang="pug">
-div.parent
-  div.wrap
-    div.left
+div.wrap
+  div.left
       div.input-group-wrap
         div.input-group(v-for="i in 400")
           div.label {{ i }}
@@ -13,10 +12,8 @@ div.parent
           @click="togglePreset(preset.id)"
           :class="{'is-active': overridePresets.includes(preset.id)}"
         ) {{ preset.id }}
-  div.sequence
-    sequence-row
-  div.input
-    InputText
+    InputText.test2
+    sequence-row.test
 </template>
 
 <script>
@@ -70,31 +67,21 @@ body
 </style>
 
 <style lang="sass" scoped>
-.parent
-  width: 100%
-  display: flex
-.wrap
+.yoko
   display: inline-block
+
+.wrap
+  display: grid
   grid-template-columns: 1fr 300px
   margin-bottom: 200px
-  width: 50%
   
-.sequence
-  width: 25%
-  font-size: 13px
+.test
+  background-color: red
 
-.input
-  width: 25%
+.test2
   background-color: white
   color: black
 
-.input-group
-  display: inline-block
-  margin: 0 5px
-  color: #444
-  font-size: 13px
-  text-align: center
-  line-height: 1.7em
 
   .label
     user-select: none
@@ -112,13 +99,6 @@ body
   background-color: #111
   color: #888
   cursor: pointer
-
-.InputText
-  margin: 2px
-  padding: 2px 3px
-  font-size: 12px
-  background-color: #111
-  color : #888
 
 
   &.is-active

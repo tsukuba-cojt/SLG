@@ -1,22 +1,19 @@
 <template lang="pug">
-div.parent
-  div.wrap
-    div.left
-      div.input-group-wrap
-        div.input-group(v-for="i in 400")
-          div.label {{ i }}
-          circular-input(:value="$store.getters.values[i - 1] || 0" :max="255" @input="$store.dispatch('overrideFrame', [i, $event])")
-      div.presets
-        button(@click="$store.dispatch('clearOverrides')") Clear Overrides
-        span.preset-selector(
-          v-for="preset in presets"
-          @click="togglePreset(preset.id)"
-          :class="{'is-active': overridePresets.includes(preset.id)}"
-        ) {{ preset.id }}
-  div.sequence
-    sequence-row
-  div.input
-    InputText
+div.wrap
+  div.left
+    div.input-group-wrap
+      div.input-group(v-for="i in 400")
+        div.label {{ i }}
+        circular-input(:value="$store.getters.values[i - 1] || 0" :max="255" @input="$store.dispatch('overrideFrame', [i, $event])")
+    div.presets
+      button(@click="$store.dispatch('clearOverrides')") Clear Overrides
+      span.preset-selector(
+        v-for="preset in presets"
+        @click="togglePreset(preset.id)"
+        :class="{'is-active': overridePresets.includes(preset.id)}"
+      ) {{ preset.id }}
+  InputText.right
+  sequence-row.test
 </template>
 
 <script>
@@ -70,23 +67,14 @@ body
 </style>
 
 <style lang="sass" scoped>
-.parent
-  width: 100%
-  display: flex
 .wrap
-  display: inline-block
+  display: grid
   grid-template-columns: 1fr 300px
   margin-bottom: 200px
-  width: 50%
-  
-.sequence
-  width: 25%
-  font-size: 13px
 
-.input
-  width: 25%
-  background-color: white
-  color: black
+.test
+  right: 100px
+
 
 .input-group
   display: inline-block
@@ -114,6 +102,7 @@ body
   cursor: pointer
 
 .InputText
+  display: inline-block
   margin: 2px
   padding: 2px 3px
   font-size: 12px

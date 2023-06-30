@@ -13,10 +13,10 @@ div.parent
           @click="togglePreset(preset.id)"
           :class="{'is-active': overridePresets.includes(preset.id)}"
         ) {{ preset.id }}
-  div.sequence
-    sequence-row
   div.input
     InputText
+  div.sequence
+    sequence-row
 </template>
 
 <script>
@@ -81,7 +81,6 @@ body
   
 .sequence
   width: 25%
-  font-size: 13px
 
 .input
   width: 25%

@@ -73,6 +73,7 @@ body
 .parent
   width: 100%
   display: flex
+  font-size: 30px
 .wrap
   display: inline-block
   grid-template-columns: 1fr 300px

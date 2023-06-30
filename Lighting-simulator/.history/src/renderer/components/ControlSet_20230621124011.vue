@@ -1,5 +1,5 @@
 <template lang="pug">
-div.control-set
+  div.control-set
     div.container
       .group
         .group__title PAR

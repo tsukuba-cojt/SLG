@@ -81,7 +81,7 @@ body
   
 .sequence
   width: 25%
-  font-size: 13px
+  font-size: 60px
 
 .input
   width: 25%
