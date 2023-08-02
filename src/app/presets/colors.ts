@@ -32,14 +32,17 @@ export const colors: Preset[] = [
     id: COLOR_BLUE,
     render(d) {
       d.set(U, addrs.LED_LF_R, 0)
+      d.set(U, addrs.LED_LF_RA, 0)
       d.set(U, addrs.LED_RF_R, 0)
       d.set(U, addrs.LED_LR_R, 0)
       d.set(U, addrs.LED_RR_R, 0)
       d.set(U, addrs.LED_LF_G, 0)
+      d.set(U, addrs.LED_LF_GA, 0)
       d.set(U, addrs.LED_RF_G, 0)
       d.set(U, addrs.LED_LR_G, 0)
       d.set(U, addrs.LED_RR_G, 0)
       d.set(U, addrs.LED_LF_B, 255)
+      d.set(U, addrs.LED_LF_BA, 255)
       d.set(U, addrs.LED_RF_B, 255)
       d.set(U, addrs.LED_LR_B, 255)
       d.set(U, addrs.LED_RR_B, 255)
@@ -236,6 +239,7 @@ export const colors: Preset[] = [
     id: COLOR_RED,
     render(d) {
       d.set(U, addrs.LED_LF_R, 255)
+      d.set(U, addrs.LED_LF_RA, 255)
       d.set(U, addrs.LED_RF_R, 255)
       d.set(U, addrs.LED_LR_R, 255)
       d.set(U, addrs.LED_RR_R, 255)

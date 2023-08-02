@@ -24,6 +24,7 @@ export const led: Preset[] = [
       d.set(U, addrs.LED_RF_DIM, s)
       d.set(U, addrs.LED_LR_DIM, s)
       d.set(U, addrs.LED_RR_DIM, s)
+      d.set(U, addrs.LED_LF_DIMA, s)
     },
   },
   {
@@ -112,6 +113,7 @@ export const led: Preset[] = [
     render(d, t, n = 1, min = 0, max = 255) {
       const nt = (o: number) => ((t + o) * n) / 2
       d.set(U, addrs.LED_LF_DIM, sin(nt(0 / 4), min, max))
+      d.set(U, addrs.LED_LF_DIMA, sin(nt(0 / 4), min, max))
       d.set(U, addrs.LED_LR_DIM, sin(nt(0 / 4), min, max))
       d.set(U, addrs.LED_RF_DIM, sin(nt(0 / 4), min, max))
       d.set(U, addrs.LED_RR_DIM, sin(nt(0 / 4), min, max))
