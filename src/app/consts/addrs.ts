@@ -1,9 +1,9 @@
 export enum addrs {
   //LED
-  LED_LF_RA = 1,
-  LED_LF_GA,
-  LED_LF_BA,
-  LED_LF_DIMA,
+  // LED_LF_R = 1,
+  // LED_LF_G,
+  // LED_LF_B,
+  // LED_LF_DIM,
 
   // LED_RF_R,
   // LED_RF_G,
