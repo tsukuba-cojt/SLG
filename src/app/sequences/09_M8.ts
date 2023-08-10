@@ -93,8 +93,8 @@ export const M8: Sequence[] = [
                 }
             },
             {
-                id: 'うつくしいね//いろが泣いている',
-                position: 60 * 8,
+                id: '↑',
+                position: 60 * 7 + 0.8,
                 cycle: 60 / 140,
                 fade: 0.1,
                 extends: [
@@ -117,8 +117,8 @@ export const M8: Sequence[] = [
                 }
             },
             {
-                id: 'うつくしいねいろが泣いて//いる',
-                position: 60 * 10,
+                id: '↑',
+                position: 60 * 9 + 0.8,
                 cycle: 60 / 140,
                 extends: [
                     COLOR_RED,
@@ -176,8 +176,8 @@ export const M8: Sequence[] = [
                 }
             },
             {
-                id: 'someone please //listen to my sounds',
-                position: 60 * 15,
+                id: '↑',
+                position: 60 * 14 + 0.8,
                 cycle: 60 / 140,
                 extends: [
                     COLOR_RED,
@@ -199,8 +199,8 @@ export const M8: Sequence[] = [
                 }
             },
             {
-                id: 'someone please listen to //my sounds',
-                position: 60 * 17,
+                id: '↑',
+                position: 60 * 16 + 0.8,
                 cycle: 60 / 140,
                 extends: [
                     COLOR_RED,
@@ -234,8 +234,23 @@ export const M8: Sequence[] = [
                 ],
             },
             {
-                id: '間奏5小節目 ちゃ、ちゃららら、ちゃらら//ら',
-                position: 60 * 20,
+                id: '↑',
+                position: 60 * 19 + (60/180)*2,
+                extends: [
+                    COLOR_RED_PURPLE,
+                    LED_ON]
+            },
+            {
+                id: '↑',
+                position: 60 * 19 + 0.01 + (60/180)*2   ,
+                fade: 0.4,
+                extends: [
+                    COLOR_RED_PURPLE,
+                ],
+            },
+            {
+                id: '↑',
+                position: 60 * 19 + (60/180)*4,
                 extends: [
                     COLOR_RED_PURPLE,
                     LED_ON
@@ -243,7 +258,7 @@ export const M8: Sequence[] = [
             },
             {
                 id: '↑',
-                position: 60 * 20 + 0.01,
+                position: 60 * 19 + (60/180)*4 + 0.01,
                 fade: 1.46,
                 extends: [
                     COLOR_RED_PURPLE,
@@ -269,8 +284,80 @@ export const M8: Sequence[] = [
                 },
             },
             {
-                id: '「ちゃちゃちゃちゃちゃ/チャーン/',
-                position: 60 * 22,
+                id: '↑',
+                position: 60 * 21 + (60/180)*1,
+                extends: [
+                    COLOR_RED_PURPLE,
+                    LED_ON
+                ],
+            },
+            {
+                id: '↑',
+                position: 60 * 21 + (60/180)*1 + 0.1,
+                extends: [
+                    COLOR_RED_PURPLE,
+                ],
+                render(d, t) {
+                    d.merge(renderPreset(LED_ON, t, 25.5))
+                },
+            },
+            {
+                id: '↑',
+                position: 60 * 21 + (60/180)*2,
+                extends: [
+                    COLOR_RED_PURPLE,
+                    LED_ON
+                ],
+            },
+            {
+                id: '↑',
+                position: 60 * 21 + (60/180)*2 + 0.1,
+                extends: [
+                    COLOR_RED_PURPLE,
+                ],
+                render(d, t) {
+                    d.merge(renderPreset(LED_ON, t, 25.5))
+                },
+            },
+            {
+                id: '↑',
+                position: 60 * 21 + (60/180)*3,
+                extends: [
+                    COLOR_RED_PURPLE,
+                    LED_ON
+                ],
+            },
+            {
+                id: '↑',
+                position: 60 * 21 + (60/180)*3 + 0.1,
+                extends: [
+                    COLOR_RED_PURPLE,
+                ],
+                render(d, t) {
+                    d.merge(renderPreset(LED_ON, t, 25.5))
+                },
+            },
+            {
+                id: '↑',
+                position: 60 * 21 + (60/180)*4,
+                extends: [
+                    COLOR_RED_PURPLE,
+                    LED_ON
+                ],
+            },
+            {
+                id: '↑',
+                position: 60 * 21 + (60/180)*4 + 0.1,
+                extends: [
+                    COLOR_RED_PURPLE,
+                ],
+                render(d, t) {
+                    d.merge(renderPreset(LED_ON, t, 25.5))
+                },
+            },
+            {
+                id: '↑',
+                position: 60 * 21 + (60/180)*6 + 0.1,
                 fade: 0.75,
                 extends: [
                     COLOR_ORANGE,
