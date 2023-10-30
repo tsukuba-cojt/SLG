@@ -1,76 +1,14 @@
 export enum addrs {
-  //LED
- 
-  // LED_RF_R,
-  // LED_RF_G,
-  // LED_RF_B,
-  // LED_RF_DIM,
+// souhousai LED
+LED_L_R = 1,
+LED_L_G,
+LED_L_B,
+LED_L_DIM,
 
-  // LED_LR_R,
-  // LED_LR_G,
-  // LED_LR_B,
-  // LED_LR_DIM,
-
-  // LED_RR_R,
-  // LED_RR_G,
-  // LED_RR_B,
-  // LED_RR_DIM,
-
-  // LEDSIMYU
-  LED_LF_R = 30,
-  LED_LF_G,
-  LED_LF_B,
-  LED_LF_DIM,
-
-  LED_RF_R = 36,
-  LED_RF_G,
-  LED_RF_B,
-  LED_RF_DIM,
-
-  LED_LR_R = 42,
-  LED_LR_G,
-  LED_LR_B,
-  LED_LR_DIM,
-
-  LED_RR_R = 48,
-  LED_RR_G,
-  LED_RR_B,
-  LED_RR_DIM,
-
-  // LED_KENBAN_R = 30,
-  // LED_KENBAN_G,
-  // LED_KENBAN_B,
-  // LED_KENBAN_DIM = 36,
-  LED_KENBAN_R = 54,
-  LED_KENBAN_G,
-  LED_KENBAN_B,
-  LED_KENBAN_DIM,
-
-  //anomiti
-  anomiti = 17,
-
-  //1SUS
-  SUS1_1 = 18,
-  SUS1_2,
-  SUS1_3,
-  SUS1_4,
-  SUS1_5,
-
-  //2SUS
-  SUS2_1 = 23,
-  SUS2_2 = 24,
-  SUS2_3 = 26,
-
-  //3SUS
-  SUS3_1 = 27,
-  SUS3_2,
-
-  //FR
-  FR = 25,
-
-  //SS
-  SS = 29,
-
+LED_R_R = 5,
+LED_R_G,
+LED_R_B,
+LED_R_DIM = 10
   // BL_1A = 1,
   // BL_1B,
   // BL_1C,
