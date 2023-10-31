@@ -1,7 +1,7 @@
 import { Preset, renderPresetObject } from '../presets'
 import { DmxFrame } from '@nandenjin/alien-core'
 
-import { jitsuen } from './00_jitsuen'
+import { first } from './00_first'
 
 /** シーケンスの内包するステップ
  *
@@ -36,7 +36,7 @@ export interface Sequence {
 
 /** プロジェクトに存在するシーケンスのリスト */
 const sequences: Sequence[] = [
-  ...jitsuen,
+  ...first,
 ]
 
 export default sequences
