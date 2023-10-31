@@ -2,17 +2,6 @@ import { Preset, renderPresetObject } from '../presets'
 import { DmxFrame } from '@nandenjin/alien-core'
 
 import { jitsuen } from './00_jitsuen'
-import { kyakuire } from './01_kyakuire'
-import { M1 } from './02_M1'
-import { M2 } from './03_M2'
-import { M3 } from './04_M3'
-import { M4 } from './05_M4'
-import { M5 } from './06_M5'
-import { M6 } from './07_M6'
-import { M7 } from './08_M7'
-import { M8 } from './09_M8'
-import { M9 } from './10_M9'
-import { END } from './11_-END'
 
 /** シーケンスの内包するステップ
  *
@@ -48,17 +37,6 @@ export interface Sequence {
 /** プロジェクトに存在するシーケンスのリスト */
 const sequences: Sequence[] = [
   ...jitsuen,
-  ...kyakuire,
-  ...M1,
-  ...M2,
-  ...M3,
-  ...M4,
-  ...M5,
-  ...M6,
-  ...M7,
-  ...M8,
-  ...M9,
-  ...END,
 ]
 
 export default sequences
