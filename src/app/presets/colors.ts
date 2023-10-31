@@ -4,8 +4,8 @@ import { UNIVERSE as U, addrs, } from '../consts'
 export const   
 COLOR_RED = 'color.red',
 COLOR_ORANGE = 'color.orange',
-COLOR_REDORANGE = 'color.red_orange',
-COLOR_GREENORANGE = 'color.green_orange',
+COLOR_REDYELLOW = 'color.red_yellow',
+COLOR_GREENYELLOW = 'color.green_yellow',
 COLOR_YELLOWGREEN = 'color.yellowgreen',
 COLOR_GREEN = 'color.green',
 COLOR_LIGHTBLUE = 'color.light_blue',
@@ -32,133 +32,133 @@ export const colors: Preset[] = [
   {
     id: COLOR_RED,
     render(d) {
-      d.set(U, addrs.LED_L_R, 0)
-      d.set(U, addrs.LED_R_R, 0)
-      d.set(U, addrs.LED_L_G, 0)
-      d.set(U, addrs.LED_R_G, 0)
-      d.set(U, addrs.LED_L_B, 255)
-      d.set(U, addrs.LED_R_B, 255)
+      d.set(U, addrs.LED_D_R, 255)
+      d.set(U, addrs.LED_O_R, 255)
+      d.set(U, addrs.LED_D_G, 0)
+      d.set(U, addrs.LED_O_G, 0)
+      d.set(U, addrs.LED_D_B, 0)
+      d.set(U, addrs.LED_O_B, 0)
     },
   },
   {
     id: COLOR_ORANGE,
     render(d) {
-      d.set(U, addrs.LED_L_R, 0)
-      d.set(U, addrs.LED_R_R, 0)
-      d.set(U, addrs.LED_L_G, 0)
-      d.set(U, addrs.LED_R_G, 0)
-      d.set(U, addrs.LED_L_B, 255)
-      d.set(U, addrs.LED_R_B, 255)
+      d.set(U, addrs.LED_D_R, 255)
+      d.set(U, addrs.LED_O_R, 255)
+      d.set(U, addrs.LED_D_G, 62.5)
+      d.set(U, addrs.LED_O_G, 25.5)
+      d.set(U, addrs.LED_D_B, 0)
+      d.set(U, addrs.LED_O_B, 0)
     },
   },
   {
-    id: COLOR_REDORANGE,
+    id: COLOR_REDYELLOW,
     render(d) {
-      d.set(U, addrs.LED_L_R, 0)
-      d.set(U, addrs.LED_R_R, 0)
-      d.set(U, addrs.LED_L_G, 0)
-      d.set(U, addrs.LED_R_G, 0)
-      d.set(U, addrs.LED_L_B, 255)
-      d.set(U, addrs.LED_R_B, 255)
+      d.set(U, addrs.LED_D_R, 255)
+      d.set(U, addrs.LED_O_R, 255)
+      d.set(U, addrs.LED_D_G, 204)
+      d.set(U, addrs.LED_O_G, 127.5)
+      d.set(U, addrs.LED_D_B, 0)
+      d.set(U, addrs.LED_O_B, 0)
     },
   },
   {
-    id: COLOR_GREENORANGE,
+    id: COLOR_GREENYELLOW,
     render(d) {
-      d.set(U, addrs.LED_L_R, 0)
-      d.set(U, addrs.LED_R_R, 0)
-      d.set(U, addrs.LED_L_G, 0)
-      d.set(U, addrs.LED_R_G, 0)
-      d.set(U, addrs.LED_L_B, 255)
-      d.set(U, addrs.LED_R_B, 255)
+      d.set(U, addrs.LED_D_R, 229.5)
+      d.set(U, addrs.LED_O_R, 255)
+      d.set(U, addrs.LED_D_G, 255)
+      d.set(U, addrs.LED_O_G, 255)
+      d.set(U, addrs.LED_D_B, 0)
+      d.set(U, addrs.LED_O_B, 0)
     },
   },
   {
     id: COLOR_YELLOWGREEN,
     render(d) {
-      d.set(U, addrs.LED_L_R, 0)
-      d.set(U, addrs.LED_R_R, 0)
-      d.set(U, addrs.LED_L_G, 0)
-      d.set(U, addrs.LED_R_G, 0)
-      d.set(U, addrs.LED_L_B, 255)
-      d.set(U, addrs.LED_R_B, 255)
+      d.set(U, addrs.LED_D_R, 127.5)
+      d.set(U, addrs.LED_O_R, 127.5)
+      d.set(U, addrs.LED_D_G, 255)
+      d.set(U, addrs.LED_O_G, 255)
+      d.set(U, addrs.LED_D_B, 0)
+      d.set(U, addrs.LED_O_B, 0)
     },
   },
   {
     id: COLOR_GREEN,
     render(d) {
-      d.set(U, addrs.LED_L_R, 0)
-      d.set(U, addrs.LED_R_R, 0)
-      d.set(U, addrs.LED_L_G, 0)
-      d.set(U, addrs.LED_R_G, 0)
-      d.set(U, addrs.LED_L_B, 255)
-      d.set(U, addrs.LED_R_B, 255)
+      d.set(U, addrs.LED_D_R, 0)
+      d.set(U, addrs.LED_O_R, 0)
+      d.set(U, addrs.LED_D_G, 255)
+      d.set(U, addrs.LED_O_G, 255)
+      d.set(U, addrs.LED_D_B, 0)
+      d.set(U, addrs.LED_O_B, 0)
     },
   },
   {
     id: COLOR_LIGHTBLUE,
     render(d) {
-      d.set(U, addrs.LED_L_R, 0)
-      d.set(U, addrs.LED_R_R, 0)
-      d.set(U, addrs.LED_L_G, 0)
-      d.set(U, addrs.LED_R_G, 0)
-      d.set(U, addrs.LED_L_B, 255)
-      d.set(U, addrs.LED_R_B, 255)
+      d.set(U, addrs.LED_D_R, 0)
+      d.set(U, addrs.LED_O_R, 0)
+      d.set(U, addrs.LED_D_G, 153)
+      d.set(U, addrs.LED_O_G, 255)
+      d.set(U, addrs.LED_D_B, 204)
+      d.set(U, addrs.LED_O_B, 255)
     },
   },
   {
     id: COLOR_BLUE,
     render(d) {
-      d.set(U, addrs.LED_L_R, 0)
-      d.set(U, addrs.LED_R_R, 0)
-      d.set(U, addrs.LED_L_G, 0)
-      d.set(U, addrs.LED_R_G, 0)
-      d.set(U, addrs.LED_L_B, 255)
-      d.set(U, addrs.LED_R_B, 255)
+      d.set(U, addrs.LED_D_R, 0)
+      d.set(U, addrs.LED_O_R, 0)
+      d.set(U, addrs.LED_D_G, 0)
+      d.set(U, addrs.LED_O_G, 25.5)
+      d.set(U, addrs.LED_D_B, 255)
+      d.set(U, addrs.LED_O_B, 255)
     },
   },
   {
     id: COLOR_BLUEPURPLE,
     render(d) {
-      d.set(U, addrs.LED_L_R, 0)
-      d.set(U, addrs.LED_R_R, 0)
-      d.set(U, addrs.LED_L_G, 0)
-      d.set(U, addrs.LED_R_G, 0)
-      d.set(U, addrs.LED_L_B, 255)
-      d.set(U, addrs.LED_R_B, 255)
+      d.set(U, addrs.LED_D_R, 89.25)
+      d.set(U, addrs.LED_O_R, 38.25)
+      d.set(U, addrs.LED_D_G, 0)
+      d.set(U, addrs.LED_O_G, 0)
+      d.set(U, addrs.LED_D_B, 255)
+      d.set(U, addrs.LED_O_B, 255)
     },
   },
   {
     id: COLOR_REDPURPLE,
     render(d) {
-      d.set(U, addrs.LED_L_R, 0)
-      d.set(U, addrs.LED_R_R, 0)
-      d.set(U, addrs.LED_L_G, 0)
-      d.set(U, addrs.LED_R_G, 0)
-      d.set(U, addrs.LED_L_B, 255)
-      d.set(U, addrs.LED_R_B, 255)
+      d.set(U, addrs.LED_D_R, 165.75)
+      d.set(U, addrs.LED_O_R, 153)
+      d.set(U, addrs.LED_D_G, 0)
+      d.set(U, addrs.LED_O_G, 0)
+      d.set(U, addrs.LED_D_B, 255)
+      d.set(U, addrs.LED_O_B, 255)
     },
   },
   {
     id: COLOR_PINK,
     render(d) {
-      d.set(U, addrs.LED_L_R, 0)
-      d.set(U, addrs.LED_R_R, 0)
-      d.set(U, addrs.LED_L_G, 0)
-      d.set(U, addrs.LED_R_G, 0)
-      d.set(U, addrs.LED_L_B, 255)
-      d.set(U, addrs.LED_R_B, 255)
+      d.set(U, addrs.LED_D_R, 255)
+      d.set(U, addrs.LED_O_R, 255)
+      d.set(U, addrs.LED_D_G, 0)
+      d.set(U, addrs.LED_O_G, 0)
+      d.set(U, addrs.LED_D_B, 127.5)
+      d.set(U, addrs.LED_O_B, 102)
     },
   },
   {
     id: COLOR_WHITE,
     render(d) {
-      d.set(U, addrs.LED_L_R, 0)
-      d.set(U, addrs.LED_R_R, 0)
-      d.set(U, addrs.LED_L_G, 0)
-      d.set(U, addrs.LED_R_G, 0)
-      d.set(U, addrs.LED_L_B, 255)
-      d.set(U, addrs.LED_R_B, 255)
+      d.set(U, addrs.LED_D_R, 255)
+      d.set(U, addrs.LED_O_R, 255)
+      d.set(U, addrs.LED_D_G, 255)
+      d.set(U, addrs.LED_O_G, 178.5)
+      d.set(U, addrs.LED_D_B, 255)
+      d.set(U, addrs.LED_O_B, 255)
     },
   },
   // {
