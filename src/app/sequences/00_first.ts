@@ -14,5 +14,6 @@ export const first: Sequence[] = [
                 id: 'ニュートラル',
                 position: 60 * 0,
             },
-        ]
+        ],
+        
     }]
