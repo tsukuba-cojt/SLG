@@ -1,5 +1,4 @@
 import { Sequence } from '.'
-import { getRenderer } from '../presets'
 import { COLOR_BLUE_D, COLOR_GREENYELLOW_D, COLOR_GREEN_D, COLOR_GREEN_O, COLOR_LIGHTBLUE_O, COLOR_WHITE_D, COLOR_WHITE_O } from '../presets/colors'
 import { LED_ON } from '../presets/led'
 
