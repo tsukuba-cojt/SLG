@@ -1,6 +1,6 @@
 import { Sequence } from '.'
 import { COLOR_BLUEPURPLE_D, COLOR_BLUEPURPLE_O, COLOR_BLUE_D, COLOR_GREENYELLOW_D, COLOR_GREENYELLOW_O, COLOR_GREEN_D, COLOR_GREEN_O, COLOR_LIGHTBLUE_D, COLOR_LIGHTBLUE_O, COLOR_ORANGE_D, COLOR_ORANGE_O, COLOR_REDPURPLE_D, COLOR_REDPURPLE_O, COLOR_REDYELLOW_D, COLOR_REDYELLOW_O, COLOR_RED_D, COLOR_RED_O, COLOR_WHITE_D, COLOR_WHITE_O } from '../presets/colors'
-import { LED_30_D, LED_30_O, LED_60_O, LED_70_D, LED_75_D, LED_75_O, LED_80_O, LED_90_O, LED_ON_D, LED_ON_O } from '../presets/led'
+import { LED_20_D, LED_30_D, LED_30_O, LED_50_D, LED_60_O, LED_70_D, LED_75_D, LED_75_O, LED_80_D, LED_80_O, LED_90_O, LED_ON_D, LED_ON_O } from '../presets/led'
 
 
 export const first: Sequence[] = [
@@ -653,10 +653,72 @@ export const first: Sequence[] = [
         
     },
     {
-        note: 'Free Free,時が来た',
+        note: '私が生きてこなかった人生',
         steps: [
             {
-                id: 'ニュートラル',
+                id: '曲In前',
+                fade:1,
+                position: 60 * 0,
+                extends:[
+                    COLOR_BLUEPURPLE_D,
+                    COLOR_WHITE_O,
+                    LED_70_D,
+                    LED_80_O
+                ]
+            },
+            {
+                id: '「口に出さない心を/抱えた/ままで」',
+                fade:1,
+                position: 60 * 0,
+                extends:[
+                    COLOR_WHITE_D,
+                    COLOR_WHITE_O,
+                    LED_20_D,
+                    LED_90_O
+                ]
+            },
+            {
+                id: '「私のつまらない人生」の後の4×1',
+                fade:1,
+                position: 60 * 0,
+                extends:[
+                    COLOR_WHITE_O,
+                    LED_90_O
+                ]
+            },
+            {
+                id: '「空っぽな人生/でも/あなたが気づかせてくれた」',
+                fade:1,
+                position: 60 * 0,
+                extends:[
+                    COLOR_WHITE_O,
+                    COLOR_WHITE_D,
+                    LED_50_D,
+                    LED_90_O
+                ]
+            },
+            {
+                id: '「「しらないふりはもうできない助けて」の後の4×１で',
+                fade:1,
+                position: 60 * 0,
+                extends:[
+                    COLOR_WHITE_O,
+                    LED_75_O
+                ]
+            },
+            {
+                id: '「例え傷ついても/扉は目の前で/私を待ってる」',
+                fade:1,
+                position: 60 * 0,
+                extends:[
+                    COLOR_WHITE_O,
+                    COLOR_REDYELLOW_D,
+                    LED_80_O,
+                    LED_80_D
+                ]
+            },
+            {
+                id: '終演MC',
                 position: 60 * 0,
             },
         ],

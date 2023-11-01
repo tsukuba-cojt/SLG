@@ -8,6 +8,7 @@ LED_80_D = 'led.80d',
 LED_75_D = 'led.75d',
 LED_70_D = 'led.70d',
 LED_60_D = 'led.60d',
+LED_50_D = 'led.50d',
 LED_30_D = 'led.30d',
 LED_20_D = 'led.20d',
 LED_ON_O = 'led.on',
@@ -16,6 +17,7 @@ LED_80_O = 'led.80',
 LED_75_O = 'led.75',
 LED_70_O = 'led.70',
 LED_60_O = 'led.60',
+LED_50_O = 'led.50',
 LED_30_O = 'led.30',
 LED_20_O = 'led.20'
 
@@ -93,6 +95,18 @@ export const led: Preset[] = [
   {
     id: LED_60_O,
     render(d, _, s = 135) {
+      d.set(U, addrs.LED_O_DIM, s)
+    },
+  },
+  {
+    id: LED_50_D,
+    render(d, _, s = 127.5) {
+      d.set(U, addrs.LED_O_DIM, s)
+    },
+  },
+  {
+    id: LED_50_O,
+    render(d, _, s = 127.5) {
       d.set(U, addrs.LED_O_DIM, s)
     },
   },
