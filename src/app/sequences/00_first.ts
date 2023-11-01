@@ -1,6 +1,6 @@
 import { Sequence } from '.'
-import { COLOR_BLUEPURPLE_D, COLOR_BLUEPURPLE_O, COLOR_BLUE_D, COLOR_GREENYELLOW_D, COLOR_GREEN_D, COLOR_GREEN_O, COLOR_LIGHTBLUE_O, COLOR_REDYELLOW_O, COLOR_WHITE_D, COLOR_WHITE_O } from '../presets/colors'
-import { LED_ON } from '../presets/led'
+import { COLOR_BLUEPURPLE_D, COLOR_BLUEPURPLE_O, COLOR_BLUE_D, COLOR_GREENYELLOW_D, COLOR_GREEN_D, COLOR_GREEN_O, COLOR_LIGHTBLUE_D, COLOR_LIGHTBLUE_O, COLOR_ORANGE_D, COLOR_REDYELLOW_O, COLOR_WHITE_D, COLOR_WHITE_O } from '../presets/colors'
+import { LED_60_O, LED_70_D, LED_80_O, LED_90_O, LED_ON, LED_ON_D } from '../presets/led'
 
 
 export const first: Sequence[] = [
@@ -22,7 +22,8 @@ export const first: Sequence[] = [
                 position: 60 * 0,
                 fade: 3.5,
                 extends:[
-                    LED_ON,
+                    LED_ON_D,
+                    LED_ON_D,
                     COLOR_WHITE_D,
                     COLOR_WHITE_O
                 ]
@@ -32,7 +33,8 @@ export const first: Sequence[] = [
                 position: 60 * 2,
                 fade: 3.41,
                 extends:[
-                    LED_ON,
+                    LED_ON_D,
+                    LED_ON_D,
                     COLOR_GREEN_O,
                     COLOR_GREEN_D
                 ]
@@ -42,7 +44,8 @@ export const first: Sequence[] = [
                 position: 60 * 4,
                 fade: 4.5,
                 extends:[
-                    LED_ON,
+                    LED_ON_D,
+                    LED_ON_D,
                     COLOR_GREENYELLOW_D,
                     COLOR_WHITE_O
                 ]
@@ -52,7 +55,8 @@ export const first: Sequence[] = [
                 position: 60 * 6,
                 fade: 4.0,
                 extends:[
-                    LED_ON,
+                    LED_ON_D,
+                    LED_ON_D,
                     COLOR_BLUE_D,
                     COLOR_LIGHTBLUE_O
                 ]
@@ -61,7 +65,8 @@ export const first: Sequence[] = [
                 id: '「その日が/ 来た」',
                 position: 60 * 7,
                 extends:[
-                    LED_ON,
+                    LED_ON_D,
+                    LED_ON_D,
                     COLOR_GREEN_D,
                     COLOR_WHITE_O
                 ]
@@ -86,7 +91,8 @@ export const first: Sequence[] = [
                 extends:[
                     COLOR_GREEN_O,
                     COLOR_GREEN_D,
-                    LED_ON
+                    LED_ON_D,
+                    LED_ON_D,
                 ]
             },
             {
@@ -99,7 +105,8 @@ export const first: Sequence[] = [
                 extends:[
                     COLOR_GREEN_O,
                     COLOR_GREEN_D,
-                    LED_ON
+                    LED_ON_D,
+                    LED_ON_D,
                 ]
             },
             {
@@ -127,7 +134,8 @@ export const first: Sequence[] = [
                 fade: 4,
                 position: 60 * 0,
                 extends:[
-                    LED_ON,
+                    LED_ON_D,
+                    LED_ON_D,
                     COLOR_BLUEPURPLE_D,
                     COLOR_REDYELLOW_O
                 ]
@@ -146,17 +154,7 @@ export const first: Sequence[] = [
         
     },
     {
-        note: '二公演目',
-        steps: [
-            {
-                id: 'ニュートラル',
-                position: 60 * 0,
-            },
-        ],
-        
-    },
-    {
-        note: 'Brand New Days',
+        note: '二公演目Brand New Days',
         steps: [
             {
                 id: 'ニュートラル',
@@ -173,7 +171,8 @@ export const first: Sequence[] = [
                 fade:2.3,
                 position: 60 * 0,
                 extends:[
-                    LED_ON,
+                    LED_ON_D,
+                    LED_ON_D,
                     COLOR_BLUEPURPLE_D,
                     COLOR_BLUEPURPLE_O
                 ]
@@ -197,6 +196,76 @@ export const first: Sequence[] = [
             {
                 id: 'ニュートラル',
                 position: 60 * 0,
+            },
+        ],
+        
+    },
+    {
+        note: '第三回公演、Be Our Guest,生まれて初めて',
+        steps: [
+            {
+                id: 'ニュートラル',
+                position: 60 * 0,
+            },
+        ],
+        
+    },
+    {
+        note: 'リメンバーミー',
+        steps: [
+            {
+                id: '曲in//',
+                position: 60 * 0,
+                fade: 1.35,
+                extends: [
+                    COLOR_LIGHTBLUE_D,
+                    COLOR_WHITE_O,
+                    LED_70_D,
+                    LED_60_O
+                ]
+            },
+            {
+                id: '二回目リ//メンバー・ミー',
+                position: 60 * 1,
+                fade: 1.35,
+                extends: [
+                    COLOR_LIGHTBLUE_D,
+                    COLOR_WHITE_O,
+                    LED_70_D,
+                    LED_90_O
+                ]
+            },
+            {
+                id: '三回目「/リメ/ンバー・ミー 忘れはしない」',
+                position: 60 * 1 + 50,
+                fade: 1.35,
+                extends: [
+                    COLOR_GREENYELLOW_D,
+                    COLOR_WHITE_O,
+                    LED_70_D,
+                    LED_60_O
+                ]
+            },
+            {
+                id: '五回目「リメンバー・ミー」三小節と二拍から十泊で',
+                position: 60 * 1 + 50,
+                fade: 1.35,
+                extends: [
+                    COLOR_ORANGE_D,
+                    COLOR_WHITE_O,
+                    LED_70_D,
+                    LED_80_O
+                ]
+            },//atode
+            {
+                id: '曲間mc',
+                position: 60 * 10,
+                extends: [
+                    COLOR_ORANGE_D,
+                    COLOR_WHITE_O,
+                    LED_70_D,
+                    LED_80_O
+                ]
             },
         ],
         

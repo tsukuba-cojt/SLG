@@ -10,14 +10,14 @@ LED_70_D = 'led.70d',
 LED_60_D = 'led.60d',
 LED_30_D = 'led.30d',
 LED_20_D = 'led.20d',
-LED_ON_O = 'led.ond',
-LED_90_O = 'led.90d',
-LED_80_O = 'led.80d',
-LED_75_O = 'led.75d',
-LED_70_O = 'led.70d',
-LED_60_O = 'led.60d',
-LED_30_O = 'led.30d',
-LED_20_O = 'led.20d'
+LED_ON_O = 'led.on',
+LED_90_O = 'led.90',
+LED_80_O = 'led.80',
+LED_75_O = 'led.75',
+LED_70_O = 'led.70',
+LED_60_O = 'led.60',
+LED_30_O = 'led.30',
+LED_20_O = 'led.20'
 
 
 
