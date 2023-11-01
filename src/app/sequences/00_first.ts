@@ -1,6 +1,6 @@
 import { Sequence } from '.'
-import { COLOR_BLUEPURPLE_D, COLOR_BLUEPURPLE_O, COLOR_BLUE_D, COLOR_GREENYELLOW_D, COLOR_GREEN_D, COLOR_GREEN_O, COLOR_LIGHTBLUE_D, COLOR_LIGHTBLUE_O, COLOR_ORANGE_D, COLOR_REDPURPLE_O, COLOR_REDYELLOW_O, COLOR_WHITE_D, COLOR_WHITE_O } from '../presets/colors'
-import { LED_60_O, LED_70_D, LED_80_O, LED_90_O, LED_ON_D, LED_ON_O } from '../presets/led'
+import { COLOR_BLUEPURPLE_D, COLOR_BLUEPURPLE_O, COLOR_BLUE_D, COLOR_GREENYELLOW_D, COLOR_GREENYELLOW_O, COLOR_GREEN_D, COLOR_GREEN_O, COLOR_LIGHTBLUE_D, COLOR_LIGHTBLUE_O, COLOR_ORANGE_D, COLOR_ORANGE_O, COLOR_REDPURPLE_D, COLOR_REDPURPLE_O, COLOR_REDYELLOW_D, COLOR_REDYELLOW_O, COLOR_RED_D, COLOR_RED_O, COLOR_WHITE_D, COLOR_WHITE_O } from '../presets/colors'
+import { LED_30_D, LED_30_O, LED_60_O, LED_70_D, LED_75_D, LED_75_O, LED_80_O, LED_90_O, LED_ON_D, LED_ON_O } from '../presets/led'
 
 
 export const first: Sequence[] = [
@@ -393,6 +393,271 @@ export const first: Sequence[] = [
             {
                 id: '終演MC',
                 position: 60 * 10
+            },
+        ],
+        
+    },
+    {
+        note: '第四回公演トゥモロー',
+        steps: [
+            {
+                id: '曲In',
+                position: 60 * 0,
+                fade:1,
+                extends:[
+                    COLOR_ORANGE_D,
+                    COLOR_ORANGE_O,
+                    LED_ON_D,
+                    LED_ON_O
+                ]
+            },
+            {
+                id: '「胸張って/うの/」',
+                position: 60 * 1,
+                fade:1,
+                extends:[
+                    COLOR_GREENYELLOW_D,
+                    COLOR_GREENYELLOW_O,
+                    LED_ON_D,
+                    LED_ON_O
+                ]
+            },
+            {
+                id: '「明日は幸せ四泊」',
+                position: 60 * 2,
+                fade:1,
+                extends:[
+                    COLOR_WHITE_D,
+                    COLOR_WHITE_O,
+                    LED_ON_D,
+                    LED_ON_O
+                ]
+            },
+            {
+                id: '「/さみしくて/憂鬱な日には',
+                position: 60 * 3,
+                fade:1,
+                extends:[
+                    COLOR_GREENYELLOW_D,
+                    COLOR_GREENYELLOW_O,
+                    LED_ON_D,
+                    LED_ON_O
+                ]
+            },
+            {
+                id: '「ラスさび明日は幸//せ',
+                position: 60 * 3,
+                fade:1,
+                extends:[
+                    COLOR_REDYELLOW_O,
+                    COLOR_REDYELLOW_D,
+                    LED_ON_D,
+                    LED_ON_O
+                ]
+            },
+            {
+                id: '曲間MC',
+                position: 60 * 3,
+            },
+        ],
+        
+    },
+    {
+        note: 'Free Free,時が来た',
+        steps: [
+            {
+                id: 'ニュートラル',
+                position: 60 * 0,
+            },
+        ],
+        
+    },
+    {
+        note: 'マキャビティ',
+        steps: [
+            {
+                id: '曲In',
+                position: 60 * 0,
+                fade:1,
+                extends:[
+                    COLOR_REDPURPLE_O,
+                    COLOR_REDPURPLE_D,
+                    LED_30_D,
+                    LED_30_O
+                ]
+            },
+            {
+                id: '「殺しの現場に/マキャヴィティノットゼア」',
+                position: 60 * 0,
+                extends:[
+                    COLOR_REDPURPLE_D,
+                    COLOR_RED_O,
+                    LED_75_D,
+                    LED_75_O
+                ]
+            },
+            {
+                id: '「↓」',
+                position: 60 * 0,
+                extends:[
+                    COLOR_REDPURPLE_O,
+                    COLOR_REDPURPLE_D,
+                    LED_30_D,
+                    LED_30_O
+                ]
+            },
+            {
+                id: '「犯罪の現場に/マキャヴィティノットゼア」',
+                position: 60 * 0,
+                extends:[
+                    COLOR_REDPURPLE_D,
+                    COLOR_RED_O,
+                    LED_75_D,
+                    LED_75_O
+                ]
+            },
+            {
+                id: '「↓」',
+                position: 60 * 0,
+                extends:[
+                    COLOR_REDPURPLE_O,
+                    COLOR_REDPURPLE_D,
+                    LED_30_D,
+                    LED_30_O
+                ]
+            },
+            {
+                id: '「だが殺されたとき/マキャヴィティノットゼア」',
+                position: 60 * 0,
+                extends:[
+                    COLOR_REDPURPLE_D,
+                    COLOR_RED_O,
+                    LED_75_D,
+                    LED_75_O
+                ]
+            },
+            {
+                id: '「↓」',
+                position: 60 * 0,
+                extends:[
+                    COLOR_REDPURPLE_O,
+                    COLOR_REDPURPLE_D,
+                    LED_30_D,
+                    LED_30_O
+                ]
+            },
+            {
+                id: '「次は倉庫だ/」',
+                position: 60 * 0,
+                extends:[
+                    COLOR_REDPURPLE_D,
+                    COLOR_WHITE_O,
+                    LED_30_D,
+                    LED_ON_O
+                ]
+            },
+            {
+                id: '「↓」',
+                position: 60 * 0,
+                extends:[
+                    COLOR_REDPURPLE_O,
+                    COLOR_REDPURPLE_D,
+                    LED_30_D,
+                    LED_30_O
+                ]
+            },
+            {
+                id: '「犬が一匹/」',
+                position: 60 * 0,
+                extends:[
+                    COLOR_RED_D,
+                    COLOR_RED_O,
+                    LED_ON_D,
+                    LED_ON_O
+                ]
+            },
+            {
+                id: '「↓」',
+                position: 60 * 0,
+                extends:[
+                    COLOR_REDPURPLE_O,
+                    COLOR_REDPURPLE_D,
+                    LED_30_D,
+                    LED_30_O
+                ]
+            },
+            {
+                id: '「駆けつけてみると/マキャヴィティノットゼア」',
+                position: 60 * 0,
+                extends:[
+                    COLOR_REDPURPLE_D,
+                    COLOR_RED_O,
+                    LED_75_D,
+                    LED_75_O
+                ]
+            },
+            {
+                id: '「↓」',
+                position: 60 * 0,
+                extends:[
+                    COLOR_REDPURPLE_O,
+                    COLOR_REDPURPLE_D,
+                    LED_30_D,
+                    LED_30_O
+                ]
+            },
+            {
+                id: '「事件の現場には/マキャヴィティノットゼア」',
+                position: 60 * 0,
+                extends:[
+                    COLOR_REDPURPLE_D,
+                    COLOR_RED_O,
+                    LED_75_D,
+                    LED_75_O
+                ]
+            },
+            {
+                id: '「↓」',
+                position: 60 * 0,
+                extends:[
+                    COLOR_REDPURPLE_O,
+                    COLOR_REDPURPLE_D,
+                    LED_30_D,
+                    LED_30_O
+                ]
+            },
+            {
+                id: '「ナポレオン of プライム/」',
+                position: 60 * 0,
+                extends:[
+                    COLOR_REDPURPLE_O,
+                    LED_30_O
+                ]
+            },
+            {
+                id: '2人「ナポレオン of プライム/」後の間奏最後のッタタタタタッタタタタタ ジャン 2人 「マ/キャヴィティ」',
+                position: 60 * 0,
+                fade:1,
+                extends:[
+                    COLOR_REDPURPLE_O,
+                    COLOR_RED_D,
+                    LED_ON_D,
+                    LED_ON_O
+                ]
+            },
+            {
+                id: '2人「殺しの現場にマキャヴィティ ノット ゼア/」',
+                position: 60 * 0,
+            },
+        ],
+        
+    },
+    {
+        note: 'Free Free,時が来た',
+        steps: [
+            {
+                id: 'ニュートラル',
+                position: 60 * 0,
             },
         ],
         
