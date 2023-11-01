@@ -332,4 +332,69 @@ export const first: Sequence[] = [
         ],
         
     },
+    {
+        note: '不幸せな魂',
+        steps: [
+            {
+                id: '曲in',
+                position: 60 * 0,
+                fade:1,
+                extends:[
+                    COLOR_BLUE_D,
+                    COLOR_LIGHTBLUE_O,
+                    LED_ON_D,
+                    LED_ON_O
+                ]
+            },
+            {
+                id: '1サビ「迷え/る人たちにの」',
+                position: 60 * 1,
+                fade:1,
+                extends:[
+                    COLOR_LIGHTBLUE_D,
+                    COLOR_WHITE_O,
+                    LED_ON_D,
+                    LED_ON_O
+                ]
+            },
+            {
+                id: '１サビ直後「/お代払わ/ず踏み倒す」',
+                position: 60 * 2,
+                fade:1,
+                extends:[
+                    COLOR_GREEN_D,
+                    COLOR_WHITE_O,
+                    LED_ON_D,
+                    LED_ON_O
+                ]
+            },
+            {
+                id: '「気の毒な子には//」後の8拍',
+                position: 60 * 3,
+                fade:1,
+                extends:[
+                    COLOR_BLUE_D,
+                    COLOR_LIGHTBLUE_O,
+                    LED_ON_D,
+                    LED_ON_O
+                ]
+            },
+            {
+                id: '２サビ「/迷える/小魚」',
+                position: 60 * 4,
+                fade:1,
+                extends:[
+                    COLOR_BLUE_D,
+                    COLOR_WHITE_O,
+                    LED_ON_D,
+                    LED_ON_O
+                ]
+            },
+            {
+                id: '終演MC',
+                position: 60 * 10
+            },
+        ],
+        
+    },
 ]
