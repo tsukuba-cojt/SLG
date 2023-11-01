@@ -1,5 +1,5 @@
 import { Sequence } from '.'
-import { COLOR_BLUE_D, COLOR_GREENYELLOW_D, COLOR_GREEN_D, COLOR_GREEN_O, COLOR_LIGHTBLUE_O, COLOR_WHITE_D, COLOR_WHITE_O } from '../presets/colors'
+import { COLOR_BLUEPURPLE_D, COLOR_BLUEPURPLE_O, COLOR_BLUE_D, COLOR_GREENYELLOW_D, COLOR_GREEN_D, COLOR_GREEN_O, COLOR_LIGHTBLUE_O, COLOR_REDYELLOW_O, COLOR_WHITE_D, COLOR_WHITE_O } from '../presets/colors'
 import { LED_ON } from '../presets/led'
 
 
@@ -105,6 +105,98 @@ export const first: Sequence[] = [
             {
                 id: '曲間MC',
                 position: 60 * 8
+            },
+        ],
+        
+    },
+    {
+        note: '素敵な友達',
+        steps: [
+            {
+                id: 'ニュートラル',
+                position: 60 * 0,
+            },
+        ],
+        
+    },
+    {
+        note: 'ALL ASK OF YOU',
+        steps: [
+            {
+                id: '曲In',
+                fade: 4,
+                position: 60 * 0,
+                extends:[
+                    LED_ON,
+                    COLOR_BLUEPURPLE_D,
+                    COLOR_REDYELLOW_O
+                ]
+            },
+        ],
+        
+    },
+    {
+        note: '終演MC',
+        steps: [
+            {
+                id: 'ニュートラル',
+                position: 60 * 0,
+            },
+        ],
+        
+    },
+    {
+        note: '二公演目',
+        steps: [
+            {
+                id: 'ニュートラル',
+                position: 60 * 0,
+            },
+        ],
+        
+    },
+    {
+        note: 'Brand New Days',
+        steps: [
+            {
+                id: 'ニュートラル',
+                position: 60 * 0,
+            },
+        ],
+        
+    },
+    {
+        note: 'あなたを失いたくない',
+        steps: [
+            {
+                id: '曲in',
+                fade:2.3,
+                position: 60 * 0,
+                extends:[
+                    LED_ON,
+                    COLOR_BLUEPURPLE_D,
+                    COLOR_BLUEPURPLE_O
+                ]
+            },
+        ],
+        
+    },
+    {
+        note: '曲間MC',
+        steps: [
+            {
+                id: 'ニュートラル',
+                position: 60 * 0,
+            },
+        ],
+        
+    },
+    {
+        note: 'Hail Holy Queen,ダンスはやめられない,時が来た',
+        steps: [
+            {
+                id: 'ニュートラル',
+                position: 60 * 0,
             },
         ],
         
