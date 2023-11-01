@@ -1,6 +1,6 @@
 import { Sequence } from '.'
 import { COLOR_BLUEPURPLE_D, COLOR_BLUEPURPLE_O, COLOR_BLUE_D, COLOR_GREENYELLOW_D, COLOR_GREEN_D, COLOR_GREEN_O, COLOR_LIGHTBLUE_D, COLOR_LIGHTBLUE_O, COLOR_ORANGE_D, COLOR_REDYELLOW_O, COLOR_WHITE_D, COLOR_WHITE_O } from '../presets/colors'
-import { LED_60_O, LED_70_D, LED_80_O, LED_90_O, LED_ON, LED_ON_D } from '../presets/led'
+import { LED_60_O, LED_70_D, LED_80_O, LED_90_O, LED_ON_D } from '../presets/led'
 
 
 export const first: Sequence[] = [
