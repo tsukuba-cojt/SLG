@@ -1,4 +1,5 @@
 import { Sequence } from '.'
+import { getRenderer } from '../presets'
 import { COLOR_BLUE_D, COLOR_GREENYELLOW_D, COLOR_GREEN_D, COLOR_GREEN_O, COLOR_LIGHTBLUE_O, COLOR_WHITE_D, COLOR_WHITE_O } from '../presets/colors'
 import { LED_ON } from '../presets/led'
 
@@ -66,7 +67,47 @@ export const first: Sequence[] = [
                     COLOR_WHITE_O
                 ]
             },
+            {
+                id: '曲間MC',
+                position: 60 * 10
+            },
         ],
         
-    }
+    },
+    {
+        note: 'うそつきは魔法の始まり',
+        steps: [
+            {
+                id: '曲in',
+                position: 60 * 0,
+            },
+            {
+                id: '指パッチンSE',
+                position: 60 * 0 + 30,//10
+                extends:[
+                    COLOR_GREEN_O,
+                    COLOR_GREEN_D,
+                    LED_ON
+                ]
+            },
+            {
+                id: 'もういいだろう 真実はこんなもんさ/',
+                position: 60 * 2 + 30,//40
+            },
+            {
+                id: 'いいえまばゆい輝き放つオズの魔法使い/',
+                position: 60 * 3,
+                extends:[
+                    COLOR_GREEN_O,
+                    COLOR_GREEN_D,
+                    LED_ON
+                ]
+            },
+            {
+                id: '曲間MC',
+                position: 60 * 8
+            },
+        ],
+        
+    },
 ]
