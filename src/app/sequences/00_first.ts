@@ -1,6 +1,6 @@
 import { Sequence } from '.'
-import { COLOR_BLUEPURPLE_D, COLOR_BLUEPURPLE_O, COLOR_BLUE_D, COLOR_GREENYELLOW_D, COLOR_GREEN_D, COLOR_GREEN_O, COLOR_LIGHTBLUE_D, COLOR_LIGHTBLUE_O, COLOR_ORANGE_D, COLOR_REDYELLOW_O, COLOR_WHITE_D, COLOR_WHITE_O } from '../presets/colors'
-import { LED_60_O, LED_70_D, LED_80_O, LED_90_O, LED_ON_D } from '../presets/led'
+import { COLOR_BLUEPURPLE_D, COLOR_BLUEPURPLE_O, COLOR_BLUE_D, COLOR_GREENYELLOW_D, COLOR_GREEN_D, COLOR_GREEN_O, COLOR_LIGHTBLUE_D, COLOR_LIGHTBLUE_O, COLOR_ORANGE_D, COLOR_REDPURPLE_O, COLOR_REDYELLOW_O, COLOR_WHITE_D, COLOR_WHITE_O } from '../presets/colors'
+import { LED_60_O, LED_70_D, LED_80_O, LED_90_O, LED_ON_D, LED_ON_O } from '../presets/led'
 
 
 export const first: Sequence[] = [
@@ -266,6 +266,68 @@ export const first: Sequence[] = [
                     LED_70_D,
                     LED_80_O
                 ]
+            },
+            
+        ],
+        
+    },
+    {
+        note: 'A Whole New World',
+        steps: [
+            {
+                id: '曲In',
+                position: 60 * 0,
+                fade:1,
+                extends:[
+                    COLOR_BLUEPURPLE_D,
+                    LED_ON_D
+                ]
+            },
+            {
+                id: '1サビ「/自由さ/」',
+                position: 60 * 1,
+                fade:1,
+                extends:[
+                    COLOR_BLUEPURPLE_D,
+                    LED_ON_D,
+                    COLOR_REDPURPLE_O,
+                    LED_ON_O
+                ]
+            },
+            {
+                id: '１サビおわりジャスミン「今あなた/と二人ね/」',
+                position: 60 * 2,
+                fade:1,
+                extends:[
+                    COLOR_BLUEPURPLE_D,
+                    LED_ON_D
+                ]
+            },
+            {
+                id: '2サビ「/自由よ/」',
+                position: 60 * 3,
+                fade:1,
+                extends:[
+                    COLOR_BLUEPURPLE_D,
+                    LED_ON_D,
+                    COLOR_REDYELLOW_O,
+                    LED_ON_O
+                ]
+            },
+            {
+                id: '２サビおわり「いつまで/も二人で/」',
+                position: 60 * 4,
+                fade:1,
+                extends:[
+                    COLOR_BLUEPURPLE_D,
+                    LED_ON_D,
+                    COLOR_BLUEPURPLE_O,
+                    LED_ON_O
+                ]
+            },
+            {
+                id: '曲間MC',
+                position: 60 * 5,
             },
         ],
         
