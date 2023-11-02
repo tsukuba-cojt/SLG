@@ -1,6 +1,6 @@
 import { Sequence } from '.'
-import { COLOR_BLUEPURPLE_D, COLOR_BLUEPURPLE_O, COLOR_BLUE_D, COLOR_BLUE_O, COLOR_GREENYELLOW_D, COLOR_GREENYELLOW_O, COLOR_GREEN_D, COLOR_GREEN_O, COLOR_LIGHTBLUE_D, COLOR_LIGHTBLUE_O, COLOR_ORANGE_D, COLOR_ORANGE_O, COLOR_PINK_D, COLOR_PINK_O, COLOR_REDPURPLE_D, COLOR_REDPURPLE_O, COLOR_REDYELLOW_D, COLOR_REDYELLOW_O, COLOR_RED_D, COLOR_RED_O, COLOR_WHITE_D, COLOR_WHITE_O } from '../presets/colors'
-import { LED_20_D, LED_30_D, LED_30_O, LED_50_D, LED_60_O, LED_70_D, LED_75_D, LED_75_O, LED_80_D, LED_80_O, LED_90_O, LED_KOUGO, LED_ON_D, LED_ON_O } from '../presets/led'
+import { COLOR_BLUEPURPLE_D, COLOR_BLUEPURPLE_O, COLOR_BLUE_D, COLOR_BLUE_O, COLOR_GREENYELLOW_D, COLOR_GREENYELLOW_O, COLOR_GREEN_D, COLOR_GREEN_O, COLOR_LIGHTBLUE_D, COLOR_LIGHTBLUE_O, COLOR_ORANGE_D, COLOR_ORANGE_O, COLOR_PINK_D, COLOR_PINK_O, COLOR_REDPURPLE_D, COLOR_REDPURPLE_O, COLOR_REDYELLOW_D, COLOR_REDYELLOW_O, COLOR_RED_D, COLOR_RED_O, COLOR_WHITE_D, COLOR_WHITE_O, COLOR_YELLOWGREEN_D, COLOR_YELLOWGREEN_O } from '../presets/colors'
+import { LED_20_D, LED_30_D, LED_30_O, LED_50_D, LED_60_D, LED_60_O, LED_70_D, LED_75_D, LED_75_O, LED_80_D, LED_80_O, LED_90_O, LED_KOUGO, LED_ON_D, LED_ON_O } from '../presets/led'
 
 
 export const first: Sequence[] = [
@@ -848,6 +848,116 @@ export const first: Sequence[] = [
             {
                 id: "曲間MC",
                 position: 60 * 10,
+            },
+        ], 
+    },
+    {
+        note: 'this is me',
+        steps: [
+            {
+                id: '曲In',
+                position: 60 * 0,
+                fade:2.5,
+                extends:[
+                    LED_30_D,
+                    LED_30_O,
+                    COLOR_WHITE_O,
+                    COLOR_WHITE_D
+                ]
+            },
+            {
+                id: 'すぐ！/I /am not a stranger to the dark',
+                position: 60 * 1,
+                extends:[
+                    LED_60_D,
+                    LED_60_O,
+                    COLOR_BLUEPURPLE_D,
+                    COLOR_BLUEPURPLE_O
+                ]
+            },
+            {
+                id: '/But/ I won`t let them break me down ',
+                position: 60 * 2,
+                extends:[
+                    LED_60_D,
+                    LED_60_O,
+                    COLOR_BLUE_D,
+                    COLOR_BLUE_O
+                ]
+            },
+            {
+                id: 'When the //sharpest words wanna cut me down',
+                position: 60 * 3,
+                extends:[
+                    LED_60_D,
+                    LED_60_O,
+                    COLOR_GREENYELLOW_D,
+                    COLOR_GREENYELLOW_O
+                ]
+            },
+            {
+                id: '(/this/ is me) Look out `cause here I come ',
+                position: 60 * 4,
+                extends:[
+                    LED_60_D,
+                    LED_60_O,
+                    COLOR_YELLOWGREEN_D,
+                    COLOR_YELLOWGREEN_O
+                ]
+            },
+            {
+                id: '/Oh/-oh-oh-oh ',
+                position: 60 * 5,
+                extends:[
+                    LED_60_D,
+                    LED_60_O,
+                    COLOR_GREEN_D,
+                    COLOR_GREEN_O
+                ]
+            },
+            {
+                id: 'wohの後のthisisme の後の一小節の四泊目/and/ I know that I deserve your love ',
+                position: 60 * 7,
+                extends:[
+                    LED_60_D,
+                    LED_60_O,
+                    COLOR_PINK_D,
+                    COLOR_PINK_O
+                ]
+            },
+            {
+                id: '一泊前/When/ the shapest words wanna cut me down ',
+                position: 60 * 8,
+                extends:[
+                    LED_60_D,
+                    LED_60_O,
+                    COLOR_LIGHTBLUE_D,
+                    COLOR_LIGHTBLUE_O
+                ]
+            },
+            {
+                id: 'this is me の後の靴の音',
+                position: 60 * 9,
+                extends:[
+                    LED_60_D,
+                    LED_60_O,
+                    COLOR_LIGHTBLUE_D,
+                    COLOR_LIGHTBLUE_O
+                ]
+            },
+            {
+                id: '↓',
+                position: 60 * 9 +1.00,
+                extends:[
+                    LED_60_D,
+                    LED_60_O,
+                    COLOR_RED_D,
+                    COLOR_RED_O
+                ]
+            },
+            {
+                id: '曲間MC,ダンスはやめられない、ワンデイモア',
+                position: 60 * 15
             },
         ],
         
