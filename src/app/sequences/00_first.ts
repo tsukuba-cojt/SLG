@@ -1,6 +1,6 @@
 import { Sequence } from '.'
 import { COLOR_BLUEPURPLE_D, COLOR_BLUEPURPLE_O, COLOR_BLUE_D, COLOR_BLUE_O, COLOR_GREENYELLOW_D, COLOR_GREENYELLOW_O, COLOR_GREEN_D, COLOR_GREEN_O, COLOR_LIGHTBLUE_D, COLOR_LIGHTBLUE_O, COLOR_ORANGE_D, COLOR_ORANGE_O, COLOR_PINK_D, COLOR_PINK_O, COLOR_REDPURPLE_D, COLOR_REDPURPLE_O, COLOR_REDYELLOW_D, COLOR_REDYELLOW_O, COLOR_RED_D, COLOR_RED_O, COLOR_WHITE_D, COLOR_WHITE_O } from '../presets/colors'
-import { LED_20_D, LED_30_D, LED_30_O, LED_50_D, LED_60_O, LED_70_D, LED_75_D, LED_75_O, LED_80_D, LED_80_O, LED_90_O, LED_ON_D, LED_ON_O } from '../presets/led'
+import { LED_20_D, LED_30_D, LED_30_O, LED_50_D, LED_60_O, LED_70_D, LED_75_D, LED_75_O, LED_80_D, LED_80_O, LED_90_O, LED_KOUGO, LED_ON_D, LED_ON_O } from '../presets/led'
 
 
 export const first: Sequence[] = [
@@ -670,7 +670,7 @@ export const first: Sequence[] = [
             {
                 id: '「口に出さない心を/抱えた/ままで」',
                 fade:1,
-                position: 60 * 1,
+                position: 60 * 2,
                 extends:[
                     COLOR_WHITE_D,
                     COLOR_WHITE_O,
@@ -681,7 +681,7 @@ export const first: Sequence[] = [
             {
                 id: '「私のつまらない人生」の後の4小節',
                 fade:2.8,
-                position: 60 * 2,
+                position: 60 * 3,
                 extends:[
                     COLOR_WHITE_O,
                     LED_90_O
@@ -690,7 +690,7 @@ export const first: Sequence[] = [
             {
                 id: '「空っぽな人生/でも/あなたが気づかせてくれた」',
                 fade:1.8,
-                position: 60 * 3,
+                position: 60 * 4,
                 extends:[
                     COLOR_WHITE_O,
                     COLOR_WHITE_D,
@@ -701,7 +701,7 @@ export const first: Sequence[] = [
             {
                 id: '「しらないふりはもうできない助けて」の後の4小節で',
                 fade:2.8,
-                position: 60 * 4,
+                position: 60 * 5,
                 extends:[
                     COLOR_WHITE_O,
                     LED_75_O
@@ -710,7 +710,7 @@ export const first: Sequence[] = [
             {
                 id: '「例え傷ついても/扉は目の前で/私を待ってる」',
                 fade:3.5,
-                position: 60 * 5,
+                position: 60 * 6,
                 extends:[
                     COLOR_WHITE_O,
                     COLOR_REDYELLOW_D,
@@ -731,16 +731,16 @@ export const first: Sequence[] = [
             {
                 id: '曲In',
                 position: 60 * 0,
-                fade:1,
+                fade:3.5,
                 extends:[
                     COLOR_BLUEPURPLE_D,
                     LED_ON_D
                 ]
             },
             {
-                id: '1サビ「/自由さ/」',
-                position: 60 * 1,
-                fade:1,
+                id: '1サビ「自由さ//」',
+                position: 60 * 1+30,//15
+                fade:1.5,
                 extends:[
                     COLOR_BLUEPURPLE_D,
                     LED_ON_D,
@@ -750,8 +750,8 @@ export const first: Sequence[] = [
             },
             {
                 id: '１サビおわりジャスミン「今あなた/と二人ね/」',
-                position: 60 * 2,
-                fade:1,
+                position: 60 * 1 +47 + 30,//30
+                fade:1.7,
                 extends:[
                     COLOR_BLUEPURPLE_D,
                     LED_ON_D
@@ -759,8 +759,8 @@ export const first: Sequence[] = [
             },
             {
                 id: '2サビ「/自由よ/」',
-                position: 60 * 3,
-                fade:1,
+                position: 60 * 2+45,//45
+                fade:1.5,
                 extends:[
                     COLOR_BLUEPURPLE_D,
                     LED_ON_D,
@@ -770,8 +770,8 @@ export const first: Sequence[] = [
             },
             {
                 id: '２サビおわり「いつまで/も二人で/」',
-                position: 60 * 4,
-                fade:1,
+                position: 60 * 2+38+60,//60
+                fade:1.7,
                 extends:[
                     COLOR_BLUEPURPLE_D,
                     LED_ON_D,
@@ -781,7 +781,7 @@ export const first: Sequence[] = [
             },
             {
                 id: '曲間MC',
-                position: 60 * 5,
+                position: 60 * 10,
             },
         ],
         
@@ -792,7 +792,7 @@ export const first: Sequence[] = [
             {
                 id: "謳いだし「/I/ didn't know what you」",
                 position: 60 * 0,
-                fade:1,
+                fade:1.8,
                 extends:[
                     LED_ON_D,
                     LED_ON_O,
@@ -802,8 +802,8 @@ export const first: Sequence[] = [
             },
             {
                 id: "二人目「/I/ didn't wanna let you down」",
-                position: 60 * 0,
-                fade:1,
+                position: 60 * 1,
+                fade:1.8,
                 extends:[
                     LED_ON_D,
                     LED_ON_O,
@@ -813,13 +813,41 @@ export const first: Sequence[] = [
             },
             {
                 id: "曲調変わってすぐ「I really had to go」の前、指パッチンの時",
-                position: 60 * 0,
+                position: 60 * 2,
                 extends:[
                     LED_ON_D,
                     LED_ON_O,
                     COLOR_WHITE_D,
-                    COLOR_WHITE_D
+                    COLOR_WHITE_O
                 ]
+            },
+            {
+                id: "曲調変化から一泊「/there are no words 」～「you can find~」",
+                position: 60 * 3,
+                cycle:60/77,
+                extends:[
+                    LED_KOUGO,
+                    COLOR_PINK_D,
+                    COLOR_BLUE_O
+                ]
+            },
+            {
+                id: "yeahで落ちた後「you can find me in the space /between/」",
+                position: 60 * 4
+            },
+            {
+                id: "↓",
+                position: 60 * 4 +1.65,
+                extends:[
+                    LED_ON_D,
+                    LED_ON_O,
+                    COLOR_PINK_D,
+                    COLOR_BLUE_O
+                ]
+            },
+            {
+                id: "曲間MC",
+                position: 60 * 10,
             },
         ],
         
