@@ -2,6 +2,7 @@ import { Preset, renderPresetObject } from '../presets'
 import { DmxFrame } from '@nandenjin/alien-core'
 
 import { first } from './00_first'
+import { second } from './01_second'
 
 /** シーケンスの内包するステップ
  *
@@ -37,6 +38,7 @@ export interface Sequence {
 /** プロジェクトに存在するシーケンスのリスト */
 const sequences: Sequence[] = [
   ...first,
+  ...second
 ]
 
 export default sequences
