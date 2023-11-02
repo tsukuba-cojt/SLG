@@ -21,7 +21,8 @@ LED_50_O = 'led.50',
 LED_30_O = 'led.30',
 LED_20_O = 'led.20',
 LED_KOUGO='led.kougo',
-LED_30_80 = 'led.30.80'
+LED_30_80 = 'led.30.80',
+LED_20_90 = 'led.20.90'
 
 
 
@@ -147,7 +148,15 @@ export const led: Preset[] = [
   {
     id: LED_30_80,
     render(d, t, n = 1) {
-      const nt = (o: number) => (((t * n) / 2 + o) % 2 < 1 ? 180 : 135)
+      const nt = (o: number) => (((t * n) / 2 + o) % 2 < 1 ? 180 : 67.5)
+      d.set(U, addrs.LED_O_DIM, nt(0))
+      d.set(U, addrs.LED_D_DIM, nt(1))
+    },
+  },
+  {
+    id: LED_20_90,
+    render(d, t, n = 1) {
+      const nt = (o: number) => (((t *1/2* n) / 2 + o) % 2 < 1 ? 202.5 : 45)
       d.set(U, addrs.LED_O_DIM, nt(0))
       d.set(U, addrs.LED_D_DIM, nt(1))
     },

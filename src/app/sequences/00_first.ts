@@ -1,5 +1,5 @@
 import { Sequence } from '.'
-import { COLOR_BLUEPURPLE_D, COLOR_BLUEPURPLE_O, COLOR_BLUE_D, COLOR_BLUE_O, COLOR_GREENYELLOW_D, COLOR_GREENYELLOW_O, COLOR_GREEN_D, COLOR_GREEN_O, COLOR_LIGHTBLUE_D, COLOR_LIGHTBLUE_O, COLOR_ORANGE_D, COLOR_ORANGE_O, COLOR_PINK_D, COLOR_PINK_O, COLOR_REDPURPLE_D, COLOR_REDPURPLE_O, COLOR_REDYELLOW_D, COLOR_REDYELLOW_O, COLOR_RED_D, COLOR_RED_O, COLOR_WHITE_D, COLOR_WHITE_O, COLOR_YELLOWGREEN_D, COLOR_YELLOWGREEN_O } from '../presets/colors'
+import { COLOR_BLUEPURPLE_D, COLOR_BLUEPURPLE_O, COLOR_BLUE_D, COLOR_BLUE_O, COLOR_GREENYELLOW_D, COLOR_GREENYELLOW_O, COLOR_GREEN_D, COLOR_GREEN_O, COLOR_LIGHTBLUE_D, COLOR_LIGHTBLUE_O, COLOR_ORANGE_D, COLOR_ORANGE_O, COLOR_PINK_D, COLOR_PINK_O, COLOR_REDPURPLE_D, COLOR_REDPURPLE_O, COLOR_REDYELLOW_D, COLOR_REDYELLOW_O,  COLOR_RED_D, COLOR_RED_O, COLOR_WHITE_D, COLOR_WHITE_O, COLOR_YELLOWGREEN_D, COLOR_YELLOWGREEN_O } from '../presets/colors'
 import { LED_20_D, LED_30_D, LED_30_O, LED_50_D, LED_60_D, LED_60_O, LED_70_D, LED_75_D, LED_75_O, LED_80_D, LED_80_O, LED_90_O, LED_KOUGO, LED_ON_D, LED_ON_O } from '../presets/led'
 
 
@@ -73,7 +73,8 @@ export const first: Sequence[] = [
             },
             {
                 id: '曲間MC',
-                position: 60 * 10
+                position: 60 * 10,
+                fade:3
             },
         ],
         
@@ -111,7 +112,8 @@ export const first: Sequence[] = [
             },
             {
                 id: '曲間MC',
-                position: 60 * 8
+                position: 60 * 8,
+                fade:3
             },
         ],
         
@@ -135,7 +137,7 @@ export const first: Sequence[] = [
                 position: 60 * 0,
                 extends:[
                     LED_ON_D,
-                    LED_ON_D,
+                    LED_ON_O,
                     COLOR_BLUEPURPLE_D,
                     COLOR_REDYELLOW_O
                 ]
@@ -149,6 +151,7 @@ export const first: Sequence[] = [
             {
                 id: 'ニュートラル',
                 position: 60 * 0,
+                fade:3
             },
         ],
         
@@ -186,6 +189,7 @@ export const first: Sequence[] = [
             {
                 id: 'ニュートラル',
                 position: 60 * 0,
+                fade:3
             },
         ],
         
@@ -260,12 +264,7 @@ export const first: Sequence[] = [
             {
                 id: '曲間mc',
                 position: 60 * 10,
-                extends: [
-                    COLOR_ORANGE_D,
-                    COLOR_WHITE_O,
-                    LED_70_D,
-                    LED_80_O
-                ]
+                fade:3
             },
             
         ],
@@ -328,6 +327,7 @@ export const first: Sequence[] = [
             {
                 id: '曲間MC',
                 position: 60 * 10,
+                fade:3
             },
         ],
         
@@ -392,7 +392,8 @@ export const first: Sequence[] = [
             },
             {
                 id: '終演MC',
-                position: 60 * 10
+                position: 60 * 10,
+                fade:3
             },
         ],
         
@@ -458,6 +459,7 @@ export const first: Sequence[] = [
             {
                 id: '曲間MC',
                 position: 60 * 10,
+                fade:3
             },
         ],
         
@@ -721,6 +723,7 @@ export const first: Sequence[] = [
             {
                 id: '終演MC',
                 position: 60 * 10,
+                fade:3
             },
         ],
         
@@ -782,6 +785,7 @@ export const first: Sequence[] = [
             {
                 id: '曲間MC',
                 position: 60 * 10,
+                fade:3
             },
         ],
         
@@ -848,6 +852,7 @@ export const first: Sequence[] = [
             {
                 id: "曲間MC",
                 position: 60 * 10,
+                fade:3
             },
         ], 
     },
@@ -957,7 +962,8 @@ export const first: Sequence[] = [
             },
             {
                 id: '曲間MC,ダンスはやめられない、ワンデイモア',
-                position: 60 * 15
+                position: 60 * 15,
+                fade:3
             },
         ],
         
