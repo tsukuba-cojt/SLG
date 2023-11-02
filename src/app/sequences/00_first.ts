@@ -225,7 +225,7 @@ export const first: Sequence[] = [
                 ]
             },
             {
-                id: '二回目リ//メンバー・ミー',
+                id: '二回目リ//メンバー・ミー遠く聞こえる',
                 position: 60 * 1,
                 fade: 1.35,
                 extends: [
@@ -247,16 +247,16 @@ export const first: Sequence[] = [
                 ]
             },
             {
-                id: '五回目「リメンバー・ミー」三小節と二拍から十泊で',
-                position: 60 * 1 + 50,
-                fade: 1.35,
+                id: '「信じ続けようリメンバー・ミー」三小節と二拍から十泊で',
+                position: 60 * 3 + 50,
+                fade: 7.06,
                 extends: [
                     COLOR_ORANGE_D,
                     COLOR_WHITE_O,
                     LED_70_D,
                     LED_80_O
                 ]
-            },//atode
+            },
             {
                 id: '曲間mc',
                 position: 60 * 10,
@@ -277,16 +277,16 @@ export const first: Sequence[] = [
             {
                 id: '曲In',
                 position: 60 * 0,
-                fade:1,
+                fade:3.5,
                 extends:[
                     COLOR_BLUEPURPLE_D,
                     LED_ON_D
                 ]
             },
             {
-                id: '1サビ「/自由さ/」',
-                position: 60 * 1,
-                fade:1,
+                id: '1サビ「自由さ//」',
+                position: 60 * 1+30,//15
+                fade:1.5,
                 extends:[
                     COLOR_BLUEPURPLE_D,
                     LED_ON_D,
@@ -296,8 +296,8 @@ export const first: Sequence[] = [
             },
             {
                 id: '１サビおわりジャスミン「今あなた/と二人ね/」',
-                position: 60 * 2,
-                fade:1,
+                position: 60 * 1 +47 + 30,//30
+                fade:1.7,
                 extends:[
                     COLOR_BLUEPURPLE_D,
                     LED_ON_D
@@ -305,8 +305,8 @@ export const first: Sequence[] = [
             },
             {
                 id: '2サビ「/自由よ/」',
-                position: 60 * 3,
-                fade:1,
+                position: 60 * 2+45,//45
+                fade:1.5,
                 extends:[
                     COLOR_BLUEPURPLE_D,
                     LED_ON_D,
@@ -316,8 +316,8 @@ export const first: Sequence[] = [
             },
             {
                 id: '２サビおわり「いつまで/も二人で/」',
-                position: 60 * 4,
-                fade:1,
+                position: 60 * 2+38+60,//60
+                fade:1.7,
                 extends:[
                     COLOR_BLUEPURPLE_D,
                     LED_ON_D,
@@ -327,7 +327,7 @@ export const first: Sequence[] = [
             },
             {
                 id: '曲間MC',
-                position: 60 * 5,
+                position: 60 * 10,
             },
         ],
         
@@ -338,7 +338,7 @@ export const first: Sequence[] = [
             {
                 id: '曲in',
                 position: 60 * 0,
-                fade:1,
+                fade:6.36,
                 extends:[
                     COLOR_BLUE_D,
                     COLOR_LIGHTBLUE_O,
@@ -347,9 +347,9 @@ export const first: Sequence[] = [
                 ]
             },
             {
-                id: '1サビ「迷え/る人たちにの」',
+                id: '1サビ「/迷える人たちにの」',
                 position: 60 * 1,
-                fade:1,
+                fade:2.9,
                 extends:[
                     COLOR_LIGHTBLUE_D,
                     COLOR_WHITE_O,
@@ -360,7 +360,7 @@ export const first: Sequence[] = [
             {
                 id: '１サビ直後「/お代払わ/ず踏み倒す」',
                 position: 60 * 2,
-                fade:1,
+                fade:1.7,
                 extends:[
                     COLOR_GREEN_D,
                     COLOR_WHITE_O,
@@ -371,7 +371,7 @@ export const first: Sequence[] = [
             {
                 id: '「気の毒な子には//」後の8拍',
                 position: 60 * 3,
-                fade:1,
+                fade:3,
                 extends:[
                     COLOR_BLUE_D,
                     COLOR_LIGHTBLUE_O,
@@ -382,7 +382,7 @@ export const first: Sequence[] = [
             {
                 id: '２サビ「/迷える/小魚」',
                 position: 60 * 4,
-                fade:1,
+                fade:2.73,
                 extends:[
                     COLOR_BLUE_D,
                     COLOR_WHITE_O,
@@ -403,7 +403,7 @@ export const first: Sequence[] = [
             {
                 id: '曲In',
                 position: 60 * 0,
-                fade:1,
+                fade:3.4,
                 extends:[
                     COLOR_ORANGE_D,
                     COLOR_ORANGE_O,
@@ -414,7 +414,7 @@ export const first: Sequence[] = [
             {
                 id: '「胸張って/うの/」',
                 position: 60 * 1,
-                fade:1,
+                fade:2.7,
                 extends:[
                     COLOR_GREENYELLOW_D,
                     COLOR_GREENYELLOW_O,
@@ -425,7 +425,7 @@ export const first: Sequence[] = [
             {
                 id: '「明日は幸せ四泊」',
                 position: 60 * 2,
-                fade:1,
+                fade:2.1,
                 extends:[
                     COLOR_WHITE_D,
                     COLOR_WHITE_O,
@@ -446,8 +446,8 @@ export const first: Sequence[] = [
             },
             {
                 id: '「ラスさび明日は幸//せ',
-                position: 60 * 3,
-                fade:1,
+                position: 60 * 4 ,
+                fade:2.53,
                 extends:[
                     COLOR_REDYELLOW_O,
                     COLOR_REDYELLOW_D,
@@ -457,7 +457,7 @@ export const first: Sequence[] = [
             },
             {
                 id: '曲間MC',
-                position: 60 * 3,
+                position: 60 * 10,
             },
         ],
         
@@ -478,7 +478,7 @@ export const first: Sequence[] = [
             {
                 id: '曲In',
                 position: 60 * 0,
-                fade:1,
+                fade:3,
                 extends:[
                     COLOR_REDPURPLE_O,
                     COLOR_REDPURPLE_D,
@@ -488,7 +488,7 @@ export const first: Sequence[] = [
             },
             {
                 id: '「殺しの現場に/マキャヴィティノットゼア」',
-                position: 60 * 0,
+                position: 60 * 1,
                 extends:[
                     COLOR_REDPURPLE_D,
                     COLOR_RED_O,
@@ -498,7 +498,7 @@ export const first: Sequence[] = [
             },
             {
                 id: '「↓」',
-                position: 60 * 0,
+                position: 60 * 1 + 2.2,
                 extends:[
                     COLOR_REDPURPLE_O,
                     COLOR_REDPURPLE_D,
@@ -508,7 +508,7 @@ export const first: Sequence[] = [
             },
             {
                 id: '「犯罪の現場に/マキャヴィティノットゼア」',
-                position: 60 * 0,
+                position: 60 * 2,
                 extends:[
                     COLOR_REDPURPLE_D,
                     COLOR_RED_O,
@@ -518,7 +518,7 @@ export const first: Sequence[] = [
             },
             {
                 id: '「↓」',
-                position: 60 * 0,
+                position: 60 * 2 + 2.2,
                 extends:[
                     COLOR_REDPURPLE_O,
                     COLOR_REDPURPLE_D,
@@ -528,7 +528,7 @@ export const first: Sequence[] = [
             },
             {
                 id: '「だが殺されたとき/マキャヴィティノットゼア」',
-                position: 60 * 0,
+                position: 60 * 4,
                 extends:[
                     COLOR_REDPURPLE_D,
                     COLOR_RED_O,
@@ -538,7 +538,7 @@ export const first: Sequence[] = [
             },
             {
                 id: '「↓」',
-                position: 60 * 0,
+                position: 60 * 4+2.2,
                 extends:[
                     COLOR_REDPURPLE_O,
                     COLOR_REDPURPLE_D,
@@ -548,7 +548,7 @@ export const first: Sequence[] = [
             },
             {
                 id: '「次は倉庫だ/」',
-                position: 60 * 0,
+                position: 60 * 5,
                 extends:[
                     COLOR_REDPURPLE_D,
                     COLOR_WHITE_O,
@@ -558,7 +558,7 @@ export const first: Sequence[] = [
             },
             {
                 id: '「↓」',
-                position: 60 * 0,
+                position: 60 * 5+2.2,
                 extends:[
                     COLOR_REDPURPLE_O,
                     COLOR_REDPURPLE_D,
@@ -568,7 +568,7 @@ export const first: Sequence[] = [
             },
             {
                 id: '「犬が一匹/」',
-                position: 60 * 0,
+                position: 60 * 6,
                 extends:[
                     COLOR_RED_D,
                     COLOR_RED_O,
@@ -578,7 +578,8 @@ export const first: Sequence[] = [
             },
             {
                 id: '「↓」',
-                position: 60 * 0,
+                position: 60 * 6 +2.65,
+                fade:1.58,
                 extends:[
                     COLOR_REDPURPLE_O,
                     COLOR_REDPURPLE_D,
@@ -588,7 +589,7 @@ export const first: Sequence[] = [
             },
             {
                 id: '「駆けつけてみると/マキャヴィティノットゼア」',
-                position: 60 * 0,
+                position: 60 * 7,
                 extends:[
                     COLOR_REDPURPLE_D,
                     COLOR_RED_O,
@@ -598,7 +599,7 @@ export const first: Sequence[] = [
             },
             {
                 id: '「↓」',
-                position: 60 * 0,
+                position: 60 * 7 + 2.9,
                 extends:[
                     COLOR_REDPURPLE_O,
                     COLOR_REDPURPLE_D,
@@ -608,7 +609,7 @@ export const first: Sequence[] = [
             },
             {
                 id: '「事件の現場には/マキャヴィティノットゼア」',
-                position: 60 * 0,
+                position: 60 * 8,
                 extends:[
                     COLOR_REDPURPLE_D,
                     COLOR_RED_O,
@@ -618,7 +619,7 @@ export const first: Sequence[] = [
             },
             {
                 id: '「↓」',
-                position: 60 * 0,
+                position: 60 *  8 + 2.2,
                 extends:[
                     COLOR_REDPURPLE_O,
                     COLOR_REDPURPLE_D,
@@ -628,7 +629,7 @@ export const first: Sequence[] = [
             },
             {
                 id: '「ナポレオン of プライム/」',
-                position: 60 * 0,
+                position: 60 * 9,
                 extends:[
                     COLOR_REDPURPLE_O,
                     LED_30_O
@@ -636,8 +637,8 @@ export const first: Sequence[] = [
             },
             {
                 id: '2人「ナポレオン of プライム/」後の間奏最後のッタタタタタッタタタタタ ジャン 2人 「マ/キャヴィティ」',
-                position: 60 * 0,
-                fade:1,
+                position: 60 * 9+0.1,
+                fade:5.9,
                 extends:[
                     COLOR_REDPURPLE_O,
                     COLOR_RED_D,
@@ -647,7 +648,7 @@ export const first: Sequence[] = [
             },
             {
                 id: '2人「殺しの現場にマキャヴィティ ノット ゼア/」',
-                position: 60 * 0,
+                position: 60 * 10,
             },
         ],
         
@@ -657,7 +658,7 @@ export const first: Sequence[] = [
         steps: [
             {
                 id: '曲In前',
-                fade:1,
+                fade:3.4,
                 position: 60 * 0,
                 extends:[
                     COLOR_BLUEPURPLE_D,
@@ -669,7 +670,7 @@ export const first: Sequence[] = [
             {
                 id: '「口に出さない心を/抱えた/ままで」',
                 fade:1,
-                position: 60 * 0,
+                position: 60 * 1,
                 extends:[
                     COLOR_WHITE_D,
                     COLOR_WHITE_O,
@@ -678,9 +679,9 @@ export const first: Sequence[] = [
                 ]
             },
             {
-                id: '「私のつまらない人生」の後の4×1',
-                fade:1,
-                position: 60 * 0,
+                id: '「私のつまらない人生」の後の4小節',
+                fade:2.8,
+                position: 60 * 2,
                 extends:[
                     COLOR_WHITE_O,
                     LED_90_O
@@ -688,8 +689,8 @@ export const first: Sequence[] = [
             },
             {
                 id: '「空っぽな人生/でも/あなたが気づかせてくれた」',
-                fade:1,
-                position: 60 * 0,
+                fade:1.8,
+                position: 60 * 3,
                 extends:[
                     COLOR_WHITE_O,
                     COLOR_WHITE_D,
@@ -698,9 +699,9 @@ export const first: Sequence[] = [
                 ]
             },
             {
-                id: '「「しらないふりはもうできない助けて」の後の4×１で',
-                fade:1,
-                position: 60 * 0,
+                id: '「しらないふりはもうできない助けて」の後の4小節で',
+                fade:2.8,
+                position: 60 * 4,
                 extends:[
                     COLOR_WHITE_O,
                     LED_75_O
@@ -708,8 +709,8 @@ export const first: Sequence[] = [
             },
             {
                 id: '「例え傷ついても/扉は目の前で/私を待ってる」',
-                fade:1,
-                position: 60 * 0,
+                fade:3.5,
+                position: 60 * 5,
                 extends:[
                     COLOR_WHITE_O,
                     COLOR_REDYELLOW_D,
@@ -719,7 +720,7 @@ export const first: Sequence[] = [
             },
             {
                 id: '終演MC',
-                position: 60 * 0,
+                position: 60 * 10,
             },
         ],
         
