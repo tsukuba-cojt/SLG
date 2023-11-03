@@ -967,9 +967,9 @@ export const first: Sequence[] = [
                 ]
             },
             {
-                id: '/どらむろーる「When  the sharpest words wanna cut…」の前のドラムロール中',
+                id: 'for your grourious /次の小説頭',
                 position: 60 * 3,
-                fade:2.78,
+                fade:2.61,
                 extends:[
                     LED_60_D,
                     LED_60_O,
