@@ -174,7 +174,7 @@ export const colors: Preset[] = [
   {
     id: COLOR_BLUEPURPLE_D,
     render(d) {
-      d.set(U, addrs.LED_D_R, 89.25)
+      d.set(U, addrs.LED_D_R, 105)
       d.set(U, addrs.LED_D_G, 0)
       d.set(U, addrs.LED_D_B, 255)
     },

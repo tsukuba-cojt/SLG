@@ -1,6 +1,6 @@
 import { Sequence } from '.'
 import { COLOR_BLUEPURPLE_D, COLOR_BLUEPURPLE_O, COLOR_BLUE_D, COLOR_BLUE_O, COLOR_GREENYELLOW_D, COLOR_GREENYELLOW_O, COLOR_GREEN_D, COLOR_GREEN_O, COLOR_LIGHTBLUE_D, COLOR_LIGHTBLUE_O, COLOR_ORANGE_D, COLOR_ORANGE_O, COLOR_PINK_D, COLOR_PINK_O, COLOR_REDPURPLE_D, COLOR_REDPURPLE_O, COLOR_REDYELLOW_D, COLOR_REDYELLOW_O,  COLOR_RED_D, COLOR_RED_O, COLOR_WHITE_D, COLOR_WHITE_O, COLOR_YELLOWGREEN_D, COLOR_YELLOWGREEN_O } from '../presets/colors'
-import { LED_20_D, LED_30_D, LED_30_O, LED_50_D, LED_60_D, LED_60_O, LED_70_D, LED_70_O, LED_75_D, LED_75_O, LED_80_D, LED_80_O, LED_90_O, LED_KOUGO, LED_ON_D, LED_ON_O } from '../presets/led'
+import { LED_20_D, LED_30_D, LED_30_O, LED_50_D, LED_60_D, LED_60_O, LED_70_D, LED_70_O, LED_75_D, LED_75_O, LED_80_D, LED_80_O, LED_90_O, LED_ON_D, LED_ON_O } from '../presets/led'
 
 
 export const first: Sequence[] = [
@@ -23,7 +23,7 @@ export const first: Sequence[] = [
                 fade: 3.5,
                 extends:[
                     LED_ON_D,
-                    LED_ON_D,
+                    LED_ON_O,
                     COLOR_WHITE_D,
                     COLOR_WHITE_O
                 ]
@@ -34,7 +34,7 @@ export const first: Sequence[] = [
                 fade: 3.41,
                 extends:[
                     LED_ON_D,
-                    LED_ON_D,
+                    LED_ON_O,
                     COLOR_GREEN_O,
                     COLOR_GREEN_D
                 ]
@@ -45,7 +45,7 @@ export const first: Sequence[] = [
                 fade: 4.5,
                 extends:[
                     LED_ON_D,
-                    LED_ON_D,
+                    LED_ON_O,
                     COLOR_GREENYELLOW_D,
                     COLOR_WHITE_O
                 ]
@@ -56,7 +56,7 @@ export const first: Sequence[] = [
                 fade: 4.0,
                 extends:[
                     LED_ON_D,
-                    LED_ON_D,
+                    LED_ON_O,
                     COLOR_BLUE_D,
                     COLOR_LIGHTBLUE_O
                 ]
@@ -66,7 +66,7 @@ export const first: Sequence[] = [
                 position: 60 * 7,
                 extends:[
                     LED_ON_D,
-                    LED_ON_D,
+                    LED_ON_O,
                     COLOR_GREEN_D,
                     COLOR_WHITE_O
                 ]
@@ -93,7 +93,7 @@ export const first: Sequence[] = [
                     COLOR_GREEN_O,
                     COLOR_GREEN_D,
                     LED_ON_D,
-                    LED_ON_D,
+                    LED_ON_O,
                 ]
             },
             {
@@ -107,7 +107,7 @@ export const first: Sequence[] = [
                     COLOR_GREEN_O,
                     COLOR_GREEN_D,
                     LED_ON_D,
-                    LED_ON_D,
+                    LED_ON_O,
                 ]
             },
             {
@@ -170,12 +170,12 @@ export const first: Sequence[] = [
         note: 'あなたを失いたくない',
         steps: [
             {
-                id: '曲in',
+                id: '蛍光灯OUT',
                 fade:2.3,
                 position: 60 * 0,
                 extends:[
                     LED_ON_D,
-                    LED_ON_D,
+                    LED_ON_O,
                     COLOR_BLUEPURPLE_D,
                     COLOR_BLUEPURPLE_O
                 ]
@@ -241,7 +241,7 @@ export const first: Sequence[] = [
             },
             {
                 id: '三回目「/リメ/ンバー・ミー 忘れはしない」',
-                position: 60 * 1 + 50,
+                position: 60 * 3,
                 fade: 1.35,
                 extends: [
                     COLOR_GREENYELLOW_D,
@@ -252,7 +252,7 @@ export const first: Sequence[] = [
             },
             {
                 id: '「信じ続けようリメンバー・ミー」三小節と二拍から十泊で',
-                position: 60 * 3 + 50,
+                position: 60 * 7,
                 fade: 7.06,
                 extends: [
                     COLOR_ORANGE_D,
@@ -289,7 +289,7 @@ export const first: Sequence[] = [
                 position: 60 * 1,
                 fade:2.65,
                 extends:[
-                    COLOR_WHITE_D,
+                    COLOR_REDYELLOW_D,
                     LED_50_D,
                     COLOR_REDYELLOW_O,
                     LED_80_O
@@ -312,9 +312,9 @@ export const first: Sequence[] = [
                 fade:3.0,
                 extends:[
                     COLOR_REDPURPLE_D,
-                    LED_ON_D,
+                    LED_70_D,
                     COLOR_BLUEPURPLE_O,
-                    LED_70_O
+                    LED_ON_O
                 ]
             },
             {
@@ -324,7 +324,7 @@ export const first: Sequence[] = [
                 extends:[
                     COLOR_WHITE_D,
                     LED_ON_D,
-                    COLOR_REDYELLOW_D,
+                    COLOR_REDYELLOW_O,
                     LED_80_O
                 ]
             },
@@ -355,9 +355,9 @@ export const first: Sequence[] = [
                 position: 60 * 7,
                 fade:3.0,
                 extends:[
-                    COLOR_WHITE_D,
-                    LED_ON_D,
-                    COLOR_REDPURPLE_O,
+                    COLOR_BLUEPURPLE_D,
+                    LED_70_D,
+                    COLOR_BLUEPURPLE_O,
                     LED_ON_O
                 ]
             },
@@ -375,7 +375,7 @@ export const first: Sequence[] = [
             {
                 id: '曲in',
                 position: 60 * 0,
-                fade:6.36,
+                fade:3,
                 extends:[
                     COLOR_BLUE_D,
                     COLOR_LIGHTBLUE_O,
@@ -483,7 +483,7 @@ export const first: Sequence[] = [
                 ]
             },
             {
-                id: '「ラスさび明日は幸//せ',
+                id: '「ラスさび明日は幸//せ後奏in',
                 position: 60 * 4 ,
                 fade:2.53,
                 extends:[
@@ -616,7 +616,7 @@ export const first: Sequence[] = [
                 ]
             },
             {
-                id: '「↓」',
+                id: '「↓おさな！！！」',
                 position: 60 * 6 +2.65,
                 fade:1.58,
                 extends:[
@@ -773,48 +773,85 @@ export const first: Sequence[] = [
                 position: 60 * 0,
                 fade:3.5,
                 extends:[
-                    COLOR_BLUEPURPLE_D,
-                    LED_ON_D
+                    COLOR_REDYELLOW_D,
+                    COLOR_BLUEPURPLE_O,
+                    LED_60_O,
+                    LED_50_D
                 ]
             },
             {
-                id: '1サビ「自由さ//」',
-                position: 60 * 1+30,//15
-                fade:1.5,
+                id: 'アラジン「/見せてあげる/」',
+                position: 60 * 1,
+                fade:2.65,
+                extends:[
+                    COLOR_REDYELLOW_D,
+                    LED_50_D,
+                    COLOR_REDYELLOW_O,
+                    LED_80_O
+                ]
+            },
+            {
+                id: 'アラジン「/自由さ/」',
+                position: 60 * 2,
+                fade:3.0,
                 extends:[
                     COLOR_BLUEPURPLE_D,
                     LED_ON_D,
                     COLOR_REDPURPLE_O,
+                    LED_70_O
+                ]
+            },
+            {
+                id: 'ジャスミン「/自由よ/」',
+                position: 60 * 3,
+                fade:3.0,
+                extends:[
+                    COLOR_REDPURPLE_D,
+                    LED_70_D,
+                    COLOR_BLUEPURPLE_O,
                     LED_ON_O
                 ]
             },
             {
-                id: '１サビおわりジャスミン「今あなた/と二人ね/」',
-                position: 60 * 1 +47 + 30,//30
-                fade:1.7,
+                id: 'アラジン「/今君と二人で/」',
+                position: 60 * 4,
+                fade:3.85,
                 extends:[
-                    COLOR_BLUEPURPLE_D,
-                    LED_ON_D
-                ]
-            },
-            {
-                id: '2サビ「/自由よ/」',
-                position: 60 * 2+45,//45
-                fade:1.5,
-                extends:[
-                    COLOR_BLUEPURPLE_D,
+                    COLOR_WHITE_D,
                     LED_ON_D,
                     COLOR_REDYELLOW_O,
-                    LED_ON_O
+                    LED_80_O
                 ]
             },
             {
-                id: '２サビおわり「いつまで/も二人で/」',
-                position: 60 * 2+38+60,//60
-                fade:1.7,
+                id: 'アラジン(ジャスミン)「/自由さ/(何を見ても)」',
+                position: 60 * 5,
+                fade:3.0,
+                extends:[
+                    COLOR_REDYELLOW_D,
+                    LED_80_D,
+                    COLOR_BLUEPURPLE_O,
+                    LED_70_O
+                ]
+            },
+            {
+                id: '二人「夢のようなこの時いつまでも二人で」 後8×2で',
+                position: 60 * 6,
+                fade:7.61,
                 extends:[
                     COLOR_BLUEPURPLE_D,
-                    LED_ON_D,
+                    LED_70_D,
+                    COLOR_BLUEPURPLE_O,
+                    LED_70_O
+                ]
+            },
+            {
+                id: '間奏後ジャスミン(アラジン)「/自由よ/（目を開いて）」',
+                position: 60 * 7,
+                fade:3.0,
+                extends:[
+                    COLOR_BLUEPURPLE_D,
+                    LED_70_D,
                     COLOR_BLUEPURPLE_O,
                     LED_ON_O
                 ]
@@ -831,8 +868,18 @@ export const first: Sequence[] = [
         note: 'Space Between',
         steps: [
             {
-                id: "謳いだし「/I/ didn't know what you」",
+                id: '前の曲',
                 position: 60 * 0,
+                extends:[
+                    COLOR_BLUEPURPLE_D,
+                    LED_ON_D,
+                    COLOR_BLUEPURPLE_O,
+                    LED_ON_O
+                ]
+            },
+            {
+                id: "謳いだし「/I/ didn't know what you」",
+                position: 60 * 1,
                 fade:1.8,
                 extends:[
                     LED_ON_D,
@@ -843,7 +890,7 @@ export const first: Sequence[] = [
             },
             {
                 id: "二人目「/I/ didn't wanna let you down」",
-                position: 60 * 1,
+                position: 60 * 2,
                 fade:1.8,
                 extends:[
                     LED_ON_D,
@@ -854,7 +901,7 @@ export const first: Sequence[] = [
             },
             {
                 id: "曲調変わってすぐ「I really had to go」の前、指パッチンの時",
-                position: 60 * 2,
+                position: 60 * 3,
                 extends:[
                     LED_ON_D,
                     LED_ON_O,
@@ -864,21 +911,22 @@ export const first: Sequence[] = [
             },
             {
                 id: "曲調変化から一泊「/there are no words 」～「you can find~」",
-                position: 60 * 3,
+                position: 60 * 4,
                 cycle:60/77,
                 extends:[
-                    LED_KOUGO,
                     COLOR_PINK_D,
-                    COLOR_BLUE_O
+                    COLOR_BLUE_O,
+                    LED_ON_D,
+                    LED_ON_O
                 ]
             },
             {
-                id: "yeahで落ちた後「you can find me in the space /between/」",
-                position: 60 * 4
+                id: "yeahで落ちた後「/you can find me in the space between」",
+                position: 60 * 5
             },
             {
                 id: "↓",
-                position: 60 * 4 +1.65,
+                position: 60 * 5 +1.65,
                 extends:[
                     LED_ON_D,
                     LED_ON_O,
@@ -953,7 +1001,7 @@ export const first: Sequence[] = [
                 extends:[
                     LED_60_D,
                     LED_60_O,
-                    COLOR_GREEN_D,
+                    COLOR_WHITE_D,
                     COLOR_GREEN_O
                 ]
             },
@@ -980,12 +1028,6 @@ export const first: Sequence[] = [
             {
                 id: 'this is me の後の靴の音',
                 position: 60 * 9,
-                extends:[
-                    LED_60_D,
-                    LED_60_O,
-                    COLOR_LIGHTBLUE_D,
-                    COLOR_LIGHTBLUE_O
-                ]
             },
             {
                 id: '↓',

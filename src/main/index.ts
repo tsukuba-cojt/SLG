@@ -13,7 +13,7 @@ import store from '../store'
 import { MutationPayload } from 'vuex'
 
 // WebUIを配信するポート番号
-const PORT = 8083
+const PORT = 8085
 
 /** expressのHTTP router */
 const app = express()

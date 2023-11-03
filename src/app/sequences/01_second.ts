@@ -75,7 +75,7 @@ export const second: Sequence[] = [
             },
             {
                 id: '「↓」',
-                position: 60 * 4 + (0.5*5),
+                position: 60 * 4 + (0.25*5),
                 extends:
                 [
                     COLOR_YELLOWGREEN_D,
@@ -86,7 +86,7 @@ export const second: Sequence[] = [
             },
             {
                 id: '「↓」',
-                position: 60 * 4 + (0.5*9),
+                position: 60 * 4 + (0.25*9),
                 extends:
                 [
                     COLOR_REDYELLOW_D,
@@ -97,7 +97,7 @@ export const second: Sequence[] = [
             },
             {
                 id: '「↓」',
-                position: 60 * 4 + (0.5*11),
+                position: 60 * 4 + (0.25*11),
                 extends:
                 [
                     COLOR_ORANGE_D,
@@ -108,7 +108,7 @@ export const second: Sequence[] = [
             },
             {
                 id: '「↓」',
-                position: 60 * 4 + (0.5*15),
+                position: 60 * 4 + (0.25*15),
                 extends:
                 [
                     COLOR_WHITE_D,
@@ -119,7 +119,7 @@ export const second: Sequence[] = [
             },
             {
                 id: '「↓」',
-                position: 60 * 4 + (0.5*16),
+                position: 60 * 4 + (0.25*16),
                 extends:
                 [
                     COLOR_RED_D,
@@ -130,7 +130,7 @@ export const second: Sequence[] = [
             },
             {
                 id: '「↓」',
-                position: 60 * 4 + (0.5*22),
+                position: 60 * 4 + (0.25*22),
                 extends:
                 [
                     COLOR_RED_D,
@@ -168,7 +168,7 @@ export const second: Sequence[] = [
                     COLOR_RED_D,
                     COLOR_BLUE_O,
                     LED_60_D,
-                    LED_60_O
+                    LED_ON_O
                 ]
             },
             {
@@ -201,7 +201,7 @@ export const second: Sequence[] = [
                     COLOR_RED_D,
                     COLOR_BLUE_O,
                     LED_80_D,
-                    LED_60_O
+                    LED_ON_O
                 ]
             },
             {
@@ -302,7 +302,7 @@ export const second: Sequence[] = [
                 ]
             },
             {
-                id: '/透/き通ったような一泊前',
+                id: '歌いだし/透/き通ったような一泊前',
                 position: 60 * 1,
                 fade:3,
                 extends:[
@@ -329,14 +329,14 @@ export const second: Sequence[] = [
                 fade:1.5,
                 extends:[
                     COLOR_WHITE_D,
-                    COLOR_WHITE_D,
+                    COLOR_WHITE_O,
                     LED_60_D,
                     LED_60_O
                 ]
             },
             {
                 id: '蛍光灯着いたら,曲間MC、Free Free、生まれてはじめて',
-                position: 60 * 4,
+                position: 60 * 10,
             },
         ],
         
@@ -420,7 +420,7 @@ export const second: Sequence[] = [
             {
                 id: '曲in',
                 position: 60 * 0,
-                fade:6.36,
+                fade:3,
                 extends:[
                     COLOR_BLUE_D,
                     COLOR_LIGHTBLUE_O,
@@ -550,7 +550,7 @@ export const second: Sequence[] = [
             },
             {
                 id: '「↓」',
-                position: 60 * 4 + (0.5*5),
+                position: 60 * 4 + (0.25*5),
                 extends:
                 [
                     COLOR_YELLOWGREEN_D,
@@ -561,7 +561,7 @@ export const second: Sequence[] = [
             },
             {
                 id: '「↓」',
-                position: 60 * 4 + (0.5*9),
+                position: 60 * 4 + (0.25*9),
                 extends:
                 [
                     COLOR_REDYELLOW_D,
@@ -572,7 +572,7 @@ export const second: Sequence[] = [
             },
             {
                 id: '「↓」',
-                position: 60 * 4 + (0.5*11),
+                position: 60 * 4 + (0.25*11),
                 extends:
                 [
                     COLOR_ORANGE_D,
@@ -583,7 +583,7 @@ export const second: Sequence[] = [
             },
             {
                 id: '「↓」',
-                position: 60 * 4 + (0.5*15),
+                position: 60 * 4 + (0.25*15),
                 extends:
                 [
                     COLOR_WHITE_D,
@@ -594,7 +594,7 @@ export const second: Sequence[] = [
             },
             {
                 id: '「↓」',
-                position: 60 * 4 + (0.5*16),
+                position: 60 * 4 + (0.25*16),
                 extends:
                 [
                     COLOR_RED_D,
@@ -605,7 +605,7 @@ export const second: Sequence[] = [
             },
             {
                 id: '「↓」',
-                position: 60 * 4 + (0.5*22),
+                position: 60 * 4 + (0.25*22),
                 extends:
                 [
                     COLOR_RED_D,
@@ -692,7 +692,7 @@ export const second: Sequence[] = [
             },
             {
                 id: '↓',
-                position: 60 * 11 + 0.5 * 2,
+                position: 60 * 11 + 0.25 * 2,
                 extends:
                 [
                     COLOR_BLUE_D,

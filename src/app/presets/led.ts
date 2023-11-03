@@ -104,7 +104,7 @@ export const led: Preset[] = [
   {
     id: LED_50_D,
     render(d, _, s = 127.5) {
-      d.set(U, addrs.LED_O_DIM, s)
+      d.set(U, addrs.LED_D_DIM, s)
     },
   },
   {
