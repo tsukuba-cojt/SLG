@@ -140,6 +140,5 @@ export const second: Sequence[] = [
                 ]
             },
         ],
-        
     }
 ]
