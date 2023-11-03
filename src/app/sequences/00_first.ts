@@ -958,7 +958,7 @@ export const first: Sequence[] = [
             {
                 id: '/But/ I won`t let them break me down ',
                 position: 60 * 2,
-                fade: 1,
+                fade: 4.5,
                 extends:[
                     LED_ON_D,
                     LED_ON_O,
@@ -967,9 +967,9 @@ export const first: Sequence[] = [
                 ]
             },
             {
-                id: 'サビの「When  the sharpest words wanna cut…」の前のドラムロール中',
+                id: '/どらむろーる「When  the sharpest words wanna cut…」の前のドラムロール中',
                 position: 60 * 3,
-                fade:1,
+                fade:2.78,
                 extends:[
                     LED_60_D,
                     LED_60_O,
@@ -990,7 +990,7 @@ export const first: Sequence[] = [
             {
                 id: '/Oh-oh-oh-oh Oh-oh/-oh-oh （最初の）',
                 position: 60 * 5,
-                fade:1,
+                fade:3.2,
                 extends:[
                     LED_80_D,
                     LED_80_O,
