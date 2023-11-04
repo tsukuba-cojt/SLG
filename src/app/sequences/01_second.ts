@@ -858,4 +858,243 @@ export const second: Sequence[] = [
         ],
         
     },
+    {
+        note: 'ダミー',
+        steps: [
+            {
+                id: '曲In',
+                fade:3,
+                position: 60 * 0,
+                extends:
+                [
+                    LED_60_D,
+                    LED_80_O,
+                    COLOR_RED_D,
+                    COLOR_WHITE_O
+                ]
+            },
+            {
+                id: 'ここにいる俺たちだ//「やつらは気づかない」の一拍前',
+                position: 60 * 1,
+                extends:
+                [
+                    LED_60_D,
+                    COLOR_BLUE_D,
+                    LED_80_O,
+                    COLOR_WHITE_O
+                ]
+            },
+            {
+                id: '「/あ/さから」～「おれたちなんだ」',
+                position: 60 * 2,
+                extends:
+                [
+                    COLOR_BLUE_D,
+                    COLOR_WHITE_O,
+                    LED_30_80
+                ]
+            },
+            {
+                id: '「/世/界のおうさ…」',
+                position: 60 * 3,
+                extends:
+                [
+                    COLOR_RED_D,
+                    COLOR_BLUE_O,
+                    LED_80_O,
+                    LED_80_D
+                ]
+            },
+            {
+                id: '「//朝から夜まで」',
+                position: 60 * 4,
+                extends:
+                [
+                    COLOR_BLUE_D,
+                    COLOR_BLUE_O,
+                    LED_60_D,
+                    LED_60_O
+                ]
+            },
+            {
+                id: '「↓」',
+                position: 60 * 4 + (0.25*5),
+                extends:
+                [
+                    COLOR_YELLOWGREEN_D,
+                    COLOR_WHITE_O,
+                    LED_60_D,
+                    LED_60_O
+                ]
+            },
+            {
+                id: '「↓」',
+                position: 60 * 4 + (0.25*9),
+                extends:
+                [
+                    COLOR_REDYELLOW_D,
+                    COLOR_WHITE_O,
+                    LED_60_D,
+                    LED_60_O
+                ]
+            },
+            {
+                id: '「↓」',
+                position: 60 * 4 + (0.25*11),
+                extends:
+                [
+                    COLOR_ORANGE_D,
+                    COLOR_ORANGE_O,
+                    LED_60_D,
+                    LED_60_O
+                ]
+            },
+            {
+                id: '「↓」',
+                position: 60 * 4 + (0.25*15),
+                extends:
+                [
+                    COLOR_WHITE_D,
+                    COLOR_WHITE_O,
+                    LED_60_D,
+                    LED_60_O
+                ]
+            },
+            {
+                id: '「↓」',
+                position: 60 * 4 + (0.25*16),
+                extends:
+                [
+                    COLOR_RED_D,
+                    COLOR_RED_O,
+                    LED_60_D,
+                    LED_60_O
+                ]
+            },
+            {
+                id: '「↓」',
+                position: 60 * 4 + (0.25*22),
+                extends:
+                [
+                    COLOR_RED_D,
+                    COLOR_WHITE_O,
+                    LED_60_D,
+                    LED_60_O
+                ]
+            },
+            {
+                id: '「/お/となの力に負けたりはしない俺たちの王は俺たちなんだ」',
+                position: 60 * 5,
+                extends:
+                [
+                    COLOR_WHITE_D,
+                    COLOR_WHITE_O,
+                    LED_60_D,
+                    LED_60_O
+                ]
+            },
+            {
+                id: '「おとなの力に負けたりはしない俺たちの王は俺たちなんだ」の後の1拍目から',
+                position: 60 * 6,
+                extends:
+                [
+                    COLOR_WHITE_D,
+                    COLOR_WHITE_O,
+                    LED_20_90
+                ]
+            },
+            {
+                id: '「/あ/さから夜まで全ての時間を生きてる今感じ愛し愛たい」',
+                position: 60 * 7,
+                extends:
+                [
+                    COLOR_RED_D,
+                    COLOR_BLUE_O,
+                    LED_60_D,
+                    LED_ON_O
+                ]
+            },
+            {
+                id: '「「/お/となの力に負けたりはしない俺たちの王は俺たちなんだ」」',
+                position: 60 * 8,
+                extends:
+                [
+                    COLOR_RED_D,
+                    COLOR_WHITE_O,
+                    LED_80_D,
+                    LED_80_O
+                ]
+            },
+            {
+                id: '「おとなの/ち/からに負けたりはしない俺たちの王は俺たちなんだ」',
+                position: 60 * 9,
+                extends:
+                [
+                    COLOR_BLUE_D,
+                    COLOR_WHITE_O,
+                    LED_60_D,
+                    LED_80_O
+                ]
+            },
+            {
+                id: '「おとなのちか/ら/に負けたりはしない俺たちの王は俺たちなんだ」',
+                position: 60 * 10,
+                extends:
+                [
+                    COLOR_RED_D,
+                    COLOR_BLUE_O,
+                    LED_80_D,
+                    LED_ON_O
+                ]
+            },
+            {
+                id: '「/あ/さから」～「おれたちなん」4拍ずつ',
+                position: 60 * 11,
+                extends:
+                [
+                    COLOR_RED_D,
+                    COLOR_WHITE_O,
+                    LED_60_D,
+                    LED_80_O
+                ]
+            },
+            {
+                id: '↓',
+                position: 60 * 11 + 0.5 * 2,
+                extends:
+                [
+                    COLOR_BLUE_D,
+                    COLOR_WHITE_O,
+                    LED_60_D,
+                    LED_80_O
+                ]
+            },
+            {
+                id: '「おれたちなん/だ/」',
+                position: 60 * 12 ,
+                extends:
+                [
+                    COLOR_WHITE_D,
+                    COLOR_WHITE_O,
+                    LED_80_D,
+                    LED_80_O
+                ]
+            },
+            {
+                id: '曲間MC',
+                position: 60 * 15 ,
+                fade:3
+            },
+        ],
+    },
+    {
+        note: 'ずっと変わらないもの',
+        steps: [
+            {
+                id: 'ニュートラル',
+                position: 60 * 0,
+            },
+        ],
+        
+    },
 ]

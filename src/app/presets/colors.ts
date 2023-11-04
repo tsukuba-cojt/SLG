@@ -230,7 +230,7 @@ export const colors: Preset[] = [
     id: COLOR_WHITE_O,
     render(d) {
       d.set(U, addrs.LED_O_R, 255)
-      d.set(U, addrs.LED_O_G, 178.5)
+      d.set(U, addrs.LED_O_G, 255)
       d.set(U, addrs.LED_O_B, 255)
     },
   },

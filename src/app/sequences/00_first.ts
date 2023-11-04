@@ -922,7 +922,13 @@ export const first: Sequence[] = [
             },
             {
                 id: "yeahで落ちた後「/you can find me in the space between」",
-                position: 60 * 5
+                position: 60 * 5,
+                extends: [
+                    LED_ON_D,
+                    LED_ON_O,
+                    COLOR_WHITE_O,
+                    COLOR_WHITE_D
+                ]
             },
             {
                 id: "↓",
