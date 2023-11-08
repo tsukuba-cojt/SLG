@@ -859,7 +859,7 @@ export const second: Sequence[] = [
         
     },
     {
-        note: 'ダミー',
+        note: 'ダミー',     
         steps: [
             {
                 id: '曲In',
