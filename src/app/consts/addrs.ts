@@ -1,5 +1,6 @@
 export enum addrs {
 // souhousai LED
+//henkou
 LED_D_R = 1,
 LED_D_G,
 LED_D_B,
