@@ -12,31 +12,7 @@ div.wrap
           @click="togglePreset(preset.id)"
           :class="{'is-active': overridePresets.includes(preset.id)}"
         ) {{ preset.id }}
-    sequence-row.sequence
-    div.right
-      div.container
-        input(type="text" placeholder="脚本を入力")
-        button 照明プランを生成
-        button 再生成
-        input(type="text" placeholder="選択肢1")
-        input(type="text" placeholder="選択肢2")
-        input(type="text" placeholder="選択肢3")
-        p
-        input(type="text" placeholder="フェード")
-        input(type="text" placeholder="サイクル")
-        button 次のセクションへ
-        button(@click="addressSetUp") アドレス設定
-        button アドレス削除
-        button アドレス一覧
-        div.popup(v-if="isPopupVisible", :style="{ top: popupPosition.y + 'px', left: popupPosition.x + 'px' }", @mousedown="startDrag")
-            div.popup-content
-              h2 アドレス設定
-              input(type="text" placeholder="name")
-              input(type="text" placeholder="Address")
-              input(type="text" placeholder="number")
-              p
-              button 登録
-              button(@click="endSetUp") 終了
+    sequence-row.right
 </template>
   
   <script>
@@ -115,24 +91,10 @@ div.wrap
   </style>
   
   <style lang="sass" scoped>
-  .popup
-    position: fixed
-    background-color: rgba(0, 0, 0, 0.5)
-    display: flex
-    justify-content: center
-    align-items: center
-  
-    .popup-content
-    background-color: white
-    color: black
-    padding: 20px
-    border-radius: 5px
-    text-align: center
-    cursor: move
   
   .wrap
     display: grid
-    grid-template-columns: 1fr 300px 300px
+    grid-template-columns: 1fr 300px
     margin-bottom: 200px
   
   .container
