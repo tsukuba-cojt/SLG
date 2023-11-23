@@ -1,6 +1,6 @@
 import { Preset } from '.'
 import { UNIVERSE as U, addrs } from '../consts'
-// import { sin } from '../lib'
+import { sin } from '../lib'
 export const 
 LED_ON_D = 'led.ond',
 LED_90_D = 'led.90d',

@@ -75,7 +75,7 @@ export const second: Sequence[] = [
             },
             {
                 id: '「↓」',
-                position: 60 * 4 + (0.25*5),
+                position: 60 * 4 + (0.25*6),
                 extends:
                 [
                     COLOR_YELLOWGREEN_D,

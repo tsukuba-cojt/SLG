@@ -9,7 +9,7 @@ LED_D_DIM,
 LED_O_R = 5,
 LED_O_G,
 LED_O_B,
-LED_O_DIM = 10
+LED_O_DIM = 10,
   // BL_1A = 1,
   // BL_1B,
   // BL_1C,
