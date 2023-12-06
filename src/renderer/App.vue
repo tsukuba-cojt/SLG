@@ -15,6 +15,11 @@ div.wrap
     sequence-row.sequence
     div.right
       div.container
+        div
+          input(type="text" v-model="inputText" @keyup.enter="sendMessage")
+          button(@click="sendMessage") 再生成
+        div
+          div(v-for="message in messages" key="message.id") {{ message.text }}
         input(type="text" placeholder="脚本を入力")
         button 照明プランを生成
         button 再生成
@@ -42,6 +47,7 @@ div.wrap
   <script>
   import { CircularInput } from '@nandenjin/alien-ui'
   import SequenceRow from './components/SequenceRow.vue'
+  import axios from 'axios'
   export default {
     name:'TsukuliveLightingCommander',
     components: {
@@ -51,6 +57,8 @@ div.wrap
     data() {
       return {
         isPopupVisible: false,
+        inputText: '',
+        messages: [],
         popupPosition: { x: 0, y: 0 },
         dragData: { x: 0, y: 0 }
       };
@@ -72,6 +80,23 @@ div.wrap
       })
     },
     methods: {
+      async sendMessage() {
+        try {
+    const response = await axios.post('https://api.openai.com/v1/engines/text-davinci-003/completions', {
+      prompt: '[' + this.inputText + ']' + 'この文章に合うような舞台照明の色を理由を含めて記述すると以下のようになります.',
+      max_tokens: 300
+    }, {
+      headers: {
+        'Authorization': 'Bearer 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  ',
+        'Content-Type': 'application/json'
+      }
+    });
+
+    console.log(response.data.choices[0].text);
+  } catch (error) {
+    console.error('APIの呼び出し中にエラーが発生しました:', error);
+  }
+    },
       togglePreset(id) {
         const overrides = this.$store.state.presets.overridePresets
         if (!overrides.includes(id)) {
@@ -115,6 +140,7 @@ div.wrap
   </style>
   
   <style lang="sass" scoped>
+  
   .popup
     position: fixed
     background-color: rgba(0, 0, 0, 0.5)
