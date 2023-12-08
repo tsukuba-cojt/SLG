@@ -16,16 +16,11 @@ div.wrap
     div.right
       div.container
         div
-          input(type="text" v-model="inputText" @keyup.enter="sendMessage")
-          button(@click="sendMessage") 再生成
+          textarea(id="outputTextbox" rows="5" cols="39" placeholder="回答エリア")
         div
-          div(v-for="message in messages" key="message.id") {{ message.text }}
-        input(type="text" placeholder="脚本を入力")
-        button 照明プランを生成
-        button 再生成
-        input(type="text" placeholder="選択肢1")
-        input(type="text" placeholder="選択肢2")
-        input(type="text" placeholder="選択肢3")
+        input(type="text" placeholder="脚本を入力" v-model="inputText")
+        button(@click="sendMessage") 照明プランを生成
+        button(@click="sendMessage") 再生成
         p
         input(type="text" placeholder="フェード")
         input(type="text" placeholder="サイクル")
@@ -87,12 +82,14 @@ div.wrap
       max_tokens: 300
     }, {
       headers: {
-        'Authorization': 'Bearer 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  ',
+        'Authorization': 'Bearer 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',
         'Content-Type': 'application/json'
       }
     });
-
+    const outputText = response.data.choices[0].text;
     console.log(response.data.choices[0].text);
+    document.getElementById('outputTextbox').value = outputText;
+
   } catch (error) {
     console.error('APIの呼び出し中にエラーが発生しました:', error);
   }
@@ -166,7 +163,7 @@ div.wrap
     flex-direction: column
     align-items: left
     justify-content: center
-    height: 45vh
+    height: 60vh
   
   .input[type="text"]
     margin-bottom: 10px
