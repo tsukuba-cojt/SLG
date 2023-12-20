@@ -18,16 +18,17 @@ div.wrap
         div
           textarea(id="outputTextbox" rows="5" cols="39" placeholder="回答エリア")
         div
-        input(type="text" placeholder="脚本を入力" v-model="inputText")
+        input(type="text" placeholder="脚本を入力" v-model="inputText" id="inputtext")
         button(@click="sendMessage") 照明プランを生成
         button(@click="sendMessage") 再生成
-        p
-        input(type="text" placeholder="フェード")
-        input(type="text" placeholder="サイクル")
-        button 次のセクションへ
+        //- p(v-for="(value, key) in addrs") {{ key }}: {{ value }}
+        input(type="text" placeholder="フェード" id="fade")
+        input(type="text" placeholder="サイクル" id="cycle")
+        input(type="time" step="1" id="time" placeholder="時間")
+        button(@click="clearTextbox") 次のセクションへ
         button(@click="addressSetUp") アドレス設定
         button アドレス削除
-        button アドレス一覧
+        button(@click="addressList") アドレス一覧
         div.popup(v-if="isPopupVisible", :style="{ top: popupPosition.y + 'px', left: popupPosition.x + 'px' }", @mousedown="startDrag")
             div.popup-content
               h2 アドレス設定
@@ -37,10 +38,16 @@ div.wrap
               p
               button 登録
               button(@click="endSetUp") 終了
+        div.popup(v-if="isPopupVisibleAddrs", :style="{ top: popupPosition.y + 'px', left: popupPosition.x + 'px' }", @mousedown="startDrag")
+          div.popup-content
+            h2 アドレス一覧
+            p(v-for="(value, key) in addrs" :key="key") {{ key }}: {{ value }}
+            button(@click="endList") 閉じる
 </template>
   
   <script>
   import { CircularInput } from '@nandenjin/alien-ui'
+  import { addrs } from '../app/consts/addrs.ts'
   import SequenceRow from './components/SequenceRow.vue'
   import axios from 'axios'
   export default {
@@ -51,7 +58,10 @@ div.wrap
     },
     data() {
       return {
+        addrs : addrs,
+        // addrs : addrs.filter(key => typeof key === 'number'),
         isPopupVisible: false,
+        isPopupVisibleAddrs : false,
         inputText: '',
         messages: [],
         popupPosition: { x: 0, y: 0 },
@@ -108,8 +118,20 @@ div.wrap
       addressSetUp() {
         this.isPopupVisible = true;
       },
+      addressList() {
+        this.isPopupVisibleAddrs = true;
+      },
       endSetUp() {
         this.isPopupVisible = false;
+      },
+      endList() {
+        this.isPopupVisibleAddrs = false;
+      },
+      clearTextbox(){
+        document.getElementById('fade').value = '';
+        document.getElementById('cycle').value = '';
+        document.getElementById('time').value = '';
+        
       },
       startDrag(event) {
         this.dragData.x = event.clientX - this.popupPosition.x;
