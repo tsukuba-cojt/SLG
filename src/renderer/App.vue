@@ -32,16 +32,16 @@ div.wrap
         div.popup(v-if="isPopupVisible", :style="{ top: popupPosition.y + 'px', left: popupPosition.x + 'px' }", @mousedown="startDrag")
             div.popup-content
               h2 アドレス設定
-              input(type="text" placeholder="name")
-              input(type="text" placeholder="Address")
+              input(type="text" placeholder="name" v-model="addrsName")
               input(type="text" placeholder="number")
               p
-              button 登録
+              button(@click="addrsRegis") 登録
               button(@click="endSetUp") 終了
         div.popup(v-if="isPopupVisibleAddrs", :style="{ top: popupPosition.y + 'px', left: popupPosition.x + 'px' }", @mousedown="startDrag")
           div.popup-content
             h2 アドレス一覧
-            p(v-for="(value, key) in addrs" :key="key") {{ key }}: {{ value }}
+            //- p(v-for="(value, key) in addrs" :key="key") {{ key }}: {{ value }}
+            p(v-for="(value, key) in addrs" :key="key" v-if="!isNaN(key)") {{ key }}: {{ value }}
             button(@click="endList") 閉じる
 </template>
   
@@ -65,7 +65,8 @@ div.wrap
         inputText: '',
         messages: [],
         popupPosition: { x: 0, y: 0 },
-        dragData: { x: 0, y: 0 }
+        dragData: { x: 0, y: 0 },
+        addrsName: ''
       };
     },
     computed: {
@@ -85,6 +86,14 @@ div.wrap
       })
     },
     methods: {
+      async addrsRegis() {
+        try {
+        const response = await axios.post('src/app/consts/addrs.ts/addrs', { addrs: this.inputData });
+        console.log('データが正常に書き込まれました:', response.data);
+        } catch (error) {
+        console.error('データの書き込み中にエラーが発生しました:', error);
+        }
+      },
       async sendMessage() {
         try {
     const response = await axios.post('https://api.openai.com/v1/engines/text-davinci-003/completions', {
