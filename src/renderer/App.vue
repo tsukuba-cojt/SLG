@@ -19,6 +19,7 @@ div.wrap
           textarea(id="outputTextbox" rows="5" cols="39" placeholder="回答エリア")
         div
         input(type="text" placeholder="脚本を入力" v-model="inputText" id="inputtext")
+        button(@click="clearOpenai") API初期化
         button(@click="sendMessage") 照明プランを生成
         button(@click="sendMessage") 再生成
         //- p(v-for="(value, key) in addrs") {{ key }}: {{ value }}
@@ -50,6 +51,7 @@ div.wrap
   import { addrs } from '../app/consts/addrs.ts'
   import SequenceRow from './components/SequenceRow.vue'
   import axios from 'axios'
+import OpenAI from 'openai'
   export default {
     name:'TsukuliveLightingCommander',
     components: {
@@ -86,6 +88,11 @@ div.wrap
       })
     },
     methods: {
+      async clearOpenai(){
+        const openAi = new OpenAI({
+          apiKey: "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",
+          });
+      },
       async addrsRegis() {
         try {
         const response = await axios.post('src/app/consts/addrs.ts/addrs', { addrs: this.inputData });
@@ -96,18 +103,33 @@ div.wrap
       },
       async sendMessage() {
         try {
-    const response = await axios.post('https://api.openai.com/v1/engines/text-davinci-003/completions', {
-      prompt: '[' + this.inputText + ']' + 'この文章に合うような舞台照明の色を理由を含めて記述すると以下のようになります.',
-      max_tokens: 300
-    }, {
-      headers: {
-        'Authorization': 'Bearer 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',
-        'Content-Type': 'application/json'
-      }
-    });
-    const outputText = response.data.choices[0].text;
-    console.log(response.data.choices[0].text);
-    document.getElementById('outputTextbox').value = outputText;
+    // const response = await axios.options('https://api.openai.com/v1/engines/text-davinci-003/completions', {
+    //   // prompt: '[' + this.inputText + ']' + 'この文章に合うような舞台照明の色を理由を含めて記述すると以下のようになります.',
+    //   prompt: 'おはようございます',
+    //   max_tokens: 300
+    // }, {
+    //   headers: {
+    //     'Authorization': 'Bearer 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',
+    //     'Content-Type': 'application/json'
+    //   }
+    // });
+    // const outputText = response.data.choices[0].text;
+    // console.log(response.data.choices[0].text);
+    // document.getElementById('outputTextbox').value = outputText;
+    const completion = await openAi.chat.completions.create({
+  model: "gpt-4-1106-preview",
+  messages: [
+    {
+      role: "user",
+      content: "適当なフルーツをJSONの配列でください",
+    },
+  ],
+  response_format: {
+    type: "json_object", // json_objectを指定
+  },
+});
+console.log(completion.choices[0]?.message.content);
+
 
   } catch (error) {
     console.error('APIの呼び出し中にエラーが発生しました:', error);
@@ -160,13 +182,13 @@ div.wrap
   }
   </script>
   
-  <style lang="sass">
+  <!-- <style lang="sass">
   body
     font: normal 14px Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace
     color: #fff
     background-color: #000
   </style>
-  
+   -->
   <style lang="sass" scoped>
   
   .popup
