@@ -5,15 +5,15 @@ div.wrap
         div.input-group(v-for="i in 400")
           div.label {{ i }}
           circular-input(:value="$store.getters.values[i - 1] || 0" :max="255" @input="$store.dispatch('overrideFrame', [i, $event])")
-      div.presets
+      //- div.presets
         button(@click="$store.dispatch('clearOverrides')") Clear Overrides
         span.preset-selector(
           v-for="preset in presets"
           @click="togglePreset(preset.id)"
           :class="{'is-active': overridePresets.includes(preset.id)}"
         ) {{ preset.id }}
-    sequence-row.sequence
-    div.right
+    //- sequence-row.sequence
+    //- div.right
       div.container
         input(type="text" placeholder="脚本を入力")
         button 照明プランを生成
@@ -147,7 +147,7 @@ div.wrap
   
   .wrap
     display: grid
-    grid-template-columns: 1fr 300px 300px
+    grid-template-columns: 1fr
     margin-bottom: 200px
   
   .container
