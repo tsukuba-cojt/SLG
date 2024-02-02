@@ -5,25 +5,25 @@ div.wrap
         div.input-group(v-for="i in 400")
           div.label {{ i }}
           circular-input(:value="$store.getters.values[i - 1] || 0" :max="255" @input="$store.dispatch('overrideFrame', [i, $event])")
-      //- div.presets
+      div.presets
         button(@click="$store.dispatch('clearOverrides')") Clear Overrides
         span.preset-selector(
           v-for="preset in presets"
           @click="togglePreset(preset.id)"
           :class="{'is-active': overridePresets.includes(preset.id)}"
         ) {{ preset.id }}
-    //- sequence-row.sequence
-    //- div.right
+    sequence-row.sequence
+    div.right
       div.container
-        input(type="text" placeholder="脚本を入力")
-        button 照明プランを生成
+        textarea(type="text" placeholder="脚本を入力" rows="10" v-model='inputText') 
+        button(@click="Send") 照明プランを生成
         button 再生成
-        input(type="text" placeholder="選択肢1")
-        input(type="text" placeholder="選択肢2")
-        input(type="text" placeholder="選択肢3")
+        textarea(rows="10" v-model="responseMessage")
         p
-        input(type="text" placeholder="フェード")
-        input(type="text" placeholder="サイクル")
+        div フェード
+        input(type="range" placeholder="フェード")
+        div サイクル
+        input(type="range" placeholder="サイクル")
         button 次のセクションへ
         button(@click="addressSetUp") アドレス設定
         button アドレス削除
@@ -48,6 +48,7 @@ div.wrap
   <script>
   import { CircularInput } from '@nandenjin/alien-ui'
   import { addrs } from '../app/consts/addrs.ts'
+  import axios from 'axios'
   import SequenceRow from './components/SequenceRow.vue'
   export default {
     name:'TsukuliveLightingCommander',
@@ -61,7 +62,9 @@ div.wrap
         isPopupVisible: false,
         isPopupVisibleAddrs : false,
         popupPosition: { x: 0, y: 0 },
-        dragData: { x: 0, y: 0 }
+        dragData: { x: 0, y: 0 },
+        responseMessage: '',
+        inputText: ''
       };
     },
     computed: {
@@ -81,6 +84,30 @@ div.wrap
       })
     },
     methods: {
+    async Send() {
+      try {
+        const token = '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';
+        const url = 'https://api.openai.com/v1/chat/completions';
+        const contentText = this.inputText + "という文言にあう舞台照明の色を理由を添えて提示しなさい";
+        const data = {
+          "model": "gpt-3.5-turbo",
+          "messages": [{"role": "user", "content": contentText}]
+        };
+        const config = {
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+          }
+        };
+
+        const response = await axios.post(url, data, config);
+        const cleanResponse = JSON.parse(JSON.stringify(response.data)); // Vue.jsのリアクティブなオブジェクトをクリーンなJavaScriptオブジェクトに変換
+        this.responseMessage = cleanResponse.choices[0].message.content;
+        console.log(cleanResponse.choices[0].message.content);
+      } catch (error) {
+        console.error(error);
+      }
+    },
       togglePreset(id) {
         const overrides = this.$store.state.presets.overridePresets
         if (!overrides.includes(id)) {
@@ -147,7 +174,7 @@ div.wrap
   
   .wrap
     display: grid
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr 300px 200px
     margin-bottom: 200px
   
   .container
@@ -155,7 +182,7 @@ div.wrap
     flex-direction: column
     align-items: left
     justify-content: center
-    height: 45vh
+    height: 80vh
   
   .input[type="text"]
     margin-bottom: 10px
