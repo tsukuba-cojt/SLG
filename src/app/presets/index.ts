@@ -3,7 +3,7 @@ import consola from 'consola'
 
 // import { base } from './base'
 import { colors } from './colors'
-// import { ground } from './ground'
+import { ground } from './ground'
 // import { nagare } from './nagare'
 // import { ss } from './ss'
 // // import { fs } from './fs'
@@ -57,7 +57,7 @@ export const presets: Preset[] = [
   // ...base,
   // ...bl,
   ...colors,
-  // ...ground,
+  ...ground,
   // ...nagare,
   // ...ss,
   // ...fs,
