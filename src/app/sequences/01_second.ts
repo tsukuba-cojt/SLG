@@ -436,6 +436,15 @@ export const second: Sequence[] = [
         note: 'シーン13',
         steps: [
             {
+                id: '江雪、来路in',
+                position: 60 * 0,
+                render(d, t,a =101.25) {
+                    d.merge(renderPreset(GROUND_BASE, t, 22.5))
+                    d.merge(renderPreset(SF, t, 101.25))
+                    d.set(UNIVERSE, addrs.SUS_2B, a)
+                  },
+            },
+            {
                 id: 'M13in',
                 position: 60 * 0,
                 fade:1,
