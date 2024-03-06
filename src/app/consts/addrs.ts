@@ -2,7 +2,7 @@ export enum addrs {
   LED_LF_R = 1,
   LED_LF_G,
   LED_LF_B,
-  LED_LF_D,
+  LED_LF_D = 6,
   LED_RF_R = 5,
   LED_RF_G,
   LED_RF_B,

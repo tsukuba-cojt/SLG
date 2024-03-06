@@ -1,10 +1,11 @@
+import { on } from 'events'
 import { Sequence } from '.'
 import { renderPreset } from '..'
 import { UNIVERSE, addrs } from '../consts'
 import { SF } from '../presets/cl'
-import { COLOR_M14_1, COLOR_M14_2, COLOR_M14_3, COLOR_M14_4, COLOR_M14_5, COLOR_ORANGE1, COLOR_PURPLE, COLOR_RED, COLOR_REDANDPURPLE, COLOR_USUPINK, COLOR_WHITE, COLOR_YELLOW } from '../presets/colors'
+import { COLOR_BLUE, COLOR_BLUEPURPLE, COLOR_M14_1, COLOR_M14_2, COLOR_M14_3, COLOR_M14_4, COLOR_M14_5, COLOR_ORANGE1, COLOR_PURPLE, COLOR_RED, COLOR_REDANDPURPLE, COLOR_USUPINK, COLOR_WHITE, COLOR_YELLOW } from '../presets/colors'
 import { GROUND_1, GROUND_2, GROUND_3, GROUND_BASE } from '../presets/ground'
-import { LED_ON } from '../presets/led'
+import { LED_CHASE_M7, LED_ON } from '../presets/led'
 
 
 
@@ -226,34 +227,107 @@ export const second: Sequence[] = [
             {
                 id: '迅話出し',
                 position: 60 * 0,
+                fade:1,
+                render(d, t,a = 80 * 2.25,b = 30 * 2.25,c = 60 * 2.25) {
+                    d.merge(renderPreset(GROUND_BASE, t, c))
+                    d.merge(renderPreset(SF, t, c))
+                  },
             },
             {
                 id: '江雪なあお前たち',
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                render(d, t,a = 50 * 2.25,b = 30 * 2.25,c = 70 * 2.25) {
+                    d.merge(renderPreset(GROUND_1, t, a))
+                    d.merge(renderPreset(GROUND_2, t, a))
+                    d.merge(renderPreset(GROUND_3, t, b))
+                    d.merge(renderPreset(SF, t, a))
+                  },
+                  extends:[
+                    LED_ON,
+                    COLOR_BLUEPURPLE
+                  ]
             },
             {
                 id: '江雪罰を受けなきゃ',
-                position: 60 * 1,
+                fade:1,
+                position: 60 * 10,
+                render(d, t,a = 50 * 2.25,b = 30 * 2.25,c = 70 * 2.25) {
+                    d.merge(renderPreset(SF, t, a))
+                  },
+                  extends:[
+                    LED_ON,
+                    COLOR_BLUEPURPLE
+                  ]
+            },
+            {
+                id: '前奏のドラムin',
+                position: 60 * 11,
+                render(d, t,a = 50 * 2.25,b = 30 * 2.25,c = 70 * 2.25) {
+                    d.merge(renderPreset(SF, t, a))
+                  },
                 extends:[
-                    GROUND_BASE
+                    LED_ON,
+                    COLOR_RED
                 ]
             },
             {
-                id: 'M7',
-                position: 60 * 1,
+                id: '俺たちのアクション届け/(ダダダダッダダダダッ)/ここを繰り返す',
+                position: 60 * 11,
+                cycle:60/(158*8),
                 extends:[
-                    GROUND_BASE
+                    LED_CHASE_M7,
+                    COLOR_RED
                 ]
             },
             {
-                id: 'M7後暗転',
+                id: '↓0.38秒後',
+                position: 60 * 11 + 0.38,
+                extends:[
+                    COLOR_RED
+                ]
+            },
+            {
+                id: 'Hi!/間奏/そびえたつ ここを繰り返す',
+                position: 60 * 11 + 0.38,
+                extends:[
+                    COLOR_RED,
+                    LED_ON
+                ]
+            },
+            {
+                id: '↓0.38秒後',
+                position: 60 * 11 + 0.38,
+                extends:[
+                    COLOR_RED,
+                ]
+            },
+            {
+                id: '↓0.38秒後',
+                position: 60 * 11 + 0.76,
+                extends:[
+                    COLOR_BLUE,
+                    LED_ON
+                ]
+            },
+            {
+                id: '↓0.38秒後',
+                position: 60 * 11 + 1.14,
+                extends:[
+                    COLOR_RED,
+                ]
+            },
+            {
+                id: '/限/界点',
                 position: 60 * 1,
                 extends:[
-                    GROUND_BASE
+                    COLOR_RED,
+                    LED_ON
                 ]
+            },
+            {
+                id: '江雪「俺たちはもう止まらない!」後の江雪の高笑いから3sでF.O.',
+                position: 60 * 1,
+                fade:1,
             }
         ],
         
