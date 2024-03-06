@@ -38,51 +38,91 @@ export const second: Sequence[] = [
         note: 'シーン１',
         steps: [
             {
-                id: '真理梨沙登場',
+                id: '10回目の足音SEを聞いたら',
                 position: 60 * 1,
-                extends:[]
+                fade:1,
+                render(d, t,a = 30 * 2.25,b = 20 * 2.25,c = 50 * 2.25) {
+                    d.set(UNIVERSE, addrs.SUS_1A, a)
+                    d.set(UNIVERSE, addrs.SUS_1B, a)
+                    d.set(UNIVERSE, addrs.SUS_2B, c)
+                    d.set(UNIVERSE, addrs.SUS_3B, a)
+                    d.set(UNIVERSE, addrs.SUS_3C, a)
+                    d.merge(renderPreset(SF, t, b))
+                  },
             },
             {
                 id: '探偵団登場',
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                render(d, t,a = 60 * 2.25,b = 70 * 2.25,c = 50 * 2.25) {
+                    d.merge(renderPreset(GROUND_BASE, t, b))
+                    d.merge(renderPreset(SF, t, a))
+                  },
             },
             {
                 id: 'M1in',
                 position: 60 * 1,
+                fade:1,
+                render(d, t,a = 40 * 2.25,b = 70 * 2.25,c = 75 * 2.25) {
+                    d.merge(renderPreset(GROUND_BASE, t, a))
+                    d.merge(renderPreset(SF, t, b))
+                    d.merge(renderPreset(LED_ON, t, b))
+                  },
                 extends:[
-                    GROUND_BASE
+                    COLOR_YELLOW
+                ]
+            },
+            {
+                id: 'ともに先へ進もう ジャ/ジャッ/',
+                position: 60 * 1,
+                render(d, t,a = 40 * 2.25,b = 60 * 2.25,c = 75 * 2.25) {
+                    d.merge(renderPreset(GROUND_BASE, t, a))
+                    d.merge(renderPreset(SF, t, b))
+                  },
+            },
+            {
+                id: '過去はかん//ごくじゃない',
+                position: 60 * 1,
+                render(d, t,a = 40 * 2.25,b = 60 * 2.25,c = 75 * 2.25) {
+                    d.merge(renderPreset(GROUND_BASE, t, c))
+                    d.merge(renderPreset(SF, t, b))
+                  },
+                extends:[
+                    COLOR_WHITE
                 ]
             },
             {
                 id: 'M1後5s',
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                fade:1,
+                render(d, t,a = 30 * 2.25,b = 20 * 2.25,c = 50 * 2.25) {
+                    d.set(UNIVERSE, addrs.SUS_1E, a)
+                    d.merge(renderPreset(SF, t, b))
+                  },
             },
             {
                 id: '江雪in',
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                render(d, t,a = 30 * 2.25,b = 20 * 2.25,c = 50 * 2.25) {
+                    d.set(UNIVERSE, addrs.SUS_1E, a)
+                    d.set(UNIVERSE, addrs.SUS_1A, a)
+                    d.merge(renderPreset(SF, t, b))
+                  },
             },
             {
                 id: '梨沙out',
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                render(d, t,a = 30 * 2.25,b = 20 * 2.25,c = 50 * 2.25) {
+                    d.set(UNIVERSE, addrs.SUS_1A, a)
+                    d.merge(renderPreset(SF, t, b))
+                  },
             },
             {
                 id: '江雪前キワ',
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                render(d, t,a = 30 * 2.25,b = 20 * 2.25,c = 50 * 2.25) {
+                    d.merge(renderPreset(GROUND_1, t, a))
+                    d.merge(renderPreset(SF, t, b))
+                  },
             },
 
         ],
