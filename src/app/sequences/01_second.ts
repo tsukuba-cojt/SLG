@@ -2,7 +2,7 @@ import { Sequence } from '.'
 import { renderPreset } from '..'
 import { UNIVERSE, addrs } from '../consts'
 import { SF } from '../presets/cl'
-import { COLOR_M14_1, COLOR_M14_2, COLOR_M14_3, COLOR_M14_4, COLOR_M14_5, COLOR_PURPLE, COLOR_RED, COLOR_REDANDPURPLE, COLOR_WHITE, COLOR_YELLOW } from '../presets/colors'
+import { COLOR_M14_1, COLOR_M14_2, COLOR_M14_3, COLOR_M14_4, COLOR_M14_5, COLOR_ORANGE1, COLOR_PURPLE, COLOR_RED, COLOR_REDANDPURPLE, COLOR_WHITE, COLOR_YELLOW } from '../presets/colors'
 import { GROUND_BASE } from '../presets/ground'
 import { LED_ON } from '../presets/led'
 
@@ -390,41 +390,79 @@ export const second: Sequence[] = [
             {
                 id: 'M12in',
                 position: 60 * 0,
+                fade:1,
+                render(d, t) {
+                    d.merge(renderPreset(GROUND_BASE, t, 67.5))
+                    d.merge(renderPreset(LED_ON, t, 157.5))
+                  },
+                extends:[
+                    COLOR_ORANGE1
+                ]
             },
             {
                 id: '皆で奴らを捕まえろ',
+                fade:1,
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                render(d, t) {
+                    d.merge(renderPreset(GROUND_BASE, t, 67.5))
+                  },
             },
             {
                 id: 'どんな相手でも（ペアのとこ）',
                 position: 60 * 1,
+                fade:1,
+                render(d, t) {
+                    d.merge(renderPreset(GROUND_BASE, t, 67.5))
+                  },
                 extends:[
-                    GROUND_BASE
+                    COLOR_RED,
+                    LED_ON
                 ]
             },
             {
                 id: 'M12out',
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                fade:1,
+                render(d, t) {
+                    d.merge(renderPreset(GROUND_BASE, t, 157.5))
+                  },
             },
             {
                 id: 'AJハケ後',
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                render(d, t,a = 50 * 2.25) {
+                    d.set(UNIVERSE, addrs.SUS_1A, a)
+                    d.set(UNIVERSE, addrs.SUS_1E, a)
+                    d.set(UNIVERSE, addrs.SUS_3A, a)
+                    d.set(UNIVERSE, addrs.SUS_3C, a)
+                  },
             },
             {
                 id: '誠サス落とし',
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                render(d, t,a = 50 * 2.25) {
+                    d.set(UNIVERSE, addrs.SUS_1E, a)
+                    d.set(UNIVERSE, addrs.SUS_3A, a)
+                    d.set(UNIVERSE, addrs.SUS_3C, a)
+                  },
+            },
+            {
+                id: '↓',
+                position: 60 * 1,
+                render(d, t,a = 50 * 2.25) {
+                    d.set(UNIVERSE, addrs.SUS_1E, a)
+                    d.set(UNIVERSE, addrs.SUS_3A, a)
+                  },
+            },
+            {
+                id: '↓',
+                position: 60 * 1,
+                render(d, t,a = 50 * 2.25) {
+                    d.set(UNIVERSE, addrs.SUS_3A, a)                  },
+            },
+            {
+                id: '照明アウト',
+                position: 60 * 1,
             }
            
            
