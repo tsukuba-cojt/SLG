@@ -208,13 +208,22 @@ export const second: Sequence[] = [
             {
                 id: 'M6最初のevrybody',
                 position: 60 * 0,
+                render(d, t,a = 55 * 2.25,b = 40 * 2.25,c = 70 * 2.25) {
+                    d.merge(renderPreset(GROUND_BASE, t, a))
+                    d.merge(renderPreset(SF, t, b))
+                    d.merge(renderPreset(LED_ON, t, c))
+                  },
+                extends:[
+                    COLOR_YELLOW
+                ]
             },
             {
                 id: 'M6最後のみんなでsayyeah',
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                render(d, t,a = 55 * 2.25,b = 40 * 2.25,c = 70 * 2.25) {
+                    d.merge(renderPreset(GROUND_BASE, t, c))
+                    d.merge(renderPreset(SF, t, c))
+                  },
             }
         ],
         
