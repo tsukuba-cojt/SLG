@@ -3,7 +3,7 @@ import { renderPreset } from '..'
 import { UNIVERSE, addrs } from '../consts'
 import { SF } from '../presets/cl'
 import { COLOR_M14_1, COLOR_M14_2, COLOR_M14_3, COLOR_M14_4, COLOR_M14_5, COLOR_ORANGE1, COLOR_PURPLE, COLOR_RED, COLOR_REDANDPURPLE, COLOR_WHITE, COLOR_YELLOW } from '../presets/colors'
-import { GROUND_BASE } from '../presets/ground'
+import { GROUND_1, GROUND_2, GROUND_3, GROUND_BASE } from '../presets/ground'
 import { LED_ON } from '../presets/led'
 
 
@@ -350,34 +350,64 @@ export const second: Sequence[] = [
             {
                 id: 'M11in',
                 position: 60 * 0,
+                fade:1,
+                render(d, t,a = 30 * 2.25, b = 40 * 2.25,c = 70 * 2.25) {
+                    d.set(UNIVERSE, addrs.SUS_3B, a)
+                    d.set(UNIVERSE, addrs.SUS_3A, a)
+                    d.set(UNIVERSE, addrs.SUS_3C, a)
+                    d.merge(renderPreset(LED_ON, t, b))
+                    d.merge(renderPreset(SF, t, c))
+                  },
+                extends:[
+                    COLOR_WHITE
+                ]
             },
             {
                 id: '俺たちの経験',
                 position: 60 * 1,
+                fade:1,
+                render(d, t,a = 30 * 2.25,c = 70 * 2.25) {
+                    d.set(UNIVERSE, addrs.SUS_3B, a)
+                    d.set(UNIVERSE, addrs.SUS_3A, a)
+                    d.set(UNIVERSE, addrs.SUS_3C, a)
+                    d.merge(renderPreset(SF, t, c))
+                  },
                 extends:[
-                    GROUND_BASE
+                    COLOR_WHITE,
+                    LED_ON
                 ]
             },
             {
                 id: 'できないことなんてない',
                 position: 60 * 1,
+                fade:1,
+                render(d, t,a = 50 * 2.25,b = 10 * 2.25,c = 70 * 2.25) {
+                    d.merge(renderPreset(SF, t, c))
+                    d.merge(renderPreset(GROUND_1, t, a))
+                    d.merge(renderPreset(GROUND_2, t, b))
+                    d.merge(renderPreset(GROUND_3, t, b))
+                  },
                 extends:[
-                    GROUND_BASE
+                    COLOR_WHITE,
+                    LED_ON
                 ]
             },
             {
                 id: 'M11out',
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                render(d, t,a = 80 * 2.25,b = 20 * 2.25,c = 70 * 2.25) {
+                    d.merge(renderPreset(SF, t, c))
+                    d.merge(renderPreset(GROUND_1, t, a))
+                    d.merge(renderPreset(GROUND_2, t, b))
+                  },
             },
             {
                 id: '江雪殺すなよ',
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                render(d, t,a = 50 * 2.25,c = 50 * 2.25) {
+                    d.merge(renderPreset(SF, t, c))
+                    d.merge(renderPreset(GROUND_BASE, t, a))
+                  },
             }
            
         ],

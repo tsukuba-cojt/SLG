@@ -19,7 +19,10 @@ export const renderGround = (d: DmxFrame, w: number, a: number, b: number) => {
 }
 
 export const
-GROUND_BASE = 'ground.base'
+GROUND_BASE = 'ground.base',
+GROUND_1 = 'ground1',
+GROUND_2 = 'ground2',
+GROUND_3 = 'ground3'
 
 
 export const ground: Preset[] = [
@@ -27,6 +30,24 @@ export const ground: Preset[] = [
     id: GROUND_BASE,
     render(d, _, s = 255) {
       renderGround(d, s, s, s)
+    },
+  },
+  {
+    id: GROUND_1,
+    render(d, _, s = 255) {
+      renderGround(d, s, _, _)
+    },
+  },
+  {
+    id: GROUND_2,
+    render(d, _, s = 255) {
+      renderGround(d, _, s, _)
+    },
+  },
+  {
+    id: GROUND_3,
+    render(d, _, s = 255) {
+      renderGround(d, _, _, s)
     },
   },
 //   {
