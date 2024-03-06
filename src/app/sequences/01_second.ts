@@ -20,9 +20,14 @@ export const second: Sequence[] = [
             {
                 id: '客入れ',
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                render(d, t,a = 70 * 2.25,b = 50 * 2.25,c = 20 * 2.25) {
+                    d.merge(renderPreset(SF, t, b))
+                    d.merge(renderPreset(GROUND_BASE, t, a))
+            },
+            },
+            {
+                id: '暗転',
+                position: 60 * 0,
             },
 
         ],
