@@ -3,7 +3,7 @@ import { Sequence } from '.'
 import { renderPreset } from '..'
 import { UNIVERSE, addrs } from '../consts'
 import { SF } from '../presets/cl'
-import { COLOR_BLUE, COLOR_BLUEPURPLE, COLOR_M14_1, COLOR_M14_2, COLOR_M14_3, COLOR_M14_4, COLOR_M14_5, COLOR_ORANGE1, COLOR_PURPLE, COLOR_RED, COLOR_REDANDPURPLE, COLOR_USUPINK, COLOR_WHITE, COLOR_YELLOW } from '../presets/colors'
+import { COLOR_BLUE, COLOR_BLUEPURPLE, COLOR_M14_1, COLOR_M14_2, COLOR_M14_3, COLOR_M14_4, COLOR_M14_5, COLOR_ORANGE1, COLOR_PURPLE, COLOR_RED, COLOR_REDANDPURPLE, COLOR_SKY, COLOR_USUPINK, COLOR_WHITE, COLOR_YELLOW } from '../presets/colors'
 import { GROUND_1, GROUND_2, GROUND_3, GROUND_BASE } from '../presets/ground'
 import { LED_CHASE_M7, LED_ON, LED_ON_B } from '../presets/led'
 
@@ -91,20 +91,58 @@ export const second: Sequence[] = [
             {
                 id: '江雪out2s後',
                 position: 60 * 0,
+                fade:1,
+                render(d, t,a = 70 * 2.25,b = 50 * 2.25,c = 20 * 2.25) {
+                    d.merge(renderPreset(SF, t, b))
+                    d.merge(renderPreset(GROUND_BASE, t, a))
+            },
             },
             {
                 id: 'M2',
                 position: 60 * 1,
+                fade:1,
+                render(d, t,a = 65 * 2.25,b = 50 * 2.25,c = 70 * 2.25) {
+                    d.merge(renderPreset(SF, t, b))
+                    d.merge(renderPreset(GROUND_BASE, t, a))
+                    d.merge(renderPreset(LED_ON, t, c))
+            },
                 extends:[
-                    GROUND_BASE
+                    COLOR_SKY
                 ]
             },
             {
-                id: 'M2後',
+                id: '/分からない辛い',
                 position: 60 * 1,
+                fade:1,
+                render(d, t,a = 45 * 2.25,b = 30 * 2.25,c = 20 * 2.25) {
+                    d.merge(renderPreset(SF, t, b))
+                    d.merge(renderPreset(GROUND_BASE, t, a))
+                    d.merge(renderPreset(LED_ON, t, c))
+            },
                 extends:[
-                    GROUND_BASE
+                    COLOR_ORANGE1
                 ]
+            },
+            {
+                id: '//happy suns!',
+                position: 60 * 1,
+                render(d, t,a = 80 * 2.25,b = 30 * 2.25,c = 20 * 2.25) {
+                    d.merge(renderPreset(SF, t, a))
+                    d.merge(renderPreset(GROUND_BASE, t, a))
+            },
+                extends:[
+                    COLOR_YELLOW,
+                    LED_ON
+                ]
+            },
+            {
+                id: '誠「/彼女たちなりに/元気を出してもらおうと思ってるんですよ」',
+                position: 60 * 1,
+                fade:1,
+                render(d, t,a = 70 * 2.25,b = 50 * 2.25,c = 20 * 2.25) {
+                    d.merge(renderPreset(SF, t, b))
+                    d.merge(renderPreset(GROUND_BASE, t, a))
+            },
             },
 
 
