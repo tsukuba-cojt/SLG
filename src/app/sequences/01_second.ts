@@ -5,7 +5,7 @@ import { UNIVERSE, addrs } from '../consts'
 import { SF } from '../presets/cl'
 import { COLOR_BLUE, COLOR_BLUEPURPLE, COLOR_M14_1, COLOR_M14_2, COLOR_M14_3, COLOR_M14_4, COLOR_M14_5, COLOR_ORANGE1, COLOR_PURPLE, COLOR_RED, COLOR_REDANDPURPLE, COLOR_USUPINK, COLOR_WHITE, COLOR_YELLOW } from '../presets/colors'
 import { GROUND_1, GROUND_2, GROUND_3, GROUND_BASE } from '../presets/ground'
-import { LED_CHASE_M7, LED_ON } from '../presets/led'
+import { LED_CHASE_M7, LED_ON, LED_ON_B } from '../presets/led'
 
 
 
@@ -180,20 +180,32 @@ export const second: Sequence[] = [
             {
                 id: 'M5in',
                 position: 60 * 0,
+                fade:1,
+                render(d, t,a = 40 * 2.25,c = 70 * 2.25) {
+                    d.set(UNIVERSE, addrs.SUS_1C, a)
+                  },
+                extends:[
+                    COLOR_WHITE,
+                    LED_ON_B
+                ]
             },
             {
                 id: 'M5歌in',
                 position: 60 * 1,
+                fade:1,
                 extends:[
-                    GROUND_BASE
+                   LED_ON,
+                   COLOR_WHITE
                 ]
             },
             {
                 id: '誠in',
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                fade:1,
+                render(d, t,a = 40 * 2.25,c = 70 * 2.25) {
+                    d.merge(renderPreset(SF, t, c))
+                    d.merge(renderPreset(GROUND_BASE, t, c))
+                  },
             }
             
 
@@ -208,6 +220,7 @@ export const second: Sequence[] = [
             {
                 id: 'M6最初のevrybody',
                 position: 60 * 0,
+                fade:1,
                 render(d, t,a = 55 * 2.25,b = 40 * 2.25,c = 70 * 2.25) {
                     d.merge(renderPreset(GROUND_BASE, t, a))
                     d.merge(renderPreset(SF, t, b))
@@ -220,6 +233,7 @@ export const second: Sequence[] = [
             {
                 id: 'M6最後のみんなでsayyeah',
                 position: 60 * 1,
+                fade:1,
                 render(d, t,a = 55 * 2.25,b = 40 * 2.25,c = 70 * 2.25) {
                     d.merge(renderPreset(GROUND_BASE, t, c))
                     d.merge(renderPreset(SF, t, c))
