@@ -118,34 +118,63 @@ export const second: Sequence[] = [
             {
                 id: 'M3',
                 position: 60 * 0,
+                render(d, t,a = 70 * 2.25,b = 80 * 2.25,c = 20 * 2.25) {
+                    d.merge(renderPreset(SF, t, a))
+                    d.merge(renderPreset(GROUND_BASE, t, b))
+            },
+            extends:[
+                LED_ON,
+                COLOR_WHITE
+            ]
             },
             {
                 id: 'M3後',
+                fade:1,
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                render(d, t,a = 70 * 2.25,b = 80 * 2.25,c = 50 * 2.25) {
+                    d.merge(renderPreset(SF, t, a))
+                    d.merge(renderPreset(GROUND_BASE, t, b))
+                    d.merge(renderPreset(LED_ON, t, c))
+            },
+            extends:[
+                COLOR_WHITE
+            ]
             },
             {
                 id: 'アナウンス',
+                fade:1,
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                render(d, t,a = 40 * 2.25,b = 30 * 2.25,c = 10 * 2.25) {
+                    d.merge(renderPreset(SF, t, a))
+                    d.merge(renderPreset(GROUND_1, t, a))
+                    d.merge(renderPreset(GROUND_2, t, b))
+                    d.merge(renderPreset(LED_ON, t, c))
+            },
+            extends:[
+                COLOR_WHITE
+            ]
             },
             {
                 id: 'アナウンス後',
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                fade:1,
+                render(d, t,a = 80 * 2.25,b = 70 * 2.25,c = 10 * 2.25) {
+                    d.merge(renderPreset(SF, t, b))
+                    d.merge(renderPreset(GROUND_BASE, t, a))
+                    d.merge(renderPreset(LED_ON, t, b))
+            },
+            extends:[
+                COLOR_WHITE
+            ]
             },
             {
                 id: 'クルミout後',
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                fade:1,
+                render(d, t,a = 65 * 2.25,b = 70 * 2.25,c = 10 * 2.25) {
+                    d.merge(renderPreset(SF, t, a))
+                    d.merge(renderPreset(GROUND_BASE, t, a))
+            },
             },
 
 
@@ -174,7 +203,7 @@ export const second: Sequence[] = [
                     d.merge(renderPreset(SF, t, a))
                     d.merge(renderPreset(GROUND_BASE, t, a))
             }}
-        ],}
+        ],},
     {
         note: 'シーン５',
         steps: [
