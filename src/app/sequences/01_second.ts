@@ -1,6 +1,9 @@
 import { Sequence } from '.'
-import { COLOR_YELLOW } from '../presets/colors'
+import { renderPreset } from '..'
+import { SF } from '../presets/cl'
+import { COLOR_M14_1, COLOR_M14_2, COLOR_M14_3, COLOR_M14_4, COLOR_M14_5, COLOR_WHITE, COLOR_YELLOW } from '../presets/colors'
 import { GROUND_BASE } from '../presets/ground'
+import { LED_ON } from '../presets/led'
 
 
 
@@ -446,20 +449,114 @@ export const second: Sequence[] = [
             {
                 id: 'かな誠in',
                 position: 60 * 0,
+                fade:1,
+                render(d, t) {
+                    d.merge(renderPreset(GROUND_BASE, t, 112.5))
+                    d.merge(renderPreset(SF, t, 112.5))
+                  },
             },
             {
                 id: 'くるみ「２人が助けに」',
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                fade:1,
+                render(d, t) {
+                    d.merge(renderPreset(GROUND_BASE, t, 157.5))
+                    d.merge(renderPreset(SF, t, 157.5))
+                  },
             },
             {
                 id: 'M14in',
                 position: 60 * 1,
+                fade:1,
+                render(d, t) {
+                    d.merge(renderPreset(GROUND_BASE, t, 191.25))
+                    d.merge(renderPreset(SF, t, 191.25))
+                  },
                 extends:[
-                    GROUND_BASE
+                    COLOR_M14_1,
+                    LED_ON
                 ]
+            },
+            {
+                id: '蒼紫・迅in',
+                position: 60 * 1,
+                fade:1,
+                render(d, t) {
+                    d.merge(renderPreset(GROUND_BASE, t, 191.25))
+                    d.merge(renderPreset(SF, t, 191.25))
+                  },
+                extends:[
+                    COLOR_M14_2,
+                    LED_ON
+                ]
+            },
+            {
+                id: '/流れる/星々が(楓in)',
+                position: 60 * 1,
+                fade:1,
+                render(d, t) {
+                    d.merge(renderPreset(GROUND_BASE, t, 191.25))
+                    d.merge(renderPreset(SF, t, 191.25))
+                  },
+                extends:[
+                    COLOR_M14_3,
+                    LED_ON
+                ]
+            },
+            {
+                id: '/星の下で見た景色/',
+                position: 60 * 1,
+                fade:1,
+                render(d, t) {
+                    d.merge(renderPreset(GROUND_BASE, t, 191.25))
+                    d.merge(renderPreset(SF, t, 191.25))
+                  },
+                extends:[
+                    COLOR_M14_4,
+                    LED_ON
+                ]
+            },
+            {
+                id: '/乗り越えていくたびに/',
+                position: 60 * 1,
+                fade:1,
+                render(d, t) {
+                    d.merge(renderPreset(GROUND_BASE, t, 191.25))
+                    d.merge(renderPreset(SF, t, 191.25))
+                  },
+                extends:[
+                    COLOR_M14_5,
+                    LED_ON
+                ]
+            },
+            {
+                id: 'ダンスタイム終わり～歌い始め',
+                position: 60 * 1,
+                fade:1,
+                render(d, t) {
+                    d.merge(renderPreset(GROUND_BASE, t, 191.25))
+                    d.merge(renderPreset(SF, t, 191.25))
+                  },
+            },
+            {
+                id: 'ダンスタイム終わり～歌い始め',
+                position: 60 * 1,
+                fade:1,
+                render(d, t) {
+                    d.merge(renderPreset(GROUND_BASE, t, 191.25))
+                    d.merge(renderPreset(SF, t, 191.25))
+                  },
+            },
+            {
+                id: '/願いを叶えてく/',
+                position: 60 * 1,
+                fade:1,
+                render(d, t) {
+                    d.merge(renderPreset(GROUND_BASE, t, 191.25))
+                  },
+                  extends:[
+                    SF
+                  ]
             }
            
         ],
@@ -471,7 +568,12 @@ export const second: Sequence[] = [
         steps: [
             {
                 id: '客電',
+                fade:1,
                 position: 60 * 0,
+                extends:[
+                    GROUND_BASE,
+                    SF
+                ]
             }
   
            

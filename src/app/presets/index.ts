@@ -7,7 +7,7 @@ import { ground } from './ground'
 // import { nagare } from './nagare'
 // import { ss } from './ss'
 // // import { fs } from './fs'
-// import { cl } from './cl'
+import { cl } from './cl'
 // import { beams } from './beams'
 // import { backpar } from './backpar'
 // import { par } from './par'
@@ -61,7 +61,7 @@ export const presets: Preset[] = [
   // ...nagare,
   // ...ss,
   // ...fs,
-  // ...cl,
+  ...cl,
   // ...beams,
   // ...backpar,
   // ...par,
