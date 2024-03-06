@@ -265,20 +265,32 @@ export const second: Sequence[] = [
             {
                 id: 'アナウンス2s後',
                 position: 60 * 0,
+                fade:1,
+                render(d, t,a = 80 * 2.25,b = 30 * 2.25,c = 70 * 2.25) {
+                    d.merge(renderPreset(GROUND_BASE, t, c))
+                    d.merge(renderPreset(SF, t, c))
+                  },
+
             },
             {
                 id: 'M8in',
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                fade:1,
+                render(d, t,a = 80 * 2.25,b = 30 * 2.25,c = 70 * 2.25) {
+                    d.merge(renderPreset(GROUND_1, t, a))
+                    d.merge(renderPreset(GROUND_2, t, b))
+                    d.merge(renderPreset(GROUND_3, t, b))
+                    d.merge(renderPreset(SF, t, c))
+                  },
             },
             {
                 id: 'M8後',
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                fade:1,
+                render(d, t,a = 80 * 2.25,b = 30 * 2.25,c = 70 * 2.25) {
+                    d.merge(renderPreset(GROUND_BASE, t, c))
+                    d.merge(renderPreset(SF, t, c))
+                  },
             }
            
         ],
@@ -291,27 +303,38 @@ export const second: Sequence[] = [
             {
                 id: '梨沙in',
                 position: 60 * 0,
+                fade:1,
+                render(d, t,a = 45 * 2.25,b = 70 * 2.25) {
+                    d.merge(renderPreset(GROUND_BASE, t, a))
+                    d.merge(renderPreset(SF, t, a))
+                  },
             },
             {
                 id: 'M9in',
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                fade:1,
+                render(d, t,a = 75 * 2.25,b = 20 * 2.25) {
+                    d.merge(renderPreset(GROUND_2, t, a))
+                    d.merge(renderPreset(SF, t, a))
+                  },
             },
             {
                 id: 'M9out',
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                fade:1,
+                render(d, t,b = 70 * 2.25) {
+                    d.merge(renderPreset(GROUND_BASE, t, b))
+                    d.merge(renderPreset(SF, t, b))
+                  },
             },
             {
                 id: '梨沙崩れ落ちる',
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                fade:1,
+                render(d, t,a = 50 * 2.25) {
+                    d.merge(renderPreset(GROUND_2, t, a))
+                    d.merge(renderPreset(SF, t, a))
+                  },
             }
            
         ],
