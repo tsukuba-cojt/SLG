@@ -2,7 +2,7 @@ import { Sequence } from '.'
 import { renderPreset } from '..'
 import { UNIVERSE, addrs } from '../consts'
 import { SF } from '../presets/cl'
-import { COLOR_M14_1, COLOR_M14_2, COLOR_M14_3, COLOR_M14_4, COLOR_M14_5, COLOR_ORANGE1, COLOR_PURPLE, COLOR_RED, COLOR_REDANDPURPLE, COLOR_WHITE, COLOR_YELLOW } from '../presets/colors'
+import { COLOR_M14_1, COLOR_M14_2, COLOR_M14_3, COLOR_M14_4, COLOR_M14_5, COLOR_ORANGE1, COLOR_PURPLE, COLOR_RED, COLOR_REDANDPURPLE, COLOR_USUPINK, COLOR_WHITE, COLOR_YELLOW } from '../presets/colors'
 import { GROUND_1, GROUND_2, GROUND_3, GROUND_BASE } from '../presets/ground'
 import { LED_ON } from '../presets/led'
 
@@ -324,20 +324,33 @@ export const second: Sequence[] = [
             {
                 id: 'M10in',
                 position: 60 * 0,
+                fade:1,
+                render(d, t,a = 60 * 2.25,c = 70 * 2.25) {
+                    d.merge(renderPreset(GROUND_BASE, t, a))
+                    d.merge(renderPreset(LED_ON, t, c))
+                    d.merge(renderPreset(SF, t, a))
+                  },
+                extends:[
+                    COLOR_USUPINK
+                ]
             },
             {
                 id: 'M10out1s後',
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                fade:1,
+                render(d, t,a = 80 * 2.25) {
+                    d.merge(renderPreset(GROUND_BASE, t, a))
+                    d.merge(renderPreset(SF, t, a))
+                  },
             },
             {
                 id: 'かな誠ハケ後',
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
+                fade:1,
+                render(d, t,a = 80 * 2.25, b = 20*2.25) {
+                    d.merge(renderPreset(GROUND_1, t, a))
+                    d.merge(renderPreset(GROUND_2, t, b))
+                  },
             }
            
         ],
@@ -395,6 +408,7 @@ export const second: Sequence[] = [
             {
                 id: 'M11out',
                 position: 60 * 1,
+                fade:1,
                 render(d, t,a = 80 * 2.25,b = 20 * 2.25,c = 70 * 2.25) {
                     d.merge(renderPreset(SF, t, c))
                     d.merge(renderPreset(GROUND_1, t, a))
@@ -404,6 +418,7 @@ export const second: Sequence[] = [
             {
                 id: '江雪殺すなよ',
                 position: 60 * 1,
+                fade:1,
                 render(d, t,a = 50 * 2.25,c = 50 * 2.25) {
                     d.merge(renderPreset(SF, t, c))
                     d.merge(renderPreset(GROUND_BASE, t, a))
