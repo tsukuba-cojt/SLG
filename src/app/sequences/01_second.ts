@@ -1,7 +1,8 @@
 import { Sequence } from '.'
 import { renderPreset } from '..'
+import { UNIVERSE, addrs } from '../consts'
 import { SF } from '../presets/cl'
-import { COLOR_M14_1, COLOR_M14_2, COLOR_M14_3, COLOR_M14_4, COLOR_M14_5, COLOR_WHITE, COLOR_YELLOW } from '../presets/colors'
+import { COLOR_M14_1, COLOR_M14_2, COLOR_M14_3, COLOR_M14_4, COLOR_M14_5, COLOR_PURPLE, COLOR_RED, COLOR_REDANDPURPLE, COLOR_WHITE, COLOR_YELLOW } from '../presets/colors'
 import { GROUND_BASE } from '../presets/ground'
 import { LED_ON } from '../presets/led'
 
@@ -437,6 +438,58 @@ export const second: Sequence[] = [
             {
                 id: 'M13in',
                 position: 60 * 0,
+                fade:1,
+                render(d, t,a =101.25) {
+                    d.merge(renderPreset(GROUND_BASE, t, 22.5))
+                    d.merge(renderPreset(SF, t, 101.25))
+                    d.merge(renderPreset(LED_ON, t, 157.5))
+                    d.set(UNIVERSE, addrs.SUS_2B, a)
+                  },
+                extends:[
+                    COLOR_PURPLE,
+                ]
+            },
+            {
+                id: '/あ/なたの本当の優しさは',
+                position: 60 * 0,
+                fade:1,
+                render(d, t,a =101.25) {
+                    d.merge(renderPreset(GROUND_BASE, t, 22.5))
+                    d.merge(renderPreset(SF, t, 101.25))
+                    d.merge(renderPreset(LED_ON, t, 157.5))
+                    d.set(UNIVERSE, addrs.SUS_2B, a)
+                  },
+                extends:[
+                    COLOR_RED
+                ]
+            },
+            {
+                id: '/お/前になんか何が分かる',
+                position: 60 * 0,
+                fade:1,
+                render(d, t,a =101.25) {
+                    d.merge(renderPreset(GROUND_BASE, t, 22.5))
+                    d.merge(renderPreset(SF, t, 101.25))
+                    d.merge(renderPreset(LED_ON, t, 157.5))
+                    d.set(UNIVERSE, addrs.SUS_2B, a)
+                  },
+                extends:[
+                    COLOR_PURPLE
+                ]
+            },
+            {
+                id: '/大/事な明日を手に入れると',
+                position: 60 * 0,
+                fade:1,
+                render(d, t,a =101.25) {
+                    d.merge(renderPreset(GROUND_BASE, t, 22.5))
+                    d.merge(renderPreset(SF, t, 101.25))
+                    d.merge(renderPreset(LED_ON, t, 157.5))
+                    d.set(UNIVERSE, addrs.SUS_2B, a)
+                  },
+                extends:[
+                    COLOR_REDANDPURPLE
+                ]
             }
             
         ],
