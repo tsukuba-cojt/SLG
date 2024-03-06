@@ -159,21 +159,22 @@ export const second: Sequence[] = [
             {
                 id: 'M4in',
                 position: 60 * 0,
+                fade:1,
+                render(d, t,a = 50 * 2.25,b = 30 * 2.25,c = 20 * 2.25) {
+                    d.merge(renderPreset(SF, t, c))
+                    d.merge(renderPreset(GROUND_1, t, a))
+                    d.merge(renderPreset(GROUND_2, t, b))
+                  },
             },
             {
                 id: '真理はけ後',
                 position: 60 * 1,
-                extends:[
-                    GROUND_BASE
-                ]
-            }
-            
-
-
-        ],
-        
-    },
-
+                fade:1,
+                render(d, t,a = 70 * 2.25,b = 30 * 2.25,c = 20 * 2.25) {
+                    d.merge(renderPreset(SF, t, a))
+                    d.merge(renderPreset(GROUND_BASE, t, a))
+            }}
+        ],}
     {
         note: 'シーン５',
         steps: [

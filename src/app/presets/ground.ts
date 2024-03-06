@@ -35,19 +35,27 @@ export const ground: Preset[] = [
   {
     id: GROUND_1,
     render(d, _, s = 255) {
-      renderGround(d, s, _, _)
+      d.set(U, addrs.SUS_1A, s)
+      d.set(U, addrs.SUS_1B, s)
+      d.set(U, addrs.SUS_1C, s)
+      d.set(U, addrs.SUS_1D, s)
+      d.set(U, addrs.SUS_1E, s)
     },
   },
   {
     id: GROUND_2,
     render(d, _, s = 255) {
-      renderGround(d, _, s, _)
+      d.set(U, addrs.SUS_2A, s)
+      d.set(U, addrs.SUS_2B, s)
+      d.set(U, addrs.SUS_2C, s)
     },
   },
   {
     id: GROUND_3,
     render(d, _, s = 255) {
-      renderGround(d, _, _, s)
+      d.set(U, addrs.SUS_3A, s)
+      d.set(U, addrs.SUS_3B, s)
+      d.set(U, addrs.SUS_3C, s)
     },
   },
 //   {
