@@ -15,7 +15,7 @@ export const renderGround = (d: DmxFrame, w: number, a: number, b: number) => {
   d.set(U, addrs.SUS_2C, a)
   d.set(U, addrs.SUS_3A, b)
   d.set(U, addrs.SUS_3B, b)
-  d.set(U, addrs.SUS_3C, b)
+  d.set(U, addrs.SUS_3C, b / 1.5)
 }
 
 export const
@@ -55,7 +55,7 @@ export const ground: Preset[] = [
     render(d, _, s = 255) {
       d.set(U, addrs.SUS_3A, s)
       d.set(U, addrs.SUS_3B, s)
-      d.set(U, addrs.SUS_3C, s)
+      d.set(U, addrs.SUS_3C, s / 1.5)
     },
   },
 //   {

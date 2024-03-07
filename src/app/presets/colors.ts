@@ -106,7 +106,7 @@ export const colors: Preset[] = [
 
   {
     id: COLOR_BLUEPURPLE,
-    render(d, a = 127/5, b = 255) {
+    render(d, a = 127, b = 255) {
       d.set(U, addrs.LED_LF_R, a)
       d.set(U, addrs.LED_LF_B, b)
       d.set(U, addrs.LED_RF_R, a) 
@@ -145,18 +145,18 @@ export const colors: Preset[] = [
   {
     id: COLOR_USUPINK,
     render(d, a = 204, b = 63.75, c = 255) {
-      d.set(U, addrs.LED_LF_R, a)
+      d.set(U, addrs.LED_LF_R, c)
       d.set(U, addrs.LED_LF_G, b)
-      d.set(U, addrs.LED_LF_B, c)
-      d.set(U, addrs.LED_RF_R, a)
+      d.set(U, addrs.LED_LF_B, a)
+      d.set(U, addrs.LED_RF_R, c)
       d.set(U, addrs.LED_RF_G, b)
-      d.set(U, addrs.LED_RF_B, c)
-      d.set(U, addrs.LED_LB_R, a)
+      d.set(U, addrs.LED_RF_B, a)
+      d.set(U, addrs.LED_LB_R, c)
       d.set(U, addrs.LED_LB_G, b)
-      d.set(U, addrs.LED_LB_B, c)
-      d.set(U, addrs.LED_RB_R, a)
+      d.set(U, addrs.LED_LB_B, a)
+      d.set(U, addrs.LED_RB_R, c)
       d.set(U, addrs.LED_RB_G, b)
-      d.set(U, addrs.LED_RB_B, c)
+      d.set(U, addrs.LED_RB_B, a)
       
     },
   },
@@ -245,12 +245,12 @@ export const colors: Preset[] = [
       d.set(U, addrs.LED_RF_R, a)
       d.set(U, addrs.LED_RF_G, a)
       d.set(U, addrs.LED_RF_B, a)
-      d.set(U, addrs.LED_LB_R, b)
+      d.set(U, addrs.LED_LB_R, a)
       d.set(U, addrs.LED_LB_G, c)
-      d.set(U, addrs.LED_LB_B, a)
-      d.set(U, addrs.LED_RB_R, b)
+      d.set(U, addrs.LED_LB_B, b)
+      d.set(U, addrs.LED_RB_R, a)
       d.set(U, addrs.LED_RB_G, c)
-      d.set(U, addrs.LED_RB_B, a)
+      d.set(U, addrs.LED_RB_B, b)
       
     },
   },
