@@ -638,6 +638,15 @@ export const second: Sequence[] = [
                 id: '梨沙in',
                 position: 60 * 0,
                 fade:1,
+                render(d, t,a = 80 * 2.25,b = 30 * 2.25,c = 70 * 2.25) {
+                    d.merge(renderPreset(GROUND_BASE, t, c))
+                    d.merge(renderPreset(SF, t, c))
+                  },
+            },
+            {
+                id: '↓',
+                position: 60 * 0,
+                fade:1,
                 render(d, t,a = 45 * 2.25,b = 70 * 2.25) {
                     d.merge(renderPreset(GROUND_BASE, t, a))
                     d.merge(renderPreset(SF, t, a))
@@ -682,6 +691,15 @@ export const second: Sequence[] = [
                 id: 'M10in',
                 position: 60 * 0,
                 fade:1,
+                render(d, t,a = 50 * 2.25) {
+                    d.merge(renderPreset(GROUND_2, t, a))
+                    d.merge(renderPreset(SF, t, a))
+                  },
+            },
+            {
+                id: '↓',
+                position: 60 * 0,
+                fade:1,
                 render(d, t,a = 60 * 2.25,c = 70 * 2.25) {
                     d.merge(renderPreset(GROUND_BASE, t, a))
                     d.merge(renderPreset(LED_ON, t, c))
@@ -719,6 +737,15 @@ export const second: Sequence[] = [
         steps: [
             {
                 id: 'M11in',
+                position: 60 * 0,
+                fade:1,
+                render(d, t,a = 80 * 2.25, b = 20*2.25) {
+                    d.merge(renderPreset(GROUND_1, t, a))
+                    d.merge(renderPreset(GROUND_2, t, b))
+                  },
+            },
+            {
+                id: '↓',
                 position: 60 * 0,
                 render(d, t,a = 30 * 2.25, b = 40 * 2.25,c = 70 * 2.25) {
                     d.set(UNIVERSE, addrs.SUS_3B, a)
@@ -787,9 +814,17 @@ export const second: Sequence[] = [
 
     {
         note: 'シーン12',
-        steps: [
+        steps: [{
+            id: 'M12in',
+            position: 60 * 0,
+            fade:1,
+            render(d, t,a = 50 * 2.25,c = 50 * 2.25) {
+                d.merge(renderPreset(SF, t, c))
+                d.merge(renderPreset(GROUND_BASE, t, a))
+              },
+        },
             {
-                id: 'M12in',
+                id: '↓',
                 position: 60 * 0,
                 fade:1,
                 render(d, t) {
@@ -839,10 +874,10 @@ export const second: Sequence[] = [
                   },
             },
             {
-                id: '誠サス落とし',
+                id: '誠銃声合わせ',
                 position: 60 * 8,
                 render(d, t,a = 50 * 2.25) {
-                    d.set(UNIVERSE, addrs.SUS_1E, a)
+                    d.set(UNIVERSE, addrs.SUS_1A, a)
                     d.set(UNIVERSE, addrs.SUS_3A, a)
                     d.set(UNIVERSE, addrs.SUS_3C, a / 1.5)
                   },
@@ -851,15 +886,15 @@ export const second: Sequence[] = [
                 id: '↓',
                 position: 60 * 9,
                 render(d, t,a = 50 * 2.25) {
-                    d.set(UNIVERSE, addrs.SUS_1E, a)
-                    d.set(UNIVERSE, addrs.SUS_3A, a)
+                    d.set(UNIVERSE, addrs.SUS_1A, a)
+                    d.set(UNIVERSE, addrs.SUS_3C, a)
                   },
             },
             {
                 id: '↓',
                 position: 60 * 10,
                 render(d, t,a = 50 * 2.25) {
-                    d.set(UNIVERSE, addrs.SUS_3A, a)                  },
+                    d.set(UNIVERSE, addrs.SUS_1A, a)                  },
             },
             {
                 id: '照明アウト',
@@ -946,9 +981,22 @@ export const second: Sequence[] = [
 
     {
         note: 'シーン14',
-        steps: [
+        steps: [{
+            id: '/かな誠in',
+            position: 60 * 0,
+            fade:1,
+            render(d, t,a =101.25) {
+                d.merge(renderPreset(GROUND_BASE, t, 22.5))
+                d.merge(renderPreset(SF, t, 101.25))
+                d.merge(renderPreset(LED_ON, t, 157.5))
+                d.set(UNIVERSE, addrs.SUS_2B, a)
+              },
+            extends:[
+                COLOR_REDANDPURPLE
+            ]
+        },
             {
-                id: 'かな誠in',
+                id: '↓',
                 position: 60 * 0,
                 fade:1,
                 render(d, t) {
