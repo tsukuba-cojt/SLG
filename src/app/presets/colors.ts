@@ -38,7 +38,7 @@ COLOR_M14_5 = 'M14.5'
 export const colors: Preset[] = [
   {
     id: COLOR_YELLOW,
-    render(d, a = 255,b = 225) {
+    render(d, _,a = 255,b = 225) {
       d.set(U, addrs.LED_LF_R, a)
       d.set(U, addrs.LED_LF_G, b)
       d.set(U, addrs.LED_RF_R, a)
@@ -53,7 +53,7 @@ export const colors: Preset[] = [
 
   {
     id: COLOR_WHITE,
-    render(d, a = 255) {
+    render(d, _,a = 255) {
       d.set(U, addrs.LED_LF_R, a)
       d.set(U, addrs.LED_LF_G, a)
       d.set(U, addrs.LED_LF_B, a)
@@ -72,7 +72,7 @@ export const colors: Preset[] = [
   
   {
     id: COLOR_SKY,
-    render(d, a = 25.5, b = 76.5, c = 255) {
+    render(d, _, b = 76.5, c = 255 , a = 25.5) {
       d.set(U, addrs.LED_LF_R, a)
       d.set(U, addrs.LED_LF_G, b)
       d.set(U, addrs.LED_LF_B, c)
@@ -91,7 +91,7 @@ export const colors: Preset[] = [
 
   {
     id: COLOR_ORANGE1,
-    render(d, a = 204, b = 153) {
+    render(d, _,a = 204, b = 153) {
       d.set(U, addrs.LED_LF_R, a)
       d.set(U, addrs.LED_LF_G, b)
       d.set(U, addrs.LED_RF_R, a)
@@ -106,7 +106,7 @@ export const colors: Preset[] = [
 
   {
     id: COLOR_BLUEPURPLE,
-    render(d, a = 127, b = 255) {
+    render(d, _,a = 127, b = 255) {
       d.set(U, addrs.LED_LF_R, a)
       d.set(U, addrs.LED_LF_B, b)
       d.set(U, addrs.LED_RF_R, a) 
@@ -121,7 +121,7 @@ export const colors: Preset[] = [
 
   {
     id: COLOR_BLUE,
-    render(d, a = 255) {
+    render(d, _,a = 255) {
       d.set(U, addrs.LED_LF_B, a)
       d.set(U, addrs.LED_RF_B, a)
       d.set(U, addrs.LED_LB_B, a)
@@ -132,7 +132,7 @@ export const colors: Preset[] = [
 
   {
     id: COLOR_RED,
-    render(d, a = 255) {
+    render(d, _,a = 255) {
       d.set(U, addrs.LED_LF_R, a)
       d.set(U, addrs.LED_RF_R, a)
       d.set(U, addrs.LED_LB_R, a)
@@ -144,7 +144,7 @@ export const colors: Preset[] = [
 
   {
     id: COLOR_USUPINK,
-    render(d, a = 204, b = 63.75, c = 255) {
+    render(d, _,a = 204, b = 63.75, c = 255) {
       d.set(U, addrs.LED_LF_R, c)
       d.set(U, addrs.LED_LF_G, b)
       d.set(U, addrs.LED_LF_B, a)
@@ -163,7 +163,7 @@ export const colors: Preset[] = [
 
   {
     id: COLOR_ORANGE2,
-    render(d, a = 255, b = 51) {
+    render(d, _,a = 255, b = 51) {
       d.set(U, addrs.LED_LF_R, a)
       d.set(U, addrs.LED_LF_G, b)
       d.set(U, addrs.LED_RF_R, a)
@@ -178,7 +178,7 @@ export const colors: Preset[] = [
 
   {
     id: COLOR_PURPLE,
-    render(d, a = 102, b = 255) {
+    render(d, _,a = 102, b = 255) {
       d.set(U, addrs.LED_LF_R, a)
       d.set(U, addrs.LED_LF_B, b)
       d.set(U, addrs.LED_RF_R, a)
@@ -193,7 +193,7 @@ export const colors: Preset[] = [
 
   {
     id: COLOR_REDANDPURPLE,
-    render(d, a = 255, b = 102) {
+    render(d, _,a = 255, b = 102) {
       d.set(U, addrs.LED_LF_R, a)
       d.set(U, addrs.LED_RF_R, b)
       d.set(U, addrs.LED_RF_B, a)
@@ -206,7 +206,7 @@ export const colors: Preset[] = [
 
   {
     id: COLOR_M14_1,
-    render(d, a = 255, b =229.5) {
+    render(d, _,a = 255, b =229.5) {
       d.set(U, addrs.LED_LF_R, a)
       d.set(U, addrs.LED_LF_G, a)
       d.set(U, addrs.LED_LF_B, a)
@@ -223,7 +223,7 @@ export const colors: Preset[] = [
 
   {
     id: COLOR_M14_2,
-    render(d, a = 255) {
+    render(d, _,a = 255) {
       d.set(U, addrs.LED_LF_R, a)
       d.set(U, addrs.LED_LF_G, a)
       d.set(U, addrs.LED_LF_B, a)
@@ -238,7 +238,7 @@ export const colors: Preset[] = [
 
   {
     id: COLOR_M14_3,
-    render(d, a = 255, b = 204, c = 63.75,) {
+    render(d, _,a = 255, b = 204, c = 63.75,) {
       d.set(U, addrs.LED_LF_R, a)
       d.set(U, addrs.LED_LF_G, a)
       d.set(U, addrs.LED_LF_B, a)
@@ -257,7 +257,7 @@ export const colors: Preset[] = [
 
   {
     id: COLOR_M14_4,
-    render(d, a = 204, b = 153) {
+    render(d, _,a = 204, b = 153) {
       d.set(U, addrs.LED_LF_R, a)
       d.set(U, addrs.LED_LF_G, a)
       d.set(U, addrs.LED_LF_B, a)
@@ -274,7 +274,7 @@ export const colors: Preset[] = [
 
   {
     id: COLOR_M14_5,
-    render(d, a = 255) {
+    render(d, _,a = 255) {
       d.set(U, addrs.LED_LF_R, a)
       d.set(U, addrs.LED_LF_G, a)
       d.set(U, addrs.LED_LF_B, a)

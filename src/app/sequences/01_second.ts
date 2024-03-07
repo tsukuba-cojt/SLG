@@ -3,7 +3,7 @@ import { Sequence } from '.'
 import { renderPreset } from '..'
 import { UNIVERSE, addrs } from '../consts'
 import { SF } from '../presets/cl'
-import { COLOR_BLUE, COLOR_BLUEPURPLE, COLOR_M14_1, COLOR_M14_2, COLOR_M14_3, COLOR_M14_4, COLOR_M14_5, COLOR_ORANGE1, COLOR_PURPLE, COLOR_RED, COLOR_REDANDPURPLE, COLOR_SKY, COLOR_USUPINK, COLOR_WHITE, COLOR_YELLOW } from '../presets/colors'
+import { COLOR_BLUE, COLOR_BLUEPURPLE, COLOR_M14_1, COLOR_M14_2, COLOR_M14_3, COLOR_M14_4, COLOR_M14_5, COLOR_ORANGE1, COLOR_ORANGE2, COLOR_PURPLE, COLOR_RED, COLOR_REDANDPURPLE, COLOR_SKY, COLOR_USUPINK, COLOR_WHITE, COLOR_YELLOW } from '../presets/colors'
 import { GROUND_1, GROUND_2, GROUND_3, GROUND_BASE } from '../presets/ground'
 import { LED_CHASE_M7, LED_ON, LED_ON_B } from '../presets/led'
 
@@ -135,6 +135,14 @@ export const second: Sequence[] = [
         steps: [
             {
                 id: '江雪out2s後',
+                position: 60 * 0,
+                render(d, t,a = 30 * 2.25,b = 20 * 2.25,c = 50 * 2.25) {
+                    d.merge(renderPreset(GROUND_1, t, a))
+                    d.merge(renderPreset(SF, t, b))
+                  },
+            },
+            {
+                id: '↓',
                 position: 60 * 0,
                 fade:1,
                 render(d, t,a = 70 * 2.25,b = 50 * 2.25,c = 20 * 2.25) {
@@ -271,6 +279,14 @@ export const second: Sequence[] = [
             {
                 id: 'M4in',
                 position: 60 * 0,
+                render(d, t,a = 65 * 2.25,b = 70 * 2.25,c = 10 * 2.25) {
+                    d.merge(renderPreset(SF, t, a))
+                    d.merge(renderPreset(GROUND_BASE, t, a))
+            },
+            },
+            {
+                id: '↓',
+                position: 60 * 0,
                 fade:2.5,
                 render(d, t,a = 50 * 2.25,b = 30 * 2.25,c = 20 * 2.25) {
                     d.merge(renderPreset(SF, t, c))
@@ -292,6 +308,13 @@ export const second: Sequence[] = [
         steps: [
             {
                 id: 'M5in',
+                position: 60 * 0,
+                render(d, t,a = 70 * 2.25,b = 30 * 2.25,c = 20 * 2.25) {
+                    d.merge(renderPreset(SF, t, a))
+                    d.merge(renderPreset(GROUND_BASE, t, a))
+            }},
+            {
+                id: '↓',
                 position: 60 * 0,
                 fade:1,
                 render(d, t,a = 40 * 2.25,c = 70 * 2.25) {
@@ -332,6 +355,14 @@ export const second: Sequence[] = [
             {
                 id: 'M6最初のevrybody',
                 position: 60 * 0,
+                render(d, t,a = 40 * 2.25,c = 70 * 2.25) {
+                    d.merge(renderPreset(SF, t, c))
+                    d.merge(renderPreset(GROUND_BASE, t, c))
+                  },
+            },
+            {
+                id: '↓',
+                position: 60 * 0,
                 fade:0.5,
                 render(d, t,a = 55 * 2.25,b = 40 * 2.25,c = 70 * 2.25) {
                     d.merge(renderPreset(GROUND_BASE, t, a))
@@ -361,6 +392,15 @@ export const second: Sequence[] = [
         steps: [
             {
                 id: '迅話出し',
+                position: 60 * 0,
+                fade:3,
+                render(d, t,a = 55 * 2.25,b = 40 * 2.25,c = 70 * 2.25) {
+                    d.merge(renderPreset(GROUND_BASE, t, c))
+                    d.merge(renderPreset(SF, t, c))
+                  },
+            },
+            {
+                id: '↓',
                 position: 60 * 0,
                 fade:1,
                 render(d, t,a = 80 * 2.25,b = 30 * 2.25,c = 60 * 2.25) {
@@ -485,7 +525,15 @@ export const second: Sequence[] = [
                 id: '江雪「俺たちはもう止まらない!」後の江雪の高笑いから3sでF.O.',
                 position: 60 * 17   ,
                 fade:2,
-            }
+            },
+            {
+                id: '客電',
+                position: 60 * 18,
+                render(d, t,a = 70 * 2.25,b = 50 * 2.25,c = 20 * 2.25) {
+                    d.merge(renderPreset(SF, t, b))
+                    d.merge(renderPreset(GROUND_BASE, t, a))
+            },
+            },
         ],
         
     },
@@ -494,8 +542,13 @@ export const second: Sequence[] = [
         note: 'シーン8',
         steps: [
             {
-                id: 'アナウンス2s後',
+                id: '暗転',
                 position: 60 * 0,
+                fade:1,
+            },
+            {
+                id: 'アナウンス2s後',
+                position: 60 * 1,
                 fade:1,
                 render(d, t,a = 80 * 2.25,b = 30 * 2.25,c = 70 * 2.25) {
                     d.merge(renderPreset(GROUND_BASE, t, c))
@@ -505,7 +558,7 @@ export const second: Sequence[] = [
             },
             {
                 id: 'M8in',
-                position: 60 * 2,
+                position: 60 * 3,
                 fade:1,
                 render(d, t,a = 80 * 2.25,b = 30 * 2.25,c = 70 * 2.25) {
                     d.merge(renderPreset(GROUND_1, t, a))
@@ -513,16 +566,66 @@ export const second: Sequence[] = [
                     d.merge(renderPreset(GROUND_3, t, b))
                     d.merge(renderPreset(SF, t, c))
                   },
+                  extends:[
+                    COLOR_USUPINK,
+                    LED_ON
+                  ],
+            },
+            {
+                id: 'はー糸ソロ',
+                position: 60 * 4,
+                fade:1,
+                render(d, t,a = 80 * 2.25,b = 30 * 2.25,c = 70 * 2.25) {
+                    d.merge(renderPreset(GROUND_1, t, a))
+                    d.merge(renderPreset(GROUND_2, t, b))
+                    d.merge(renderPreset(GROUND_3, t, b))
+                    d.merge(renderPreset(SF, t, c))
+                  },
+                  extends:[
+                    COLOR_SKY,
+                    LED_ON
+                  ],
+            },
+            {
+                id: 'サビ',
+                position: 60 * 5,
+                fade:1,
+                render(d, t,a = 80 * 2.25,b = 30 * 2.25,c = 70 * 2.25) {
+                    d.merge(renderPreset(GROUND_1, t, a))
+                    d.merge(renderPreset(GROUND_2, t, b))
+                    d.merge(renderPreset(GROUND_3, t, b))
+                    d.merge(renderPreset(SF, t, c))
+                  },
+                  extends:[
+                    COLOR_YELLOW,
+                    LED_ON
+                  ],
+            },
+            {
+                id: 'ラスサビ',
+                position: 60 * 6,
+                fade:1,
+                render(d, t,a = 80 * 2.25,b = 30 * 2.25,c = 70 * 2.25) {
+                    d.merge(renderPreset(GROUND_1, t, a))
+                    d.merge(renderPreset(GROUND_2, t, b))
+                    d.merge(renderPreset(GROUND_3, t, b))
+                    d.merge(renderPreset(SF, t, c))
+                  },
+                  extends:[
+                    COLOR_ORANGE2,
+                    LED_ON
+                  ],
             },
             {
                 id: 'M8後',
-                position: 60 * 4,
+                position: 60 * 7,
                 fade:1,
                 render(d, t,a = 80 * 2.25,b = 30 * 2.25,c = 70 * 2.25) {
                     d.merge(renderPreset(GROUND_BASE, t, c))
                     d.merge(renderPreset(SF, t, c))
                   },
-            }
+            },
+
            
         ],
         
