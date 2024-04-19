@@ -2,22 +2,11 @@ import { Preset } from '.'
 import { UNIVERSE as U, addrs, } from '../consts'
 
 export const   
-COLOR_YELLOW = 'yellow',
-COLOR_WHITE = 'white',
-COLOR_SKY = 'sky',
-COLOR_ORANGE1 = 'ORANGE1',
+COLOR_ORANGE = 'ORANGE',
 COLOR_BLUEPURPLE = 'bluepurple',
-COLOR_BLUE = 'blue',
 COLOR_RED = 'red',
-COLOR_USUPINK = 'usupink',
-COLOR_ORANGE2 = 'orange2',
-COLOR_PURPLE = 'purple',
-COLOR_REDANDPURPLE = 'redandpurple',
-COLOR_M14_1 = 'M14.1',
-COLOR_M14_2 = 'M14.2',
-COLOR_M14_3 = 'M14.3',
-COLOR_M14_4 = 'M14.4',
-COLOR_M14_5 = 'M14.5'
+COLOR_ORANGEWHITE = 'orangeandwhite'
+
 
 
 
@@ -36,43 +25,9 @@ COLOR_M14_5 = 'M14.5'
 
 
 export const colors: Preset[] = [
-  {
-    id: COLOR_YELLOW,
-    render(d, _,a = 255,b = 225) {
-      d.set(U, addrs.LED_LF_R, a)
-      d.set(U, addrs.LED_LF_G, b)
-      d.set(U, addrs.LED_RF_R, a)
-      d.set(U, addrs.LED_RF_G, b)
-      d.set(U, addrs.LED_LB_R, a)
-      d.set(U, addrs.LED_LB_G, b)
-      d.set(U, addrs.LED_RB_R, a)
-      d.set(U, addrs.LED_RB_G, b)
-      
-    },
-  },
-
-  {
-    id: COLOR_WHITE,
-    render(d, _,a = 255) {
-      d.set(U, addrs.LED_LF_R, a)
-      d.set(U, addrs.LED_LF_G, a)
-      d.set(U, addrs.LED_LF_B, a)
-      d.set(U, addrs.LED_RF_R, a)
-      d.set(U, addrs.LED_RF_G, a)
-      d.set(U, addrs.LED_RF_B, a)
-      d.set(U, addrs.LED_LB_R, a)
-      d.set(U, addrs.LED_LB_G, a)
-      d.set(U, addrs.LED_LB_B, a)
-      d.set(U, addrs.LED_RB_R, a)
-      d.set(U, addrs.LED_RB_G, a)
-      d.set(U, addrs.LED_RB_B, a)
-      
-    },
-  },
-  
-  {
-    id: COLOR_SKY,
-    render(d, _, b = 76.5, c = 255 , a = 25.5) {
+{
+    id: COLOR_ORANGE,
+    render(d, _,a = 243, b = 154, c =56) {
       d.set(U, addrs.LED_LF_R, a)
       d.set(U, addrs.LED_LF_G, b)
       d.set(U, addrs.LED_LF_B, c)
@@ -88,22 +43,6 @@ export const colors: Preset[] = [
       
     },
   },
-
-  {
-    id: COLOR_ORANGE1,
-    render(d, _,a = 204, b = 153) {
-      d.set(U, addrs.LED_LF_R, a)
-      d.set(U, addrs.LED_LF_G, b)
-      d.set(U, addrs.LED_RF_R, a)
-      d.set(U, addrs.LED_RF_G, b)
-      d.set(U, addrs.LED_LB_R, a)
-      d.set(U, addrs.LED_LB_G, b)
-      d.set(U, addrs.LED_RB_R, a)
-      d.set(U, addrs.LED_RB_G, b)
-      
-    },
-  },
-
   {
     id: COLOR_BLUEPURPLE,
     render(d, _,a = 127, b = 255) {
@@ -118,18 +57,6 @@ export const colors: Preset[] = [
       
     },
   },
-
-  {
-    id: COLOR_BLUE,
-    render(d, _,a = 255) {
-      d.set(U, addrs.LED_LF_B, a)
-      d.set(U, addrs.LED_RF_B, a)
-      d.set(U, addrs.LED_LB_B, a)
-      d.set(U, addrs.LED_RB_B, a)
-      
-    },
-  },
-
   {
     id: COLOR_RED,
     render(d, _,a = 255) {
@@ -137,157 +64,26 @@ export const colors: Preset[] = [
       d.set(U, addrs.LED_RF_R, a)
       d.set(U, addrs.LED_LB_R, a)
       d.set(U, addrs.LED_RB_R, a)
-      
-      
     },
   },
-
   {
-    id: COLOR_USUPINK,
-    render(d, _,a = 204, b = 63.75, c = 255) {
-      d.set(U, addrs.LED_LF_R, c)
-      d.set(U, addrs.LED_LF_G, b)
-      d.set(U, addrs.LED_LF_B, a)
-      d.set(U, addrs.LED_RF_R, c)
-      d.set(U, addrs.LED_RF_G, b)
-      d.set(U, addrs.LED_RF_B, a)
-      d.set(U, addrs.LED_LB_R, c)
-      d.set(U, addrs.LED_LB_G, b)
-      d.set(U, addrs.LED_LB_B, a)
-      d.set(U, addrs.LED_RB_R, c)
-      d.set(U, addrs.LED_RB_G, b)
-      d.set(U, addrs.LED_RB_B, a)
-      
-    },
-  },
-
-  {
-    id: COLOR_ORANGE2,
-    render(d, _,a = 255, b = 51) {
+    id: COLOR_ORANGEWHITE,
+    render(d, _,a = 243, b = 154, c =56 ,e=255) {
       d.set(U, addrs.LED_LF_R, a)
       d.set(U, addrs.LED_LF_G, b)
+      d.set(U, addrs.LED_LF_B, c)
       d.set(U, addrs.LED_RF_R, a)
       d.set(U, addrs.LED_RF_G, b)
-      d.set(U, addrs.LED_LB_R, a)
-      d.set(U, addrs.LED_LB_G, b)
-      d.set(U, addrs.LED_RB_R, a)
-      d.set(U, addrs.LED_RB_G, b)
+      d.set(U, addrs.LED_RF_B, c)
+      d.set(U, addrs.LED_LB_R, e)
+      d.set(U, addrs.LED_LB_G, e)
+      d.set(U, addrs.LED_LB_B, e)
+      d.set(U, addrs.LED_RB_R, e)
+      d.set(U, addrs.LED_RB_G, e)
+      d.set(U, addrs.LED_RB_B, e)
       
     },
   },
-
-  {
-    id: COLOR_PURPLE,
-    render(d, _,a = 102, b = 255) {
-      d.set(U, addrs.LED_LF_R, a)
-      d.set(U, addrs.LED_LF_B, b)
-      d.set(U, addrs.LED_RF_R, a)
-      d.set(U, addrs.LED_RF_B, b)
-      d.set(U, addrs.LED_LB_R, a)
-      d.set(U, addrs.LED_LB_B, b)
-      d.set(U, addrs.LED_RB_R, a)
-      d.set(U, addrs.LED_RB_B, b)
-      
-    },
-  },
-
-  {
-    id: COLOR_REDANDPURPLE,
-    render(d, _,a = 255, b = 102) {
-      d.set(U, addrs.LED_LF_R, a)
-      d.set(U, addrs.LED_RF_R, b)
-      d.set(U, addrs.LED_RF_B, a)
-      d.set(U, addrs.LED_LB_R, a)
-      d.set(U, addrs.LED_RB_R, b)
-      d.set(U, addrs.LED_RB_B, a)
-      
-    },
-  },
-
-  {
-    id: COLOR_M14_1,
-    render(d, _,a = 255, b =229.5) {
-      d.set(U, addrs.LED_LF_R, a)
-      d.set(U, addrs.LED_LF_G, a)
-      d.set(U, addrs.LED_LF_B, a)
-      d.set(U, addrs.LED_RF_R, a)
-      d.set(U, addrs.LED_RF_G, a)
-      d.set(U, addrs.LED_RF_B, a)
-      d.set(U, addrs.LED_LB_R, a)
-      d.set(U, addrs.LED_LB_G, b)
-      d.set(U, addrs.LED_RB_R, a)
-      d.set(U, addrs.LED_RB_G, b)
-      
-    },
-  },
-
-  {
-    id: COLOR_M14_2,
-    render(d, _,a = 255) {
-      d.set(U, addrs.LED_LF_R, a)
-      d.set(U, addrs.LED_LF_G, a)
-      d.set(U, addrs.LED_LF_B, a)
-      d.set(U, addrs.LED_RF_R, a)
-      d.set(U, addrs.LED_RF_G, a)
-      d.set(U, addrs.LED_RF_B, a)
-      d.set(U, addrs.LED_LB_B, a)
-      d.set(U, addrs.LED_RB_B, a)
-      
-    },
-  },
-
-  {
-    id: COLOR_M14_3,
-    render(d, _,a = 255, b = 204, c = 63.75,) {
-      d.set(U, addrs.LED_LF_R, a)
-      d.set(U, addrs.LED_LF_G, a)
-      d.set(U, addrs.LED_LF_B, a)
-      d.set(U, addrs.LED_RF_R, a)
-      d.set(U, addrs.LED_RF_G, a)
-      d.set(U, addrs.LED_RF_B, a)
-      d.set(U, addrs.LED_LB_R, a)
-      d.set(U, addrs.LED_LB_G, c)
-      d.set(U, addrs.LED_LB_B, b)
-      d.set(U, addrs.LED_RB_R, a)
-      d.set(U, addrs.LED_RB_G, c)
-      d.set(U, addrs.LED_RB_B, b)
-      
-    },
-  },
-
-  {
-    id: COLOR_M14_4,
-    render(d, _,a = 204, b = 153) {
-      d.set(U, addrs.LED_LF_R, a)
-      d.set(U, addrs.LED_LF_G, a)
-      d.set(U, addrs.LED_LF_B, a)
-      d.set(U, addrs.LED_RF_R, a)
-      d.set(U, addrs.LED_RF_G, a)
-      d.set(U, addrs.LED_RF_B, a)
-      d.set(U, addrs.LED_LB_R, a)
-      d.set(U, addrs.LED_LB_G, b)
-      d.set(U, addrs.LED_RB_R, a)
-      d.set(U, addrs.LED_RB_G, b)
-      
-    },
-  },
-
-  {
-    id: COLOR_M14_5,
-    render(d, _,a = 255) {
-      d.set(U, addrs.LED_LF_R, a)
-      d.set(U, addrs.LED_LF_G, a)
-      d.set(U, addrs.LED_LF_B, a)
-      d.set(U, addrs.LED_RF_R, a)
-      d.set(U, addrs.LED_RF_G, a)
-      d.set(U, addrs.LED_RF_B, a)
-      d.set(U, addrs.LED_LB_R, a)
-      d.set(U, addrs.LED_RB_R, a)
-      
-    },
-  },
-
-
   // {
   //   id: COLOR_WHITE_MH,
   //   render(d) {
