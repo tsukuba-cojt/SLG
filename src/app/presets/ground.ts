@@ -13,9 +13,8 @@ export const renderGround = (d: DmxFrame, w: number, a: number, b: number) => {
   d.set(U, addrs.SUS_2A, a)
   d.set(U, addrs.SUS_2B, a)
   d.set(U, addrs.SUS_2C, a)
-  d.set(U, addrs.SUS_3A, b)
-  d.set(U, addrs.SUS_3B, b)
-  d.set(U, addrs.SUS_3C, b / 1.5)
+  d.set(U, addrs.SUS_2D, a)
+  d.set(U, addrs.SUS_2E, a)
 }
 
 export const
@@ -32,32 +31,32 @@ export const ground: Preset[] = [
       renderGround(d, s, s, s)
     },
   },
-  {
-    id: GROUND_1,
-    render(d, _, s = 255) {
-      d.set(U, addrs.SUS_1A, s)
-      d.set(U, addrs.SUS_1B, s)
-      d.set(U, addrs.SUS_1C, s)
-      d.set(U, addrs.SUS_1D, s)
-      d.set(U, addrs.SUS_1E, s)
-    },
-  },
-  {
-    id: GROUND_2,
-    render(d, _, s = 255) {
-      d.set(U, addrs.SUS_2A, s)
-      d.set(U, addrs.SUS_2B, s)
-      d.set(U, addrs.SUS_2C, s)
-    },
-  },
-  {
-    id: GROUND_3,
-    render(d, _, s = 255) {
-      d.set(U, addrs.SUS_3A, s)
-      d.set(U, addrs.SUS_3B, s)
-      d.set(U, addrs.SUS_3C, s / 1.5)
-    },
-  },
+  // {
+  //   id: GROUND_1,
+  //   render(d, _, s = 255) {
+  //     d.set(U, addrs.SUS_1A, s)
+  //     d.set(U, addrs.SUS_1B, s)
+  //     d.set(U, addrs.SUS_1C, s)
+  //     d.set(U, addrs.SUS_1D, s)
+  //     d.set(U, addrs.SUS_1E, s)
+  //   },
+  // },
+  // {
+  //   id: GROUND_2,
+  //   render(d, _, s = 255) {
+  //     d.set(U, addrs.SUS_2A, s)
+  //     d.set(U, addrs.SUS_2B, s)
+  //     d.set(U, addrs.SUS_2C, s)
+  //   },
+  // },
+  // {
+  //   id: GROUND_3,
+  //   render(d, _, s = 255) {
+  //     d.set(U, addrs.SUS_3A, s)
+  //     d.set(U, addrs.SUS_3B, s)
+  //     d.set(U, addrs.SUS_3C, s / 1.5)
+  //   },
+  // },
 //   {
 //     id: GROUND_TASUMAKI_CHASE3,
 //     render(d, t, n = 10) {
