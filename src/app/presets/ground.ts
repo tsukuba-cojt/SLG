@@ -7,7 +7,7 @@ import { sin } from '../lib'
 export const renderGround = (d: DmxFrame, w: number, a: number, b: number) => {
   d.set(U, addrs.SUS_1A, w)
   d.set(U, addrs.SUS_1B, w)
-  d.set(U, addrs.SUS_1C, w)
+  d.set(U, addrs.SUS_1C, w * 0.8)
   d.set(U, addrs.SUS_1D, w)
   d.set(U, addrs.SUS_1E, w)
   d.set(U, addrs.SUS_2A, a)

@@ -3,6 +3,7 @@ import { UNIVERSE as U, addrs, } from '../consts'
 
 export const   
 COLOR_ORANGE = 'ORANGE',
+COLOR_ORANGE1 = 'ORANGE1',
 COLOR_BLUEPURPLE = 'bluepurple',
 COLOR_RED = 'red',
 COLOR_ORANGEWHITE = 'orangeandwhite'
@@ -28,6 +29,24 @@ export const colors: Preset[] = [
 {
     id: COLOR_ORANGE,
     render(d, _,a = 243, b = 154, c =56) {
+      d.set(U, addrs.LED_LF_R, a)
+      d.set(U, addrs.LED_LF_G, b)
+      d.set(U, addrs.LED_LF_B, c)
+      d.set(U, addrs.LED_RF_R, a)
+      d.set(U, addrs.LED_RF_G, b)
+      d.set(U, addrs.LED_RF_B, c)
+      d.set(U, addrs.LED_LB_R, a)
+      d.set(U, addrs.LED_LB_G, b)
+      d.set(U, addrs.LED_LB_B, c)
+      d.set(U, addrs.LED_RB_R, a)
+      d.set(U, addrs.LED_RB_G, b)
+      d.set(U, addrs.LED_RB_B, c)
+      
+    },
+  },
+  {
+    id: COLOR_ORANGE1,
+    render(d, _,a = 237, b = 126, c =0) {
       d.set(U, addrs.LED_LF_R, a)
       d.set(U, addrs.LED_LF_G, b)
       d.set(U, addrs.LED_LF_B, c)
@@ -75,12 +94,12 @@ export const colors: Preset[] = [
       d.set(U, addrs.LED_RF_R, a)
       d.set(U, addrs.LED_RF_G, b)
       d.set(U, addrs.LED_RF_B, c)
-      d.set(U, addrs.LED_LB_R, e)
-      d.set(U, addrs.LED_LB_G, e)
-      d.set(U, addrs.LED_LB_B, e)
-      d.set(U, addrs.LED_RB_R, e)
-      d.set(U, addrs.LED_RB_G, e)
-      d.set(U, addrs.LED_RB_B, e)
+      // d.set(U, addrs.LED_LB_R, e)
+      // d.set(U, addrs.LED_LB_G, e)
+      // d.set(U, addrs.LED_LB_B, e)
+      // d.set(U, addrs.LED_RB_R, e)
+      // d.set(U, addrs.LED_RB_G, e)
+      // d.set(U, addrs.LED_RB_B, e)
       
     },
   },
