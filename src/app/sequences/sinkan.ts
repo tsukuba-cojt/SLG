@@ -11,6 +11,24 @@ import { COLOR_BLUEPURPLE, COLOR_ORANGE, COLOR_ORANGE1, COLOR_RED } from '../pre
 
 export const sinkan: Sequence[] = [
     {
+        note: 'OHANASHI',
+        steps: [
+            {
+                id: 'OHANASHI',
+                position: 60 * 1,
+                render(d, t,a = 45 * 2.25,b = 30 * 2.25) {
+                    d.merge(renderPreset(GROUND_BASE, t, a))
+                    d.merge(renderPreset(SF, t, b))
+                    d.merge(renderPreset(LED_ON, t, b))
+            },
+            extends: [
+                COLOR_ORANGE
+            ]
+            },
+        ],
+        
+    },
+    {
         note: '客入れ',
         steps: [
             {
@@ -20,14 +38,15 @@ export const sinkan: Sequence[] = [
             {
                 id: '客入れ',
                 position: 60 * 1,
-                render(d, t,a = 45 * 2.25,b = 30 * 2.25) {
+                render(d, t,a = 60 * 2.25,b = 50 * 2.25) {
                     d.merge(renderPreset(GROUND_BASE, t, a))
                     d.merge(renderPreset(SF, t, b))
             },
             },
             {
                 id: '暗転',
-                position: 60 * 30,
+                position: 60 * 60,
+                fade:1
             },
 
         ],
@@ -216,7 +235,7 @@ export const sinkan: Sequence[] = [
             },
             {
                 id: '/Ba/-ba-da-ba,',
-                position: 60 * 5,
+                position: 60 * 6,
                 render(d, t,a = 70 * 2.25,b = 50 * 2.25,c = 70 * 2.25) {
                     d.merge(renderPreset(GROUND_BASE, t, a))
                     d.merge(renderPreset(SF, t, b))
@@ -228,7 +247,7 @@ export const sinkan: Sequence[] = [
             },
             {
                 id: 'せーのさんはい/We/ wish you a happy birthday',
-                position: 60 * 6,
+                position: 60 * 7,
                 render(d, t,a = 100 * 2.25,b = 80 * 2.25,c = 80 * 2.25) {
                     d.merge(renderPreset(GROUND_BASE, t, a))
                     d.merge(renderPreset(SF, t, b))
@@ -240,7 +259,7 @@ export const sinkan: Sequence[] = [
             },
             {
                 id: '笑顔でいようぜ後のドラム最後のキメ//',
-                position: 60 * 7,
+                position: 60 * 8,
                 render(d, t,a = 70 * 2.25,b = 50 * 2.25,c = 50 * 2.25) {
                     d.merge(renderPreset(GROUND_BASE, t, a))
                     d.merge(renderPreset(SF, t, b))
@@ -252,7 +271,7 @@ export const sinkan: Sequence[] = [
             },
             {
                 id: '小百合誕生日おめでとう/We/ wish you a happy birthday',
-                position: 60 * 8,
+                position: 60 * 9,
                 render(d, t,a = 80 * 2.25,b = 80 * 2.25,c = 80 * 2.25) {
                     d.merge(renderPreset(GROUND_BASE, t, a))
                     d.merge(renderPreset(SF, t, b))
@@ -264,7 +283,7 @@ export const sinkan: Sequence[] = [
         },
             {
                 id: '手拍子の後/つ/らいこと',
-                position: 60 * 9,
+                position: 60 * 10,
                 render(d, t,a = 30 * 2.25,b = 0 * 2.25,c = 30 * 2.25) {
                     d.merge(renderPreset(GROUND_BASE, t, a))
                     d.merge(renderPreset(SF, t, b))
@@ -276,7 +295,7 @@ export const sinkan: Sequence[] = [
             },
             {
                 id: 'たのしいこ/と/',
-                position: 60 * 10,
+                position: 60 * 11,
                 render(d, t,a = 100 * 2.25,b = 80 * 2.25,c = 80 * 2.25) {
                     d.merge(renderPreset(GROUND_BASE, t, a))
                     d.merge(renderPreset(SF, t, b))
@@ -288,7 +307,7 @@ export const sinkan: Sequence[] = [
             },
             {
                 id: '光を浴びての後チャンチャンの５泊目',
-                position: 60 * 11,
+                position: 60 * 12,
                 render(d, t,a = 100 * 2.25,b = 100 * 2.25,c = 100 * 2.25) {
                     d.merge(renderPreset(GROUND_BASE, t, a))
                     d.merge(renderPreset(SF, t, b))
@@ -300,12 +319,24 @@ export const sinkan: Sequence[] = [
             },
             {
                 id: 'M4outの2s後',
-                position: 60 * 12,
+                position: 60 * 13,
+                render(d, t,a = 100 * 2.25,b = 100 * 2.25,c = 100 * 2.25) {
+                    d.merge(renderPreset(GROUND_BASE, t, a))
+                    d.merge(renderPreset(SF, t, b))
+                    d.merge(renderPreset(LED_ON, t, c))
+            },
+            extends:[
+                COLOR_ORANGE1
+            ]
+            },
+            {
+                id: '↓',
+                position: 60 * 13 + 2,
                 fade:2
             },
             {
                 id: 'カテコBGMinの/3小節目の頭から4小節目の終わり/までで',
-                position: 60 * 13,
+                position: 60 * 14,
                 fade:3.81,
                 render(d, t,a = 70 * 2.25,b = 50 * 2.25,c = 50 * 2.25) {
                     d.merge(renderPreset(GROUND_BASE, t, a))
@@ -318,13 +349,17 @@ export const sinkan: Sequence[] = [
             },
             {
                 id: '全員はけたら',
-                position: 60 * 15,
+                position: 60 * 16,
                 fade:4.1
             },
             {
-                id: '舞監口上',
-                position: 60 * 16,
-                fade:2
+                id: '舞監口上in',
+                position: 60 * 18,
+                fade:2,
+                render(d, t,a = 45 * 2.25,b = 30 * 2.25) {
+                    d.merge(renderPreset(GROUND_BASE, t, a))
+                    d.merge(renderPreset(SF, t, b))
+            },
             },
             
         ],
